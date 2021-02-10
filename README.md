@@ -1,6 +1,7 @@
 ## Team
 ### Team name: 
 ### Members
+| Name             | Email                   |
 |------------------|------------------------:|
 | Jiaya Wu         | <kz20196@bristol.ac.uk> |
 | Ronel Mehmedov   | <yu20919@bristol.ac.uk> |
