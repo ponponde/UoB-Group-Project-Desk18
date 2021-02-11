@@ -1,6 +1,6 @@
 # UoB-Group-Project desk 18
-## Team
-### Team name: 
+## Team Profile
+### Project name  
 ### Members
 | Name             | Email                   |
 |:----------------:|:-----------------------:|
