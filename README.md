@@ -14,11 +14,16 @@
 # Project Report
 ## Introduction [10 marks]
 ### Abstract
-Motivation for the project, framing of the problem and a high-level overview of the system
+Motivation for the project, framing of the problem and a high-level overview of the system.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices dolor ac sodales pellentesque. In tincidunt diam viverra, pellentesque purus et, laoreet ligula. Curabitur sollicitudin metus a eleifend condimentum. Donec id dolor nibh. Praesent suscipit quam sed feugiat aliquam. Nunc tristique diam sit amet turpis sodales, quis convallis ante aliquet. In odio tortor, ultrices eget massa at, sodales suscipit mauris. Aenean a tincidunt erat. Mauris ornare quis augue a sagittis.
 ### Project Objectives
-The high level goals of the project and the contribution towards solving the problem. A checklist against which the team can evaluate their success.
+The high level goals of the project and the contribution towards solving the problem. A checklist against which the team can evaluate their success.  Nunc purus mauris, tristique id venenatis vel, hendrerit eu nibh. Duis cursus iaculis lorem id molestie. Donec tempor lacinia lacus ut fermentum. Nam in purus a leo viverra laoreet. Suspendisse sed felis tincidunt, faucibus lorem eu, rutrum arcu. Nulla risus eros, ultricies at vehicula quis, tincidunt sed erat. Quisque mattis in diam euismod aliquet. Ut vel nulla a odio congue laoreet. Donec sed tellus et eros dignissim ornare. Phasellus in cursus erat, imperdiet suscipit orci. Nunc sapien magna, ornare in eleifend non, scelerisque eget ex. Ut diam tortor, auctor ac lectus ac, convallis porta lacus.
 ### Video
 Short (1-2min) demo video to explain your system (think Kickstarter)
+   <figure class="video_container">
+   <video controls="true" allowfullscreen="true" poster="path/to/poster_image.png">
+   <source src="video/test.mp4" type="video/mp4">
+   </video>
+   </figure>
 ## Background and Motivation [10 marks]
 ### Background literature
 Academic research review
