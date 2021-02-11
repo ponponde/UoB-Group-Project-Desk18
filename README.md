@@ -9,7 +9,7 @@
 | Sheng-Han Tim Chu| <re20470@bristol.ac.uk> |
 | Yi-Tsen Ho       | <kv20880@bristol.ac.uk> |
 | Yin-Te Lan       | <oq20204@bristol.ac.uk> |
-### ![404](/img/teamslogo.png =50x)
+### <img src="/img/teamslogo.jpg" alt="404lol" width="50"/>
 [Teams Channel](https://teams.microsoft.com/l/channel/19%3ab811a4a7be67448bb4bfafd8c70266a2%40thread.tacv2/Desk%252018?groupId=a9a647c8-66d1-4f10-bd04-9a5ed3f67e7b&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b)
 
 # Project Report
