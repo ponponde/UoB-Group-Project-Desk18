@@ -21,11 +21,11 @@ The high level goals of the project and the contribution towards solving the pro
 Short (1-2min) demo video to explain your system (think Kickstarter)
 ## Background and Motivation [10 marks]
 ### Background literature
-Academic research review
+Academic research review. Aenean venenatis fermentum lacinia. Aenean pretium justo vitae felis congue posuere. Cras accumsan lectus sit amet massa eleifend, in iaculis urna elementum. Etiam molestie hendrerit purus, eget tempus ante gravida vel. Duis ultrices, lacus vel dignissim porttitor, ipsum quam dapibus sapien, et bibendum lacus diam nec sapien. Ut sollicitudin sem non imperdiet rhoncus. Pellentesque semper vel est vel malesuada. Sed sit amet sapien sit amet sapien pulvinar tempus.
 ### State of the art survey
-Current industry review
+Current industry review. Aenean rutrum iaculis felis a vulputate. Pellentesque vehicula eleifend velit, mollis mattis sem. Donec velit sem, pretium convallis sollicitudin ultricies, suscipit vitae ipsum. Phasellus vel justo non dui blandit accumsan. Integer nec ex vitae ante gravida lacinia. Pellentesque rhoncus vel dolor a convallis. Phasellus suscipit sit amet eros at congue. Aliquam condimentum ligula vel risus congue varius. Mauris scelerisque sem a nulla tempus, a venenatis velit efficitur. Donec at sem in lectus euismod tristique et a magna. Curabitur nec tempus ipsum. Etiam sem dolor, cursus tincidunt efficitur eu, blandit eu ipsum. Nullam non leo aliquet velit sagittis dapibus eget vel mi. Nulla placerat ante non imperdiet volutpat. Phasellus ac turpis id tortor sodales pulvinar. In aliquam varius mattis.
 ### Clear definition of the problem
-How does your project relate to the above? We will be marking the ability of your team to identify a worthwhile and important problem and clearly articulate the scope and challenge of the problem.
+How does your project relate to the above? We will be marking the ability of your team to identify a worthwhile and important problem and clearly articulate the scope and challenge of the problem. Aliquam erat volutpat. Nam ac diam et felis blandit laoreet a ac odio. Curabitur ac orci eu est euismod malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc auctor erat ut felis scelerisque, ac tincidunt nunc mattis. Aenean mi orci, molestie eu tortor non, viverra vulputate leo. Vestibulum auctor diam eget dui sodales lacinia. Suspendisse at porta ligula, lacinia hendrerit arcu. Aliquam augue enim, rhoncus sed lectus in, scelerisque dapibus ligula. Pellentesque at placerat sem, ut rhoncus justo. Morbi nec dui tristique, placerat tortor nec, commodo massa. Donec non commodo leo, id sagittis nisi. Donec bibendum risus molestie libero sollicitudin, dignissim mollis nisl placerat.
 ## System Implmentation [20 marks]
 ### Stack architecture and system design
 e.g. class diagrams, dequence diagrams
