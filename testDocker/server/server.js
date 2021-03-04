@@ -1,4 +1,3 @@
-console.log("hellow world");
 const express = require('express');
 const path = require('path');
 const http = require('http');
@@ -15,20 +14,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Point static path to dist (folder where build files are located)
-// app.use(express.static(path.join(__dirname, './client/public')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // Set our api routes
 app.use('/api', api);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './client/public/index.html'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 /**
  * Get port from environment and store in Express.
  */
-const port = process.env.PORT || '3000';
+const port = process.env.APP_SERVER_PORT || '8000';
 app.set('port', port);
 
 /**
