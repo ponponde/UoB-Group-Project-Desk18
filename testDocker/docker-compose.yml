@@ -24,8 +24,8 @@ services:
     ports:
       - ${REACT_APP_PORT}:${REACT_APP_PORT}
     volumes:
-      - ./client/srcL/srv/app/fr-shohin-admin-client/src
-      - ./client/public:/srv/app/fr-shohin-admin-client/public
+      - ./client/src:/srv/app/fr-shohin-admin-client/src
+      - ./client/build:/srv/app/fr-shohin-admin-client/build
     links:
       - server
     command: npm run start
