@@ -31,7 +31,7 @@ function App() {
     //      //  });
     //  }, []);
     const getLocationID = (e) => {
-        const res = axios.get(apiUrl + "/users");
+        const res = axios.get(apiUrl + "/api/test/all");
         console.log("res.data", res.data);
         console.log(e.target.id);
         let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
