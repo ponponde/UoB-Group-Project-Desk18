@@ -5,7 +5,7 @@ import World from "@svg-maps/world";
 import { SVGMap } from "react-svg-map";
 import "./App.css";
 import "react-svg-map/lib/index.css";
-
+import NavBar from "./component/navBar";
 const apiUrl = `http://localhost:8080`;
 
 function App() {
@@ -31,12 +31,12 @@ function App() {
     //      //  });
     //  }, []);
     const getLocationID = (e) => {
-        const res = axios.get(apiUrl + "/api/test/all");
-        console.log("res.data", res.data);
-        console.log(e.target.id);
-        let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
-        console.log(d);
-        setCountryRecord(d[0]);
+        //   const res = axios.get(apiUrl + "/api/test/all");
+        //   console.log("res.data", res.data);
+        //   console.log(e.target.id);
+        //   let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
+        //   console.log(d);
+        //   setCountryRecord(d[0]);
         //         Date: "2021-02-16T14:55:54.762Z"
         // ID: "c2d733a7-9e4b-48bb-b6c8-d2ce38761119"
         // NewConfirmed: 53883
@@ -48,7 +48,7 @@ function App() {
         // TotalDeaths: 486325
 
         setPlace(e.target.id);
-        setShow(true);
+        //   setShow(true);
     };
     const getScreenPosition = (e) => {
         //   console.log(e);
@@ -70,17 +70,20 @@ function App() {
     ];
     return (
         <div className="App">
+            <NavBar />
             {globalData ? (
                 <div className="global">
                     TotalConfirmed:{globalData.TotalConfirmed}, TotalDeaths: {globalData.TotalDeaths}, TotalRecovered:{" "}
                     {globalData.TotalRecovered}
                 </div>
             ) : null}
-            <SVGMap
-                map={World}
-                onLocationFocus={(e) => getLocationID(e)}
-                onLocationMouseMove={(e) => getScreenPosition(e)}
-            />
+            <div className="main_map">
+                <SVGMap
+                    map={World}
+                    onLocationFocus={(e) => getLocationID(e)}
+                    onLocationMouseMove={(e) => getScreenPosition(e)}
+                />
+            </div>
 
             {isShow ? (
                 <div className="popup" style={position}>

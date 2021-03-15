@@ -1,0 +1,35 @@
+@import "../common.scss";
+.searchBar {
+   color: #fff;
+   background-color: $primary;
+   height: 55px;
+   margin-bottom: 20px;
+   position: fixed;
+   width: 100%;
+   z-index: 100;
+   .searchInput {
+       border-bottom: 2px solid #fff;
+       width: 40%;
+       height: 70%;
+       min-width: 240px;
+       margin: 0 auto;
+       @media screen and (max-width: $mobileSize) {
+           margin-left: 30%;
+       }
+       display: flex;
+       align-items: flex-end;
+       > input {
+           border: unset;
+           outline-style: none;
+           background: $primary;
+           color: #fff;
+           width: 100%;
+           font-size: 20px;
+           margin-bottom: 5px;
+           margin-left: 10px;
+       }
+       .searchBtn {
+           cursor: pointer;
+       }
+   }
+}
