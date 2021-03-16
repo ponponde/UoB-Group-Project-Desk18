@@ -2,6 +2,7 @@
 ## Team Profile
 ### Project name  
 ### Members
+
 | Name             | Email                   |
 |:----------------:|:-----------------------:|
 | Jiayi Wu         | <kz20196@bristol.ac.uk> |
