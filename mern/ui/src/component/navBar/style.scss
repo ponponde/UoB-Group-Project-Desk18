@@ -1,5 +1,5 @@
-@import "../common.scss";
-.searchBar {
+@import "../../common.scss";
+.navBar {
    color: #fff;
    background-color: $primary;
    height: 55px;
@@ -7,6 +7,7 @@
    position: fixed;
    width: 100%;
    z-index: 100;
+   @include flexCenter;
    .searchInput {
        border-bottom: 2px solid #fff;
        width: 40%;
@@ -31,5 +32,14 @@
        .searchBtn {
            cursor: pointer;
        }
+   }
+   .groupBtn{
+      @include flexCenter;
+      height: 55px;
+      .navBtn{
+         @include flexCenter;
+         margin-right: 10px;
+         align-items: center;
+      }
    }
 }
