@@ -1,11 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 // import logo from "./logo.svg";
+import "antd/dist/antd.css";
 import axios from "axios";
+import InfoDrawer from "./component/InfoDrawer";
 import World from "@svg-maps/world";
 import { SVGMap } from "react-svg-map";
-import "./App.css";
+import "./App.scss";
 import "react-svg-map/lib/index.css";
-
+import NavBar from "./component/navBar";
+import { Drawer, Button } from "antd";
+import { initDrawerData } from "./initData";
 const apiUrl = `http://localhost:8080`;
 
 function App() {
@@ -15,6 +19,34 @@ function App() {
     const [globalData, setGlobalData] = React.useState({});
     const [countryData, setCountryData] = React.useState([]);
     const [countryRecord, setCountryRecord] = React.useState("");
+    const [openDrawer, setOpenDrawer] = useState(false);
+    const [drawerData, setDrawerData] = useState({});
+    const showDrawer = (type) => {
+        switch (type) {
+            case "Details":
+                setDrawerData({
+                    title: type,
+                    data: [],
+                    derection: "bottom",
+                });
+                break;
+            case "Travel":
+                setDrawerData({
+                    title: type + " Policy",
+                    data: [],
+                    derection: "bottom",
+                });
+                break;
+            case "News":
+                setDrawerData({
+                    title: type,
+                    data: [],
+                    derection: "bottom",
+                });
+                break;
+        }
+        setOpenDrawer(true);
+    };
 
     //  React.useEffect(() => {
     //      const res = axios.get(apiUrl + "/users");
@@ -31,12 +63,12 @@ function App() {
     //      //  });
     //  }, []);
     const getLocationID = (e) => {
-        const res = axios.get(apiUrl + "/api/test/all");
-        console.log("res.data", res.data);
-        console.log(e.target.id);
-        let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
-        console.log(d);
-        setCountryRecord(d[0]);
+        //   const res = axios.get(apiUrl + "/api/test/all");
+        //   console.log("res.data", res.data);
+        //   console.log(e.target.id);
+        //   let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
+        //   console.log(d);
+        //   setCountryRecord(d[0]);
         //         Date: "2021-02-16T14:55:54.762Z"
         // ID: "c2d733a7-9e4b-48bb-b6c8-d2ce38761119"
         // NewConfirmed: 53883
@@ -48,7 +80,7 @@ function App() {
         // TotalDeaths: 486325
 
         setPlace(e.target.id);
-        setShow(true);
+        //   setShow(true);
     };
     const getScreenPosition = (e) => {
         //   console.log(e);
@@ -70,17 +102,20 @@ function App() {
     ];
     return (
         <div className="App">
+            <NavBar />
             {globalData ? (
                 <div className="global">
                     TotalConfirmed:{globalData.TotalConfirmed}, TotalDeaths: {globalData.TotalDeaths}, TotalRecovered:{" "}
                     {globalData.TotalRecovered}
                 </div>
             ) : null}
-            <SVGMap
-                map={World}
-                onLocationFocus={(e) => getLocationID(e)}
-                onLocationMouseMove={(e) => getScreenPosition(e)}
-            />
+            <div className="main_map">
+                <SVGMap
+                    map={World}
+                    onLocationFocus={(e) => getLocationID(e)}
+                    onLocationMouseMove={(e) => getScreenPosition(e)}
+                />
+            </div>
 
             {isShow ? (
                 <div className="popup" style={position}>
@@ -93,6 +128,28 @@ function App() {
                             })}
                     </ul>
                 </div>
+            ) : null}
+            <div className="footer">
+                <Button type="primary" onClick={() => showDrawer("Details")}>
+                    Details
+                </Button>
+                <Button type="primary" onClick={() => showDrawer("Travel")}>
+                    Travel Policy
+                </Button>
+                <Button type="primary" onClick={() => showDrawer("News")}>
+                    News
+                </Button>
+            </div>
+            {openDrawer ? (
+                <InfoDrawer
+                    visible={openDrawer}
+                    title={drawerData.title}
+                    data={drawerData.data}
+                    direction={drawerData.diriection}
+                    onClose={() => {
+                        setOpenDrawer(false);
+                    }}
+                />
             ) : null}
         </div>
     );
