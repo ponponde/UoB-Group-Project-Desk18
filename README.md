@@ -18,6 +18,7 @@ Motivation for the project, framing of the problem and a high-level overview of 
 ### Project Objectives
 The high level goals of the project and the contribution towards solving the problem. A checklist against which the team can evaluate their success.  Nunc purus mauris, tristique id venenatis vel, hendrerit eu nibh. Duis cursus iaculis lorem id molestie. Donec tempor lacinia lacus ut fermentum. Nam in purus a leo viverra laoreet. Suspendisse sed felis tincidunt, faucibus lorem eu, rutrum arcu. Nulla risus eros, ultricies at vehicula quis, tincidunt sed erat. Quisque mattis in diam euismod aliquet. Ut vel nulla a odio congue laoreet. Donec sed tellus et eros dignissim ornare. Phasellus in cursus erat, imperdiet suscipit orci. Nunc sapien magna, ornare in eleifend non, scelerisque eget ex. Ut diam tortor, auctor ac lectus ac, convallis porta lacus.
 ### Video
+
 Short (1-2min) demo video to explain your system (think Kickstarter)
 ![404lol](video/test.gif)
 ## Background and Motivation [10 marks]
