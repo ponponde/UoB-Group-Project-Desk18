@@ -10,6 +10,9 @@ import "react-svg-map/lib/index.css";
 import NavBar from "./component/navBar";
 import { Drawer, Button } from "antd";
 import { initDrawerData } from "./initData";
+
+const GB = require('./data/travel/gb.json');
+const dd = require('./data/covid/0308.json');
 const apiUrl = `http://localhost:8080`;
 
 function App() {
@@ -21,19 +24,27 @@ function App() {
     const [countryRecord, setCountryRecord] = React.useState("");
     const [openDrawer, setOpenDrawer] = useState(false);
     const [drawerData, setDrawerData] = useState({});
+    React.useEffect(()=>{
+      console.log(1111,GB);
+      // const rowData = JSON.parse(dd);
+      const gData = dd.Global;
+      setGlobalData(gData);
+      setCountryData(dd.Countries);
+      
+    },[])
     const showDrawer = (type) => {
         switch (type) {
             case "Details":
                 setDrawerData({
                     title: type,
-                    data: [],
+                    data: GB.Country,
                     derection: "bottom",
                 });
                 break;
             case "Travel":
                 setDrawerData({
                     title: type + " Policy",
-                    data: [],
+                    data: GB.Notes,
                     derection: "bottom",
                 });
                 break;
@@ -66,9 +77,9 @@ function App() {
         //   const res = axios.get(apiUrl + "/api/test/all");
         //   console.log("res.data", res.data);
         //   console.log(e.target.id);
-        //   let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
+          let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
         //   console.log(d);
-        //   setCountryRecord(d[0]);
+          setCountryRecord(d[0]);
         //         Date: "2021-02-16T14:55:54.762Z"
         // ID: "c2d733a7-9e4b-48bb-b6c8-d2ce38761119"
         // NewConfirmed: 53883
@@ -80,7 +91,7 @@ function App() {
         // TotalDeaths: 486325
 
         setPlace(e.target.id);
-        //   setShow(true);
+          setShow(true);
     };
     const getScreenPosition = (e) => {
         //   console.log(e);
