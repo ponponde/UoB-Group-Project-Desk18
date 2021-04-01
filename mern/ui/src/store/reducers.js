@@ -1,7 +1,7 @@
 import * as types from "./types";
 const initialState = {
     user: {},
-    isLogin: true,
+    isLogin: false,
     currentCountry: "globle",
     showForum: false,
 };
@@ -23,6 +23,12 @@ export function dataReducer(state = initialState, action) {
             return {
                 ...state,
                 showForum: action.data,
+            };
+        case types.LOG_OUT:
+            return {
+                ...state,
+                isLogin: false,
+                user: {},
             };
         default:
             return state;

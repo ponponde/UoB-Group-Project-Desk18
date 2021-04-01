@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SearchOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import LoginModal from "../LoginModal";
@@ -9,6 +9,7 @@ import SideForum from "../SideForum";
 import SignupModal from "../SignupModal";
 import logo from "../../img/logo.png";
 import logoTxt from "../../img/logoTxt.png";
+import { logout } from "../../store/action";
 const NavBar = (props) => {
     const [showLogin, setShowLogin] = React.useState(false);
     const [showSignup, setShowSignup] = React.useState(false);
@@ -16,6 +17,10 @@ const NavBar = (props) => {
     const [keyWord, setKeyword] = React.useState();
     const isLogin = useSelector((state) => state.isLogin);
     const currentCountry = useSelector((state) => state.currentCountry);
+    const dispatch = useDispatch();
+    const handleLogout = () => {
+        dispatch(logout());
+    };
     //  const showForum = useSelector((state) => state.showForum);
     return (
         <div className="navBar">
@@ -60,7 +65,7 @@ const NavBar = (props) => {
                             </Link>
                         </div>
                         <div className="navBtn">
-                            <Button>Log out</Button>
+                            <Button onClick={() => handleLogout()}>Log out</Button>
                         </div>
                     </>
                 )}

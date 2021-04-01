@@ -7,6 +7,13 @@ export function setUser(user) {
     };
 }
 
+export function logout() {
+    return {
+        type: types.LOG_OUT,
+        data: false,
+    };
+}
+
 export const setCurrentCountry = (country) => {
     return {
         type: types.SET_CURRENT_COUNTRY,

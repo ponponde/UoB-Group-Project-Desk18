@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Input, Button, Modal } from "antd";
 import { setUser } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
-
+import * as fetch from "../../utils/fetch";
 const layout = {
     labelCol: {
         span: 8,
