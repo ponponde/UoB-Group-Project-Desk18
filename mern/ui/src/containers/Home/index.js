@@ -1,18 +1,16 @@
-import React, { Component, useState } from "react";
-// import logo from "./logo.svg";
-import "antd/dist/antd.css";
-import axios from "axios";
-import InfoDrawer from "./component/InfoDrawer";
+import React, { useState } from "react";
+import InfoDrawer from "../../components/InfoDrawer";
 import World from "@svg-maps/world";
 import { SVGMap } from "react-svg-map";
 import "./App.scss";
 import "react-svg-map/lib/index.css";
-import NavBar from "./component/navBar";
-import { Drawer, Button } from "antd";
-import { initDrawerData } from "./initData";
-
-const GB = require('./data/travel/gb.json');
-const dd = require('./data/covid/0308.json');
+import NavBar from "../../components/NavBar";
+import { Button } from "antd";
+import { useSelector, useDispatch } from "react-redux";
+import StatisticPanel from "../../components/StatisticPanel";
+import { setCurrentCountry } from "../../store/action";
+const GB = require("../../data/travel/gb.json");
+const dd = require("../../data/covid/0308.json");
 const apiUrl = `http://localhost:8080`;
 
 function App() {
@@ -24,14 +22,18 @@ function App() {
     const [countryRecord, setCountryRecord] = React.useState("");
     const [openDrawer, setOpenDrawer] = useState(false);
     const [drawerData, setDrawerData] = useState({});
-    React.useEffect(()=>{
-      console.log(1111,GB);
-      // const rowData = JSON.parse(dd);
-      const gData = dd.Global;
-      setGlobalData(gData);
-      setCountryData(dd.Countries);
-      
-    },[])
+    const currentCountry = useSelector((state) => state.currentCountry);
+    const dispatch = useDispatch();
+    React.useEffect(() => {
+        console.log(1111, GB);
+        // const rowData = JSON.parse(dd);
+        const gData = dd.Global;
+        setGlobalData(gData);
+        setCountryData(dd.Countries);
+        //   if (localStorage.getItem(ep.SESSION_KEY) != null) {
+        //    fetch.login
+        //   }
+    }, []);
     const showDrawer = (type) => {
         switch (type) {
             case "Details":
@@ -73,13 +75,13 @@ function App() {
     //      //      setCountryData(rowData.Countries);
     //      //  });
     //  }, []);
-    const getLocationID = (e) => {
+    const setLocationID = (e) => {
         //   const res = axios.get(apiUrl + "/api/test/all");
         //   console.log("res.data", res.data);
         //   console.log(e.target.id);
-          let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
+        let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
         //   console.log(d);
-          setCountryRecord(d[0]);
+        setCountryRecord(d[0]);
         //         Date: "2021-02-16T14:55:54.762Z"
         // ID: "c2d733a7-9e4b-48bb-b6c8-d2ce38761119"
         // NewConfirmed: 53883
@@ -89,9 +91,9 @@ function App() {
         // Slug: "united-states"
         // TotalConfirmed: 27694165
         // TotalDeaths: 486325
-
+        dispatch(setCurrentCountry(e.target.id));
         setPlace(e.target.id);
-          setShow(true);
+        setShow(true);
     };
     const getScreenPosition = (e) => {
         //   console.log(e);
@@ -114,16 +116,17 @@ function App() {
     return (
         <div className="App">
             <NavBar />
-            {globalData ? (
+            <StatisticPanel data={countryRecord} />
+            {/* {globalData ? (
                 <div className="global">
                     TotalConfirmed:{globalData.TotalConfirmed}, TotalDeaths: {globalData.TotalDeaths}, TotalRecovered:{" "}
                     {globalData.TotalRecovered}
                 </div>
-            ) : null}
+            ) : null} */}
             <div className="main_map">
                 <SVGMap
                     map={World}
-                    onLocationFocus={(e) => getLocationID(e)}
+                    onLocationFocus={(e) => setLocationID(e)}
                     onLocationMouseMove={(e) => getScreenPosition(e)}
                 />
             </div>
