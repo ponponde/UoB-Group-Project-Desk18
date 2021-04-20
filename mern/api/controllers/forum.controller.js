@@ -5,6 +5,11 @@ exports.postData = (req, res) => {
    const post = new forum_model({
       userId: req.body.userId,
       post: req.body.post,
+      country: req.body.country,
+      author: req.body.author,
+      author_id: req.body.author_id,
+      content: req.body.content,
+      date: new Date(),
    });
 
    post.save((err, data) => {

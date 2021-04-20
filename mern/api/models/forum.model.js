@@ -3,8 +3,11 @@ const mongoose = require("mongoose");
 const forum = mongoose.model(
    "forum",
    new mongoose.Schema({
-      userId: Number,
-      post: String,
+      country: String,
+      author: String,
+      author_id: Number,
+      content: String,
+      date: Date,
    })
 );
 
