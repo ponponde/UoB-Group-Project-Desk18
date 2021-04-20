@@ -4,7 +4,6 @@ const forum_model = db.forum;
 exports.postData = (req, res) => {
    const post = new forum_model({
       userId: req.body.userId,
-      post: req.body.post,
       country: req.body.country,
       author: req.body.author,
       author_id: req.body.author_id,
@@ -32,17 +31,14 @@ exports.getData = (req, res) => {
 };
 
 exports.getDataByCountry = (req,res) => {
-   forum_model.findOne({
-      CountryCode: req.body.CountryCode,
-   })
-   .exec((err,user) => {
+   forum_model.find({
+      country: req.params.country,
+   }, '-_id userId country author content date')
+   .exec((err,data) => {
       if (err) {
          res.status(500).send({ message: err });
          return;
       }
-      res.status(200).send({
-         userId: data.userId,
-         post: data.post,
-      });
+      res.status(200).send(data);
    });
 };

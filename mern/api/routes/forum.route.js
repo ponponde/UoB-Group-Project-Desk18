@@ -8,5 +8,5 @@ module.exports = function (app) {
 
     app.post("/api/forum", controller.postData);
     app.get("/api/forum", controller.getData);
-    app.get("/api/forum/{country_code}", controller.getDataByCountry);
+    app.get("/api/forum/:country", controller.getDataByCountry);
 }
