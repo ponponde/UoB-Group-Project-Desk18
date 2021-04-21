@@ -62,8 +62,8 @@
 
 .Intro{
     h1{
-        font-weight: 300;
-        font-size: 16px;
+        font-weight: 400;
+        font-size: 20px;
         color: #fff;
         color: #fff;
     }
@@ -94,18 +94,19 @@
         margin: 0 auto;
         @include flexCenter;
         // text-decoration: underline;
-        font-weight: 500;
-        font-size: 32px;
+        font-weight: 400;
+        font-size: 20px;
         position: relative;
         color: #fff;
         &:after{
             content:"";
             width: 0;
-            height: 3px;
+            height: 2px;
             background-color: #fff;
             position: absolute;
             bottom: 0;
-            left: auto;
+            left: 50%;
+            transform: translateX(-50%);
             transition: all 0.3s;
           }
         &:hover:after{
@@ -178,12 +179,33 @@
             @include flexCenter;
             align-items: center;
         }
-        .introSlide1{
+        .slideTextBox{
+            padding-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .introSlide{
             box-sizing: border-box;
+            margin: 0 auto;
             width: 56vw;
             height: 40vw;
             max-width: 700px;
             max-height: 500px;
+            &.logoSlide{
+                width: 52vw;
+                height: 30vw;
+                max-width: 700px;
+                max-height: 400px;
+                padding-bottom: 10px;
+            }
+            &.introSlide0{
+                width: 40vw;
+                max-width: 500px;
+            }
+            &.introSlide2{
+                height: 36vw;
+                max-height: 450px;
+            }
         }
         .iconLeft{
             position: absolute;
@@ -202,6 +224,31 @@
             font-size: 30px;
             color: #fff;
             z-index: 300;
+        }
+        .btnSkip{
+            position: absolute;
+            left: 50%;
+            bottom: 15vh;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+            transition: 1s;
+            font-weight: 400;
+            font-size: 20px;
+            color: #fff;
+            &:after{
+                content:"";
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all 0.3s;
+            }
+            &:hover:after{
+                width: 100%;
+            }
         }
     }
 

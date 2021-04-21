@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import "./Intro.scss";
 import logo_removebg from "../../img/logo_removebg.png";
 import logoTxt_removebg from "../../img/logoTxt_removebg.png";
-import GB from "../../img/GB.png";
-import GBtext from "../../img/GB_text.png";
+import logoSlide from "../../img/logoSlide.png"
+import introSlide0 from "../../img/introSlide0.png";
 import introSlide1 from "../../img/introSlide1.png";
+import introSlide2 from "../../img/introSlide2.gif";
+import introSlide3 from "../../img/introSlide3.gif";
+
 
 import { Carousel } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
@@ -23,13 +26,6 @@ const Intro = (props) => {
 
     const handlePrev = () => carouselRef.current.prev();
 
-    const contentStyle = {
-        height: '160px',
-        color: '#fff',
-        lineHeight: '160px',
-        textAlign: 'center',
-        background: '#364d79',
-      };
     const { visible } = props;
     return (
        <div className="Intro" style={showIntro ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}  >
@@ -43,20 +39,28 @@ const Intro = (props) => {
                 <LeftOutlined className="iconLeft" onClick={handlePrev}  />     
                 <Carousel ref={carouselRef}>
                     <div>
-                        <img className="introSlide1" src={introSlide1}></img>
-                        <h1>ONE CLICK ON MAP FOR REAL-TIME OFFICIAL STATISTICS OF COVID-19</h1>
+                        <img className="introSlide logoSlide" src={logoSlide}></img>
+                        <div className="slideTextBox"><h1 >COVIDSURVIVAL IS A PLATFORM FOR EVERYONE TO LEARNING THE INFROMATION OF COVID-19 AND SHARE YOUR THOUGHTS.</h1></div>
                     </div>
                     <div>
-                        <h1>2</h1>
+                        <img className="introSlide introSlide0" src={introSlide0}></img>
+                        <div className="slideTextBox"><h1 >THE GLOBAL STATICS ARE SHOWN ON THE TOP LEFT OF THE PAGE</h1></div>
                     </div>
                     <div>
-                        <h1>3</h1>
+                        <img className="introSlide introSlide1" src={introSlide1}></img>
+                        <div className="slideTextBox"><h1 >ONE CLICK ON MAP FOR REAL-TIME OFFICIAL STATISTICS OF COVID-19</h1></div>
                     </div>
                     <div>
-                        <h1>4</h1>
+                        <img className="introSlide introSlide2" src={introSlide2}></img>
+                        <div className="slideTextBox"><h1 >FURTHER DETAILS OF TRAVEL POLICY AND NEWS ARE ON THE BOTTOM-LEFT OF THE PAGE.</h1></div>
+                    </div>
+                    <div>
+                        <img className="introSlide introSlide3" src={introSlide3}></img>
+                        <div className="slideTextBox"><h1 >AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID.</h1></div>
                     </div>
                </Carousel>
                <RightOutlined className="iconRight" onClick={handleNext}/>
+               <div><div className="btnSkip" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false)}}>SKIP AND START</div></div>
            </div>
        </div>
     );
