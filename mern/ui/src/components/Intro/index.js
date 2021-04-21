@@ -12,8 +12,6 @@ import introSlide3 from "../../img/introSlide3.gif";
 import { Carousel } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
-import { useSelector, useDispatch } from "react-redux";
-import * as fetch from "../../utils/fetch";
 
 const Intro = (props) => {
     const [showIntro, setShowIntro] = useState(true);
