@@ -187,24 +187,24 @@
         .introSlide{
             box-sizing: border-box;
             margin: 0 auto;
-            width: 56vw;
-            height: 40vw;
-            max-width: 700px;
-            max-height: 500px;
+            width: 50vw;
+            height: 36vw;
+            max-width: 730px;
+            max-height: 450px;
             &.logoSlide{
-                width: 52vw;
-                height: 30vw;
-                max-width: 700px;
-                max-height: 400px;
+                width: 47vw;
+                height: 27vw;
+                max-width: 630px;
+                max-height: 360px;
                 padding-bottom: 10px;
             }
             &.introSlide0{
-                width: 40vw;
-                max-width: 500px;
+                width: 36vw;
+                max-width: 450px;
             }
             &.introSlide2{
-                height: 36vw;
-                max-height: 450px;
+                height: 32vw;
+                max-height: 400px;
             }
         }
         .iconLeft{
