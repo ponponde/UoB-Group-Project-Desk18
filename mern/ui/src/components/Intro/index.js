@@ -28,8 +28,8 @@ const Intro = (props) => {
     return (
        <div className="Intro" style={showIntro ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}  >
            <div className="IntroLogo" style={showLogo ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}>
-                <img src={logo_removebg} className="logo" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false)}} />
-                <img src={logoTxt_removebg} className="logoTxt" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false)}} />
+                <img src={logo_removebg} className="logo" onClick={() => {setShowLogo(false);setShowSlide(true); }} />
+                <img src={logoTxt_removebg} className="logoTxt" onClick={() => {setShowLogo(false);setShowSlide(true); }} />
                 <div><div className="btnText startText" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false)}}>START</div></div>
                 <div><div className="btnText tutorialText" onClick={() => {setShowLogo(false);setShowSlide(true); }}>TUTORIAL</div></div>
            </div>

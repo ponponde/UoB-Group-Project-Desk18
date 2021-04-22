@@ -15,26 +15,6 @@
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-// @keyframes shakeLarge_logo {
-//     0% { width: 16vw; height: 16vw; }
-//     100% { width: 24vw; height: 24vw; }
-// }
-
-// @keyframes shakeLarge_logoText {
-//     0% { width: 40vw; height: 6vw; }
-//     100% { width: 60vw; height: 9vw; }
-// }
-
-// @keyframes finalLarge_logo {
-//     0% { width: 24vw; height: 24vw; }
-//     100% { width: 32vw; height: 32vw; }
-// }
-
-// @keyframes finalLarge_logoText {
-//     0% { width: 60vw; height: 9vw; }
-//     100% { width: 80vw; height: 12vw; }
-// }
-
 @keyframes opening {
     0% { opacity: 0;}
     100% { opacity: 1; }
@@ -44,15 +24,6 @@
     0%{transform: scale(1,1);}
     100%{transform: scale(1.05,1.05);}
 }
-
-// @keyframes flicker {
-// 	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-// 		opacity: .99;
-// 	}
-// 	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-// 		opacity: 0.4;
-// 	}
-// }
 
 @keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
@@ -89,6 +60,7 @@
     }
 
     .btnText{
+        user-select: none;
         cursor: pointer;
         transition: 1s;
         margin: 0 auto;
@@ -127,6 +99,7 @@
         align-items: center;
         flex-direction: column;
         .logo{
+            user-select: none;
             animation: bounce 2s ease;
             cursor: pointer;
             transition: 1s;
@@ -141,6 +114,7 @@
             }
         }
         .logoTxt{
+            user-select: none;
             cursor: pointer;
             transition: 1s;
             box-sizing: border-box;
@@ -149,12 +123,6 @@
             @include flexCenter;
             align-items: center;
         }
-        .startText{
-            &:hover{
-                // animation: enlarge 2s;
-            }
-        }
-        
     }
 
     .Slide{
@@ -170,10 +138,7 @@
             @include flexCenter;
             align-items: center;
             text-align: center;
-             height: 90vh;
-            // line-height: 40vw;
-            // min-height: 700px;
-            // min-width: 700px;
+            height: 90vh;
             background: #244949;
             overflow: hidden;
             @include flexCenter;
@@ -187,24 +152,24 @@
         .introSlide{
             box-sizing: border-box;
             margin: 0 auto;
-            width: 50vw;
-            height: 36vw;
-            max-width: 730px;
-            max-height: 450px;
+            width: 40vw;
+            height: 30vw;
+            max-width: 600px;
+            max-height: 360px;
             &.logoSlide{
-                width: 47vw;
-                height: 27vw;
-                max-width: 630px;
-                max-height: 360px;
+                width: 38vw;
+                height: 22vw;
+                max-width: 520px;
+                max-height: 290px;
                 padding-bottom: 10px;
             }
             &.introSlide0{
-                width: 36vw;
-                max-width: 450px;
+                width: 30vw;
+                max-width: 360px;
             }
             &.introSlide2{
-                height: 32vw;
-                max-height: 400px;
+                height: 24vw;
+                max-height: 320px;
             }
         }
         .iconLeft{
@@ -226,9 +191,10 @@
             z-index: 300;
         }
         .btnSkip{
+            user-select: none;
             position: absolute;
             left: 50%;
-            bottom: 15vh;
+            bottom: 12vh;
             transform: translate(-50%,-50%);
             cursor: pointer;
             transition: 1s;
