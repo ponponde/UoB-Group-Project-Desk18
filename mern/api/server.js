@@ -3,15 +3,16 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const PORT = 8080;
-const connection = "mongodb://mongo:27017/mongo-test";
+const connection = "mongodb://localhost:27017/mongo-test";
 
 app.use(cors());
-// parse requests of content-type - application/json
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./models");
 const Role = db.role;
+
 
 db.mongoose
     .connect(connection, {
@@ -52,18 +53,15 @@ function initial() {
         }
     });
 }
+
+const mapinforouter = require("./routes/mapinfo.routes")
+
+app.use('/mapinfo', mapinforouter);
+
 require("./routes/auth.routes")(app);
 require("./routes/user.routes")(app);
 require("./routes/map.routes")(app);
 require("./routes/forum.route")(app);
-
-// app.listen(PORT, function () {
-//     console.log(`Listening on ${PORT}`);
-
-//     connectDb().then(() => {
-//         console.log("MongoDb connected");
-//     });
-// });
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
