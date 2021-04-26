@@ -8,6 +8,7 @@ module.exports = function (app) {
 
     app.get("/api/map/total", controller.totalMap);
 
+    app.get("/api/map/mapInfo/:id", controller.mapInfo);
     //-----example
     app.get("/api/example", E_controller.getData);
     app.post("/api/example", E_controller.storeData);
