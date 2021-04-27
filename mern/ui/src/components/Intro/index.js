@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Intro.scss";
 import logo_removebg from "../../img/logo_removebg.png";
 import logoTxt_removebg from "../../img/logoTxt_removebg.png";
@@ -18,19 +18,21 @@ const Intro = (props) => {
     const [showLogo, setShowLogo] = useState(true);
     const [showSlide, setShowSlide] = useState(false);
 
+    
+
     const carouselRef = React.createRef();
 
     const handleNext = () => carouselRef.current.next();
 
     const handlePrev = () => carouselRef.current.prev();
 
-    const { visible } = props;
+    const {  } = props;
     return (
        <div className="Intro" style={showIntro ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}  >
            <div className="IntroLogo" style={showLogo ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}>
                 <img src={logo_removebg} className="logo" onClick={() => {setShowLogo(false);setShowSlide(true); }} />
                 <img src={logoTxt_removebg} className="logoTxt" onClick={() => {setShowLogo(false);setShowSlide(true); }} />
-                <div><div className="btnText startText" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false)}}>START</div></div>
+                <div><div className="btnText startText" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false);}}>START</div></div>
                 <div><div className="btnText tutorialText" onClick={() => {setShowLogo(false);setShowSlide(true); }}>TUTORIAL</div></div>
            </div>
            <div className="Slide" style={showSlide ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}>
@@ -58,7 +60,7 @@ const Intro = (props) => {
                     </div>
                </Carousel>
                <RightOutlined className="iconRight" onClick={handleNext}/>
-               <div><div className="btnSkip" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false)}}>SKIP AND START</div></div>
+               <div><div className="btnSkip" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false);}}>SKIP AND START</div></div>
            </div>
        </div>
     );

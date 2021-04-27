@@ -20,6 +20,7 @@ const dd = require("../../data/covid/0308.json");
 const apiUrl = `http://localhost:8080`;
 
 function App(props) {
+    const [isMap, setIsMap] = React.useState(true);
     const [place, setPlace] = React.useState();
     const [position, setPosition] = React.useState({});
     const [isShow, setShow] = React.useState(false);
@@ -107,11 +108,13 @@ function App(props) {
         "TotalDeaths",
         "TotalRecovered",
     ];
+
+    
     return (
         <div className="App">
 
             {isLogin ? null : <Intro />}
-            <MusicPlayer/>
+            <MusicPlayer isMap={isMap}/>
 
             <NavBar />
             <StatisticPanel data={countryRecord} />
