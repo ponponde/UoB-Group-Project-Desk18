@@ -1,0 +1,225 @@
+
+@import "../../common.scss";
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes opening {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+}
+
+@keyframes enlarge {
+    0%{transform: scale(1,1);}
+    100%{transform: scale(1.05,1.05);}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.Intro{
+    h1{
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+        color: #fff;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    opacity: 1;
+    z-index: 200;
+    transition: 1s;
+    @include flexCenter;
+    align-items: center;
+    &.showIntro{
+        opacity: 1;
+        visibility: visible;
+    }
+    &.closeIntro{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .btnText{
+        user-select: none;
+        cursor: pointer;
+        transition: 1s;
+        margin: 0 auto;
+        @include flexCenter;
+        // text-decoration: underline;
+        font-weight: 400;
+        font-size: 20px;
+        position: relative;
+        color: #fff;
+        &:after{
+            content:"";
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s;
+          }
+        &:hover:after{
+            width: 100%;
+          }
+    }   
+
+    .IntroLogo{
+        transition: 0.5s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        animation: opening 1.5s 0s linear;
+        @include flexCenter;
+        align-items: center;
+        flex-direction: column;
+        .logo{
+            user-select: none;
+            animation: bounce 2s ease;
+            cursor: pointer;
+            transition: 1s;
+            box-sizing: border-box;
+            width: 16vw;
+            height: 16vw;
+            margin: 0 auto;
+            @include flexCenter;
+            align-items: center;
+            &:hover{
+                animation: bounce 2s ease infinite;
+            }
+        }
+        .logoTxt{
+            user-select: none;
+            cursor: pointer;
+            transition: 1s;
+            box-sizing: border-box;
+            width: 42vw;
+            height: 5vw;
+            @include flexCenter;
+            align-items: center;
+        }
+    }
+
+    .Slide{
+        transition: 0.5s;
+        transition: 0.5s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        .ant-carousel .slick-slide {
+            @include flexCenter;
+            align-items: center;
+            text-align: center;
+            height: 90vh;
+            background: #244949;
+            overflow: hidden;
+            @include flexCenter;
+            align-items: center;
+        }
+        .slideTextBox{
+            padding-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .introSlide{
+            box-sizing: border-box;
+            margin: 0 auto;
+            width: 40vw;
+            height: 30vw;
+            max-width: 600px;
+            max-height: 360px;
+            &.logoSlide{
+                width: 38vw;
+                height: 22vw;
+                max-width: 520px;
+                max-height: 290px;
+                padding-bottom: 10px;
+            }
+            &.introSlide0{
+                width: 30vw;
+                max-width: 360px;
+            }
+            &.introSlide2{
+                height: 24vw;
+                max-height: 320px;
+            }
+        }
+        .iconLeft{
+            position: absolute;
+            left: 10vw;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #fff;
+            z-index: 300;
+        }
+        .iconRight{
+            position: absolute;
+            right: 10vw;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #fff;
+            z-index: 300;
+        }
+        .btnSkip{
+            user-select: none;
+            position: absolute;
+            left: 50%;
+            bottom: 12vh;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+            transition: 1s;
+            font-weight: 400;
+            font-size: 20px;
+            color: #fff;
+            &:after{
+                content:"";
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all 0.3s;
+            }
+            &:hover:after{
+                width: 100%;
+            }
+        }
+    }
+
+    
+
+    
+    
+}

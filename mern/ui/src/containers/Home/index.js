@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Intro from "../../components/Intro";
 import InfoDrawer from "../../components/InfoDrawer";
 import World from "@svg-maps/world";
 import { SVGMap } from "react-svg-map";
@@ -115,6 +116,7 @@ function App() {
     ];
     return (
         <div className="App">
+            <Intro/>
             <NavBar />
             <StatisticPanel data={countryRecord} />
             {/* {globalData ? (
