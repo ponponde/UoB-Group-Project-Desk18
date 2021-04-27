@@ -7,6 +7,7 @@ import Editor from "../Editor";
 import * as ep from "../../Endpoint";
 import * as fetch from "../../utils/fetch";
 import { setPostData } from "../../store/action";
+import { formatName } from "../../utils/mockData";
 
 const SideForum = (props) => {
     const currentCountry = useSelector((state) => state.currentCountry);
@@ -22,7 +23,7 @@ const SideForum = (props) => {
 
     return (
         <Drawer
-            title={`You are in ${currentCountry}`}
+            title={`You are in ${formatName(currentCountry)}`}
             width={720}
             onClose={() => props.close && props.close()}
             visible={props.visible}

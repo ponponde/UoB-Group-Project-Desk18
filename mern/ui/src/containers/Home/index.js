@@ -12,6 +12,7 @@ import NavBar from "../../components/NavBar";
 import { Button } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import StatisticPanel from "../../components/StatisticPanel";
+import RankingList from "../../components/RankingList";
 import { setCurrentCountry } from "../../store/action";
 const GB = require("../../data/travel/gb.json");
 const dd = require("../../data/covid/0308.json");
@@ -110,6 +111,9 @@ function App(props) {
             {isLogin ? null : <Intro />}
             <NavBar />
             <StatisticPanel data={countryRecord} />
+            <div className="rank_list">
+                <RankingList data={countryRecord} />
+            </div>
             <div className="main_map">
                 <SVGMap
                     map={World}
@@ -130,6 +134,7 @@ function App(props) {
                     </ul>
                 </div>
             ) : null}
+
             <div className="footer">
                 <Button type="primary" onClick={() => showDrawer("Details")}>
                     Details

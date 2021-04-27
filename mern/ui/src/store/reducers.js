@@ -2,7 +2,7 @@ import * as types from "./types";
 const initialState = {
     user: {},
     isLogin: false,
-    currentCountry: "globle",
+    currentCountry: "Globle",
     showForum: false,
     currentCountry_code: "",
     post_data: [],

@@ -30,7 +30,7 @@ const Post = (props) => {
     ];
     const posts = (data) => {
         const arr = [];
-        data.forEach((p, i) => {
+        data?.forEach((p, i) => {
             arr.push(
                 <Comment
                     actions={actions}

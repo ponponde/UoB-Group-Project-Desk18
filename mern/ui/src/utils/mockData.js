@@ -1,6 +1,12 @@
-const getRandomNum = (max) => {
-    return Math.floor(Math.random() * max);
+import { name } from "../data/countryName";
+export const getRandomNum = (max, min) => {
+    if (!min) {
+        min = 0;
+        max--;
+    }
+    return Math.floor(Math.random() * (max - min + 1) + min);
 };
+
 export const getMockName = () => {
     const mockName = [
         "spoonguyuk",
@@ -32,4 +38,17 @@ export const mockPhoto = () => {
 
 export const getMockLike = () => {
     return getRandomNum(500);
+};
+
+export const formatName = (code) => {
+    if (code == "Globle") {
+        return code;
+    }
+    let res = "";
+    name.forEach((n) => {
+        if (n.ISO2 == code.toUpperCase()) {
+            res = n.Country;
+        }
+    });
+    return res;
 };
