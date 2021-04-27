@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Intro from "../../components/Intro";
+import MusicPlayer from "../../components/MusicPlayer";
 import InfoDrawer from "../../components/InfoDrawer";
 import World from "@svg-maps/world";
 import { SVGMap } from "react-svg-map";
@@ -116,6 +117,7 @@ function App() {
     ];
     return (
         <div className="App">
+            <MusicPlayer/>
             <Intro/>
             <NavBar />
             <StatisticPanel data={countryRecord} />
