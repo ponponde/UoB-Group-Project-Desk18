@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Intro from "../../components/Intro";
+import MusicPlayer from "../../components/MusicPlayer";
 import InfoDrawer from "../../components/InfoDrawer";
 import World from "@svg-maps/world";
 import * as ep from "../../Endpoint";
@@ -108,7 +109,10 @@ function App(props) {
     ];
     return (
         <div className="App">
+
             {isLogin ? null : <Intro />}
+            <MusicPlayer/>
+
             <NavBar />
             <StatisticPanel data={countryRecord} />
             <div className="rank_list">
