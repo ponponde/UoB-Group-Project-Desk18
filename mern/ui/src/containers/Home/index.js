@@ -38,7 +38,7 @@ function App(props) {
     async function retrieveUserData() {
         const TOKEN = localStorage.getItem(ep.SESSION_KEY);
         if (TOKEN) {
-            const userdata = fetch.getUserInfo();
+            const userdata = await fetch.getUserInfo();
             dispatch(setUser(userdata));
         }
     }

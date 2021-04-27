@@ -6,7 +6,6 @@ import { DislikeOutlined, LikeOutlined, DislikeFilled, LikeFilled } from "@ant-d
 import Reply from "../Reply";
 import { Form, Button, List, Input } from "antd";
 import * as mockData from "../../utils/mockData";
-import Editor from "../Editor";
 const { TextArea } = Input;
 const Post = (props) => {
     const [likes, setLikes] = useState(0);
@@ -20,12 +19,6 @@ const Post = (props) => {
         setAction("liked");
     };
 
-    const dislike = () => {
-        setLikes(0);
-        setDislikes(1);
-        setAction("disliked");
-    };
-
     const actions = [
         <Tooltip key="comment-basic-like" title="Like">
             <span onClick={like}>
@@ -35,22 +28,29 @@ const Post = (props) => {
         </Tooltip>,
         <span key="comment-basic-reply-to">Reply to</span>,
     ];
-
-    return (
-        <>
-            {post_data?.map((p) => {
+    const posts = (data) => {
+        const arr = [];
+        data.forEach((p, i) => {
+            arr.push(
                 <Comment
                     actions={actions}
-                    author={<a>{p.author}</a>}
-                    avatar={<Avatar src={mockData.mockPhoto()} alt={p.author} />}
-                    content={<p>{p.content}</p>}
+                    author={<a>{p?.author}</a>}
+                    avatar={<Avatar src={mockData.mockPhoto()} alt={p?.author} />}
+                    content={<p>{p?.content}</p>}
                     datetime={
-                        <Tooltip title={moment(p.date).format("YYYY-MM-DD HH:mm:ss")}>
+                        <Tooltip title={moment(p?.date).format("YYYY-MM-DD HH:mm:ss")}>
                             <span>{moment().fromNow()}</span>
                         </Tooltip>
                     }
-                />;
-            })}
+                />
+            );
+        });
+        return arr;
+    };
+
+    return (
+        <>
+            {posts(post_data)}
             <Comment
                 actions={actions}
                 author={<a>{mockData.getMockName()}</a>}

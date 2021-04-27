@@ -14,11 +14,12 @@ const SideForum = (props) => {
     React.useEffect(() => {
         getData();
     }, [currentCountry]);
+
     const getData = async () => {
         const res = await fetch.getForumByCountry(currentCountry);
         dispatch(setPostData(res));
-        console.log("getForumByCountry", res);
     };
+
     return (
         <Drawer
             title={`You are in ${currentCountry}`}

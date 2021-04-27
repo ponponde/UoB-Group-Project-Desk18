@@ -23,13 +23,9 @@ const LoginModal = (props) => {
     const [form] = Form.useForm();
     const dispatch = useDispatch();
     const onFinish = (values) => {
-        console.log(values);
-        //   setUser(values);
-
         fetch
             .login(values)
             .then((r) => {
-                console.log(1111, r);
                 if (r.status == 200) {
                     dispatch(setUser(r.data));
                     close();

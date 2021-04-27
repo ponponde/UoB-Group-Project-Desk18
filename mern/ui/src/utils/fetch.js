@@ -17,7 +17,6 @@ export const login = (values, callback) => {
 export const signup = (values, callback) => {
     return axios.post(ep.SIGNUP_API, values).then(
         (response) => {
-            console.log(response);
             login(values);
             callback && callback();
             return response;
@@ -37,7 +36,6 @@ export const getUserInfo = () => {
         data: { token: TOKEN },
     }).then(
         (response) => {
-            console.log(999999, response.data);
             localStorage.setItem(ep.SESSION_KEY, response.data.accessToken);
             return response.data;
         },
@@ -50,11 +48,26 @@ export const getUserInfo = () => {
 export const getForumByCountry = (country_code) => {
     return axios({
         method: "GET",
-        url: "http://localhost:8080/api/forum/${country_code}",
+        url: `http://localhost:8080/api/forum/${country_code}`,
     }).then(
         (response) => {
-            console.log(getForumByCountry, response.data);
-            //   localStorage.setItem(ep.SESSION_KEY, response.data.accessToken);
+            console.log("getForumByCountry", response.data);
+            return response.data;
+        },
+        (error) => {
+            console.log(error);
+        }
+    );
+};
+
+export const sentPost = (data) => {
+    return axios({
+        method: "POST",
+        url: ep.FOURM_POST_API,
+        data,
+    }).then(
+        (response) => {
+            console.log("sentPost", response.data);
             return response.data;
         },
         (error) => {

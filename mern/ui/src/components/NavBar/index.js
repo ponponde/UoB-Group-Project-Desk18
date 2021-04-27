@@ -61,7 +61,7 @@ const NavBar = (props) => {
                         </div>
                         <div className="navBtn">
                             <Link to="Game">
-                                <Button>Game</Button>
+                                <Button>Profolio</Button>
                             </Link>
                         </div>
                         <div className="navBtn">
