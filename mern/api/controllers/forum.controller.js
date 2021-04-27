@@ -45,7 +45,7 @@ exports.getDataByCountry = (req,res) => {
 
 exports.getDataByMember = (req,res) => {
    forum_model.find({
-      userId: req.params.member,
+      author_id: req.params.author_id,
    }, '-_id userId country author content date')
    .exec((err,data) => {
       if (err) {
