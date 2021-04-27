@@ -5,10 +5,10 @@ import { useSelector, useDispatch } from "react-redux";
 import Post from "../Post";
 import Editor from "../Editor";
 const SideForum = (props) => {
-    React.useEffect(() => {
-        console.log(props);
-    }, [props]);
     const currentCountry = useSelector((state) => state.currentCountry);
+    React.useEffect(() => {
+        console.log(currentCountry);
+    }, [currentCountry]);
 
     return (
         <Drawer

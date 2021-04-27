@@ -1,6 +1,7 @@
 import * as types from "./types";
 
 export function setUser(user) {
+    console.log("setUser", user);
     return {
         type: types.SET_USER,
         data: user,
@@ -27,6 +28,7 @@ export const setShowForum = (v) => {
         data: v,
     };
 };
+
 // export function setDetailData(data, events) {
 //     return {
 //         type: types.UPDATE_DETAIL,

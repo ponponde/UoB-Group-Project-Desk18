@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Intro from "../../components/Intro";
 import InfoDrawer from "../../components/InfoDrawer";
 import World from "@svg-maps/world";
+import * as ep from "../../Endpoint";
+import * as fetch from "../../utils/fetch";
+import { setCountryCode, setUser } from "../../store/action";
 import { SVGMap } from "react-svg-map";
 import "./App.scss";
 import "react-svg-map/lib/index.css";
@@ -14,7 +17,7 @@ const GB = require("../../data/travel/gb.json");
 const dd = require("../../data/covid/0308.json");
 const apiUrl = `http://localhost:8080`;
 
-function App() {
+function App(props) {
     const [place, setPlace] = React.useState();
     const [position, setPosition] = React.useState({});
     const [isShow, setShow] = React.useState(false);
@@ -25,16 +28,22 @@ function App() {
     const [drawerData, setDrawerData] = useState({});
     const currentCountry = useSelector((state) => state.currentCountry);
     const dispatch = useDispatch();
+
     React.useEffect(() => {
-        console.log(1111, GB);
-        // const rowData = JSON.parse(dd);
         const gData = dd.Global;
         setGlobalData(gData);
         setCountryData(dd.Countries);
-        //   if (localStorage.getItem(ep.SESSION_KEY) != null) {
-        //    fetch.login
-        //   }
     }, []);
+    async function retrieveUserData() {
+        const TOKEN = localStorage.getItem(ep.SESSION_KEY);
+        if (TOKEN) {
+            const userdata = fetch.getUserInfo();
+            dispatch(setUser(userdata));
+        }
+    }
+    React.useEffect(() => {
+        retrieveUserData();
+    }, [props]);
     const showDrawer = (type) => {
         switch (type) {
             case "Details":
@@ -62,26 +71,8 @@ function App() {
         setOpenDrawer(true);
     };
 
-    //  React.useEffect(() => {
-    //      const res = axios.get(apiUrl + "/users");
-    //      //   this.setState({
-    //      //       users: res.data,
-    //      //   });
-
-    //      console.log("res.data", res.data);
-    //      //  fetchSummary().then((r) => {
-    //      //      const rowData = JSON.parse(r);
-    //      //      const gData = rowData.Global;
-    //      //      setGlobalData(gData);
-    //      //      setCountryData(rowData.Countries);
-    //      //  });
-    //  }, []);
     const setLocationID = (e) => {
-        //   const res = axios.get(apiUrl + "/api/test/all");
-        //   console.log("res.data", res.data);
-        //   console.log(e.target.id);
         let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
-        //   console.log(d);
         setCountryRecord(d[0]);
         //         Date: "2021-02-16T14:55:54.762Z"
         // ID: "c2d733a7-9e4b-48bb-b6c8-d2ce38761119"
@@ -92,13 +83,12 @@ function App() {
         // Slug: "united-states"
         // TotalConfirmed: 27694165
         // TotalDeaths: 486325
+
         dispatch(setCurrentCountry(e.target.id));
         setPlace(e.target.id);
         setShow(true);
     };
     const getScreenPosition = (e) => {
-        //   console.log(e);
-        //   console.log(e.screenX);
         const style = {
             left: e.screenX,
             top: e.screenY / 2,
@@ -119,12 +109,6 @@ function App() {
             <Intro/>
             <NavBar />
             <StatisticPanel data={countryRecord} />
-            {/* {globalData ? (
-                <div className="global">
-                    TotalConfirmed:{globalData.TotalConfirmed}, TotalDeaths: {globalData.TotalDeaths}, TotalRecovered:{" "}
-                    {globalData.TotalRecovered}
-                </div>
-            ) : null} */}
             <div className="main_map">
                 <SVGMap
                     map={World}

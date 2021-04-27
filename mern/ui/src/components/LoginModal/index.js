@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Input, Button, Modal } from "antd";
 import { setUser } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
+import * as ep from "../../Endpoint";
 import * as fetch from "../../utils/fetch";
 const layout = {
     labelCol: {
@@ -25,22 +26,20 @@ const LoginModal = (props) => {
         console.log(values);
         //   setUser(values);
 
-        fetch.login(values).then((r) => {
-            // console.log(1111, r.data);
-            dispatch(setUser(r.data));
-            close();
-        });
-        //    {
-        //       "username":"abc",
-        //       "email":"abc@gmail.com",
-        //       "password":"12345",
-        //       "roles":["user"]
-        //   }
+        fetch
+            .login(values)
+            .then((r) => {
+                console.log(1111, r);
+                if (r.status == 200) {
+                    dispatch(setUser(r.data));
+                    close();
+                }
+            })
+            .catch((err) => {
+                window.alert("Login failed, please try again");
+            });
     };
-    //  const AfterLogin = () => {
-    //      setUser();
-    //      close();
-    //  };
+
     const onReset = () => {
         form.resetFields();
     };
@@ -54,6 +53,7 @@ const LoginModal = (props) => {
     function setToken(userToken) {
         sessionStorage.setItem("token", JSON.stringify(userToken));
     }
+
     const saveToken = (userToken) => {
         localStorage.setItem("token", JSON.stringify(userToken));
         setToken(userToken.token);
@@ -95,7 +95,7 @@ const LoginModal = (props) => {
                             },
                         ]}
                     >
-                        <Input />
+                        <Input.Password />
                     </Form.Item>
                     <Form.Item {...tailLayout}>
                         <Button type="primary" htmlType="submit">
