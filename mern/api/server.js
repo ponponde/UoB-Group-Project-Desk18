@@ -55,6 +55,7 @@ function initial() {
 require("./routes/auth.routes")(app);
 require("./routes/user.routes")(app);
 require("./routes/map.routes")(app);
+require("./routes/forum.route")(app);
 
 // app.listen(PORT, function () {
 //     console.log(`Listening on ${PORT}`);
