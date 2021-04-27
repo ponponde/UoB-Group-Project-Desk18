@@ -30,21 +30,22 @@ const Post = (props) => {
     ];
     const posts = (data) => {
         const arr = [];
-        data?.forEach((p, i) => {
-            arr.push(
-                <Comment
-                    actions={actions}
-                    author={<a>{p?.author}</a>}
-                    avatar={<Avatar src={mockData.mockPhoto()} alt={p?.author} />}
-                    content={<p>{p?.content}</p>}
-                    datetime={
-                        <Tooltip title={moment(p?.date).format("YYYY-MM-DD HH:mm:ss")}>
-                            <span>{moment().fromNow()}</span>
-                        </Tooltip>
-                    }
-                />
-            );
-        });
+        data &&
+            data.forEach((p, i) => {
+                arr.push(
+                    <Comment
+                        actions={actions}
+                        author={<a>{p?.author}</a>}
+                        avatar={<Avatar src={mockData.mockPhoto()} alt={p?.author} />}
+                        content={<p>{p?.content}</p>}
+                        datetime={
+                            <Tooltip title={moment(p?.date).format("YYYY-MM-DD HH:mm:ss")}>
+                                <span>{moment().fromNow()}</span>
+                            </Tooltip>
+                        }
+                    />
+                );
+            });
         return arr;
     };
 
