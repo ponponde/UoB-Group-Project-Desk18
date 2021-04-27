@@ -42,3 +42,16 @@ exports.getDataByCountry = (req,res) => {
       res.status(200).send(data);
    });
 };
+
+exports.getDataByMember = (req,res) => {
+   forum_model.find({
+      userId: req.params.member,
+   }, '-_id userId country author content date')
+   .exec((err,data) => {
+      if (err) {
+         res.status(500).send({ message: err });
+         return;
+      }
+      res.status(200).send(data);
+   });
+}
