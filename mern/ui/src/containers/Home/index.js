@@ -27,6 +27,7 @@ function App(props) {
     const [openDrawer, setOpenDrawer] = useState(false);
     const [drawerData, setDrawerData] = useState({});
     const currentCountry = useSelector((state) => state.currentCountry);
+    const isLogin = useSelector((state) => state.isLogin);
     const dispatch = useDispatch();
 
     React.useEffect(() => {
@@ -106,7 +107,7 @@ function App(props) {
     ];
     return (
         <div className="App">
-            <Intro/>
+            {isLogin ? null : <Intro />}
             <NavBar />
             <StatisticPanel data={countryRecord} />
             <div className="main_map">

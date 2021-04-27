@@ -5,9 +5,16 @@ const initialState = {
     currentCountry: "globle",
     showForum: false,
     currentCountry_code: "",
+    post_data: [],
 };
 export function dataReducer(state = initialState, action) {
     switch (action.type) {
+        case types.SET_POST_DATA:
+            console.log("SET_POST_DATA", action.data);
+            return {
+                ...state,
+                post_data: action.data,
+            };
         case types.SET_USER:
             console.log("SET_USER", action.data);
             return {

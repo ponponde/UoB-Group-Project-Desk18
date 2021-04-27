@@ -46,3 +46,19 @@ export const getUserInfo = () => {
         }
     );
 };
+
+export const getForumByCountry = (country_code) => {
+    return axios({
+        method: "GET",
+        url: "http://localhost:8080/api/forum/${country_code}",
+    }).then(
+        (response) => {
+            console.log(getForumByCountry, response.data);
+            //   localStorage.setItem(ep.SESSION_KEY, response.data.accessToken);
+            return response.data;
+        },
+        (error) => {
+            console.log(error);
+        }
+    );
+};

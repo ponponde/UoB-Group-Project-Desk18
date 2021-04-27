@@ -4,12 +4,21 @@ import { Drawer, Form, Button, Col, Row, Input, Select, DatePicker } from "antd"
 import { useSelector, useDispatch } from "react-redux";
 import Post from "../Post";
 import Editor from "../Editor";
+import * as ep from "../../Endpoint";
+import * as fetch from "../../utils/fetch";
+import { setPostData } from "../../store/action";
+
 const SideForum = (props) => {
     const currentCountry = useSelector((state) => state.currentCountry);
+    const dispatch = useDispatch();
     React.useEffect(() => {
-        console.log(currentCountry);
+        getData();
     }, [currentCountry]);
-
+    const getData = async () => {
+        const res = await fetch.getForumByCountry(currentCountry);
+        dispatch(setPostData(res));
+        console.log("getForumByCountry", res);
+    };
     return (
         <Drawer
             title={`You are in ${currentCountry}`}

@@ -4,12 +4,12 @@ import "antd/dist/antd.css";
 // import "./index.css";
 import { Comment, Tooltip, List } from "antd";
 import moment from "moment";
-
+import * as mockData from "../../utils/mockData";
 const data = [
     {
         actions: [<span key="comment-list-reply-to-0">Reply to</span>],
-        author: "Han Solo",
-        avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+        author: mockData.getMockName(),
+        avatar: mockData.mockPhoto(),
         content: (
             <p>
                 We supply a series of design principles, practical patterns and high quality design resources (Sketch
@@ -24,8 +24,8 @@ const data = [
     },
     {
         actions: [<span key="comment-list-reply-to-0">Reply to</span>],
-        author: "Han Solo",
-        avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+        author: mockData.getMockName(),
+        avatar: mockData.mockPhoto(),
         content: (
             <p>
                 We supply a series of design principles, practical patterns and high quality design resources (Sketch
