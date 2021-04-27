@@ -12,7 +12,7 @@ const MusicPlayer = (props) => {
 
   const { isMap } = props;
   useEffect(() => {
-    audioTheme.volume = 0.8;
+    audioTheme.volume = 0.3;
     audioTheme.play();
     audioTheme.loop = true;
   });
@@ -34,9 +34,11 @@ const MusicPlayer = (props) => {
     },[]);
 
     let soundEffect = () => {
-        audioButton.play();
+      audioButton.volume = 0.7;
+      audioButton.play();
     }
     let soundEffect2 = () => {
+      audioButton2.volume = 0.7;
       audioButton2.play();
     }
 
