@@ -33,7 +33,7 @@ exports.getData = (req, res) => {
 exports.getDataByCountry = (req,res) => {
    forum_model.find({
       country: req.params.country,
-   }, '-_id userId country author content date')
+   }, '-_id userId country author content date').sort( { date: -1 } )
    .exec((err,data) => {
       if (err) {
          res.status(500).send({ message: err });
