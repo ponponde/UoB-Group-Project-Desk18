@@ -40,20 +40,20 @@ function initial() {
     });
 }
 
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== "test") {
     conn.connect()
-      .then(() => {
-          console.log("Successfully connect to MongoDB.");
-          initial();
-      })
-      .catch((err) => {
-          console.error("Connection error", err);
-          process.exit();
-      });
+        .then(() => {
+            console.log("Successfully connect to MongoDB.");
+            initial();
+        })
+        .catch((err) => {
+            console.error("Connection error", err);
+            process.exit();
+        });
 }
 
 require("./routes/auth.routes")(app);
-require("./routes/user.routes")(app);
+// require("./routes/user.routes")(app);
 require("./routes/map.routes")(app);
 require("./routes/forum.route")(app);
 
