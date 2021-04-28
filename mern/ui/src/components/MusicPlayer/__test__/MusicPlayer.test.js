@@ -8,6 +8,12 @@ import renderer from "react-test-renderer";
 
 afterEach(cleanup); 
 
+it("renders without crashing", ()=>{
+    const div = document.createElement("div");
+    ReactDOM.render(<MusicPlayer/>, div);
+});
+
+
 it("match snapshot", () => {
     const tree = renderer.create(<MusicPlayer/>).toJSON();
     expect(tree).toMatchSnapshot();
