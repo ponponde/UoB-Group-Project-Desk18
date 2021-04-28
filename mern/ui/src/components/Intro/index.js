@@ -28,39 +28,39 @@ const Intro = (props) => {
 
     const {  } = props;
     return (
-       <div className="Intro" style={showIntro ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}  >
+       <div className="Intro" data-testid="Intro" style={showIntro ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}  >
            <div className="IntroLogo" style={showLogo ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}>
-                <img src={logo_removebg} className="logo" onClick={() => {setShowLogo(false);setShowSlide(true); }} />
-                <img src={logoTxt_removebg} className="logoTxt" onClick={() => {setShowLogo(false);setShowSlide(true); }} />
-                <div><div className="btnText startText" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false);}}>START</div></div>
-                <div><div className="btnText tutorialText" onClick={() => {setShowLogo(false);setShowSlide(true); }}>TUTORIAL</div></div>
+                <img src={logo_removebg} data-testid="logo" className="logo" onClick={() => {setShowLogo(false);setShowSlide(true); }} />
+                <img src={logoTxt_removebg} data-testid="logoTxt" className="logoTxt" onClick={() => {setShowLogo(false);setShowSlide(true); }} />
+                <div><div className="btnText startText" data-testid="btnStart" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false);}}>START</div></div>
+                <div><div className="btnText tutorialText" data-testid="btnTutorial" onClick={() => {setShowLogo(false);setShowSlide(true); }}>TUTORIAL</div></div>
            </div>
            <div className="Slide" style={showSlide ? {visibility: "visible", opacity: 1 } : {visibility: "hidden", opacity: 0}}>
                 <LeftOutlined className="iconLeft" onClick={handlePrev}  />     
                 <Carousel ref={carouselRef}>
                     <div>
                         <img className="introSlide logoSlide" src={logoSlide}></img>
-                        <div className="slideTextBox"><h1 >COVIDSURVIVAL IS A PLATFORM FOR EVERYONE TO LEARNING THE INFROMATION OF COVID-19 AND SHARE YOUR THOUGHTS.</h1></div>
+                        <div className="slideTextBox"><h1 className="logoSlideText" >COVIDSURVIVAL IS A PLATFORM FOR EVERYONE TO LEARNING THE INFROMATION OF COVID-19 AND SHARE YOUR THOUGHTS</h1></div>
                     </div>
                     <div>
                         <img className="introSlide introSlide0" src={introSlide0}></img>
-                        <div className="slideTextBox"><h1 >THE GLOBAL STATICS ARE SHOWN ON THE TOP LEFT OF THE PAGE</h1></div>
+                        <div className="slideTextBox"><h1 className="slide0Text" >THE GLOBAL STATICS ARE SHOWN ON THE TOP LEFT OF THE PAGE</h1></div>
                     </div>
                     <div>
                         <img className="introSlide introSlide1" src={introSlide1}></img>
-                        <div className="slideTextBox"><h1 >ONE CLICK ON MAP FOR REAL-TIME OFFICIAL STATISTICS OF COVID-19</h1></div>
+                        <div className="slideTextBox"><h1 className="slide1Text" >ONE CLICK ON MAP FOR REAL-TIME OFFICIAL STATISTICS OF COVID-19</h1></div>
                     </div>
                     <div>
                         <img className="introSlide introSlide2" src={introSlide2}></img>
-                        <div className="slideTextBox"><h1 >FURTHER DETAILS OF TRAVEL POLICY AND NEWS ARE ON THE BOTTOM-LEFT OF THE PAGE.</h1></div>
+                        <div className="slideTextBox"><h1 className="slide2Text" >FURTHER DETAILS OF TRAVEL POLICY AND NEWS ARE ON THE BOTTOM-LEFT OF THE PAGE</h1></div>
                     </div>
                     <div>
                         <img className="introSlide introSlide3" src={introSlide3}></img>
-                        <div className="slideTextBox"><h1 >AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID.</h1></div>
+                        <div className="slideTextBox"><h1 className="slide3Text" >AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID</h1></div>
                     </div>
                </Carousel>
                <RightOutlined className="iconRight" onClick={handleNext}/>
-               <div><div className="btnSkip" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false);}}>SKIP AND START</div></div>
+               <div><div className="btnSkip" data-testid="btnSkip" onClick={() => {setShowIntro(false); setShowLogo(false); setShowSlide(false);}}>SKIP AND START</div></div>
            </div>
        </div>
     );
