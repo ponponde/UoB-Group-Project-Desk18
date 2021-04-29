@@ -3,7 +3,7 @@
 >！！！ The prior example is https://github.com/Team-Jag/Do-or-die-fitness-tracker 
 
 <p align="center">logo here</p>
-# <p align="center">CovidSurvival</p>
+<p align="center">_CovidSurvival_</p>
 ## 
 ## Introduction 
 
