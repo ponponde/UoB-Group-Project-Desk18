@@ -3,9 +3,9 @@
 >！！！ The prior example is https://github.com/Team-Jag/Do-or-die-fitness-tracker 
 
 <p align="center">logo here</p>
-<p align="center">_CovidSurvival_</p>
-## 
-## Introduction 
+<p align="center"><big><b>CovidSurvival</b></big></p>
+## Introduction
+>one sentence
 
 ### Abstract
 Motivation for the project, framing of the problem and a high-level overview of the system.  
