@@ -6,13 +6,8 @@ import Play from "./Play";
 import Pause from "./Pause";
 import theme from "../../music/themeMusic.mp3";
 import buttonSound from "../../music/button.mp3";
-import { Slider, InputNumber } from 'antd';
-
-
-import useAudio from './useAudio';
 
 function MusicPlayer() {
-//   const { curTime, duration, playing, setPlaying, setClickedTime } = useAudio();
 const [audioButton] = useState(new Audio(buttonSound));
 const [curTime, setCurTime] = useState();
 const [playing, setPlaying] = useState(true);
@@ -24,21 +19,19 @@ const finalVolume = muted ? 0 : (volume / 100) ** 2
 useEffect(() => {
     const audio = document.getElementById("audio");
        
-    // state setters wrappers
     const setAudioData = () => {
         setCurTime(audio.currentTime);
     }
 
     const setAudioTime = () => setCurTime(audio.currentTime);
      
-    // DOM listeners: update React state on DOM events
     audio.addEventListener("loadeddata", setAudioData);
 
     audio.addEventListener("timeupdate", setAudioTime);
     
     audio.volume = finalVolume;
     audio.loop = true;
-    // React state listeners: update DOM on React state changes
+    
     playing ? audio.play() : audio.pause();
 
     if (clickedTime && clickedTime !== curTime) {
