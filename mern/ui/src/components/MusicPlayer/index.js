@@ -37,6 +37,7 @@ useEffect(() => {
     audio.addEventListener("timeupdate", setAudioTime);
     
     audio.volume = finalVolume;
+    audio.loop = true;
     // React state listeners: update DOM on React state changes
     playing ? audio.play() : audio.pause();
 
