@@ -11,6 +11,7 @@ exports.signup = (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8),
+        points: 300,
     });
 
     user.save((err, user) => {
@@ -106,7 +107,6 @@ exports.signin = (req, res) => {
 };
 
 exports.getUserInfo = async (req, res) => {
-    console.log("getUserInfo", req.body.token);
     if (req.body.token) {
         let decoded;
         try {
