@@ -3,7 +3,7 @@
 >！！！ The prior example is https://github.com/Team-Jag/Do-or-die-fitness-tracker 
 
 <p align="center">logo here</p>
-<p align="center"><big><b>CovidSurvival</b></big></p>
+<p align="center"><big><b><font size='70'>CovidSurvival</font></b></big></p>
 ## Introduction
 >one sentence
 
