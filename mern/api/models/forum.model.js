@@ -7,6 +7,7 @@ const forum = mongoose.model(
         author: String,
         author_id: String,
         content: String,
+        likes: Number,
         date: Date,
     })
 );
