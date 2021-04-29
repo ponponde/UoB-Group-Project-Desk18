@@ -68,7 +68,7 @@ useEffect(() => {
   }
   
 
-
+  
   return (
     <div className="player MusicPlayer">
       <audio id="audio">
