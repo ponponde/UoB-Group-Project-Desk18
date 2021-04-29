@@ -107,11 +107,13 @@ function App(props) {
         "TotalDeaths",
         "TotalRecovered",
     ];
+
+    
     return (
         <div className="App">
 
             {isLogin ? null : <Intro />}
-            <MusicPlayer/>
+            <MusicPlayer />
 
             <NavBar />
             <StatisticPanel data={countryRecord} />

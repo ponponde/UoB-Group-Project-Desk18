@@ -1,0 +1,615 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="Intro"
+  data-testid="Intro"
+  style={
+    Object {
+      "opacity": 1,
+      "visibility": "visible",
+    }
+  }
+>
+  <div
+    className="IntroLogo"
+    style={
+      Object {
+        "opacity": 1,
+        "visibility": "visible",
+      }
+    }
+  >
+    <img
+      className="logo"
+      data-testid="logo"
+      onClick={[Function]}
+      src="logo_removebg.png"
+    />
+    <img
+      className="logoTxt"
+      data-testid="logoTxt"
+      onClick={[Function]}
+      src="logoTxt_removebg.png"
+    />
+    <div>
+      <div
+        className="btnText startText"
+        data-testid="btnStart"
+        onClick={[Function]}
+      >
+        START
+      </div>
+    </div>
+    <div>
+      <div
+        className="btnText tutorialText"
+        data-testid="btnTutorial"
+        onClick={[Function]}
+      >
+        TUTORIAL
+      </div>
+    </div>
+  </div>
+  <div
+    className="Slide"
+    style={
+      Object {
+        "opacity": 0,
+        "visibility": "hidden",
+      }
+    }
+  >
+    <span
+      aria-label="left"
+      className="anticon anticon-left iconLeft"
+      onClick={[Function]}
+      role="img"
+      tabIndex={-1}
+    >
+      <svg
+        aria-hidden="true"
+        data-icon="left"
+        fill="currentColor"
+        focusable="false"
+        height="1em"
+        viewBox="64 64 896 896"
+        width="1em"
+      >
+        <path
+          d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"
+        />
+      </svg>
+    </span>
+    <div
+      className="ant-carousel"
+    >
+      <div
+        className="slick-slider slick-initialized"
+        dir="ltr"
+      >
+        <div
+          className="slick-list"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={null}
+          onMouseMove={null}
+          onMouseUp={[Function]}
+          onTouchCancel={null}
+          onTouchEnd={[Function]}
+          onTouchMove={null}
+          onTouchStart={[Function]}
+          style={Object {}}
+        >
+          <div
+            className="slick-track"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            style={
+              Object {
+                "WebkitTransform": "translate3d(0px, 0px, 0px)",
+                "WebkitTransition": "",
+                "msTransform": "translateX(0px)",
+                "opacity": 1,
+                "transform": "translate3d(0px, 0px, 0px)",
+                "transition": "",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              className="slick-slide slick-cloned"
+              data-index={-1}
+              onClick={[Function]}
+              style={
+                Object {
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide3"
+                    src="introSlide3.gif"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={false}
+              className="slick-slide slick-active slick-current"
+              data-index={0}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide logoSlide"
+                    src="logoSlide.png"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      COVIDSURVIVAL IS A PLATFORM FOR EVERYONE TO LEARNING THE INFROMATION OF COVID-19 AND SHARE YOUR THOUGHTS
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide"
+              data-index={1}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide0"
+                    src="introSlide0.png"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      THE GLOBAL STATICS ARE SHOWN ON THE TOP LEFT OF THE PAGE
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide"
+              data-index={2}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide1"
+                    src="introSlide1.png"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      ONE CLICK ON MAP FOR REAL-TIME OFFICIAL STATISTICS OF COVID-19
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide"
+              data-index={3}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide2"
+                    src="introSlide2.gif"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      FURTHER DETAILS OF TRAVEL POLICY AND NEWS ARE ON THE BOTTOM-LEFT OF THE PAGE
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide"
+              data-index={4}
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide3"
+                    src="introSlide3.gif"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide slick-cloned"
+              data-index={5}
+              onClick={[Function]}
+              style={
+                Object {
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide logoSlide"
+                    src="logoSlide.png"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      COVIDSURVIVAL IS A PLATFORM FOR EVERYONE TO LEARNING THE INFROMATION OF COVID-19 AND SHARE YOUR THOUGHTS
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide slick-cloned"
+              data-index={6}
+              onClick={[Function]}
+              style={
+                Object {
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide0"
+                    src="introSlide0.png"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      THE GLOBAL STATICS ARE SHOWN ON THE TOP LEFT OF THE PAGE
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide slick-cloned"
+              data-index={7}
+              onClick={[Function]}
+              style={
+                Object {
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide1"
+                    src="introSlide1.png"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      ONE CLICK ON MAP FOR REAL-TIME OFFICIAL STATISTICS OF COVID-19
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide slick-cloned"
+              data-index={8}
+              onClick={[Function]}
+              style={
+                Object {
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide2"
+                    src="introSlide2.gif"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      FURTHER DETAILS OF TRAVEL POLICY AND NEWS ARE ON THE BOTTOM-LEFT OF THE PAGE
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden={true}
+              className="slick-slide slick-cloned"
+              data-index={9}
+              onClick={[Function]}
+              style={
+                Object {
+                  "width": 0,
+                }
+              }
+              tabIndex="-1"
+            >
+              <div>
+                <div
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <img
+                    className="introSlide introSlide3"
+                    src="introSlide3.gif"
+                  />
+                  <div
+                    className="slideTextBox"
+                  >
+                    <h1>
+                      AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul
+          className="slick-dots slick-dots-bottom"
+          onMouseEnter={null}
+          onMouseLeave={null}
+          onMouseOver={null}
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <li
+            className="slick-active"
+          >
+            <button
+              onClick={[Function]}
+            >
+              1
+            </button>
+          </li>
+          <li
+            className=""
+          >
+            <button
+              onClick={[Function]}
+            >
+              2
+            </button>
+          </li>
+          <li
+            className=""
+          >
+            <button
+              onClick={[Function]}
+            >
+              3
+            </button>
+          </li>
+          <li
+            className=""
+          >
+            <button
+              onClick={[Function]}
+            >
+              4
+            </button>
+          </li>
+          <li
+            className=""
+          >
+            <button
+              onClick={[Function]}
+            >
+              5
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <span
+      aria-label="right"
+      className="anticon anticon-right iconRight"
+      onClick={[Function]}
+      role="img"
+      tabIndex={-1}
+    >
+      <svg
+        aria-hidden="true"
+        data-icon="right"
+        fill="currentColor"
+        focusable="false"
+        height="1em"
+        viewBox="64 64 896 896"
+        width="1em"
+      >
+        <path
+          d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"
+        />
+      </svg>
+    </span>
+    <div>
+      <div
+        className="btnSkip"
+        data-testid="btnSkip"
+        onClick={[Function]}
+      >
+        SKIP AND START
+      </div>
+    </div>
+  </div>
+</div>
+`;
