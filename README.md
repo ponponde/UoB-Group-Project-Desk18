@@ -1,6 +1,6 @@
 //logo here （居中！！）
 //
-# **CovidSurvival**
+# <p align="center">**CovidSurvival**</p>
 ### Members
 
 | Name             | Email                   |
