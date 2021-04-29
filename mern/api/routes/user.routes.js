@@ -14,4 +14,11 @@ module.exports = function (app) {
     //  app.get("/api/test/mod", [authJwt.verifyToken, authJwt.isModerator], controller.moderatorBoard);
 
     //  app.get("/api/test/admin", [authJwt.verifyToken, authJwt.isAdmin], controller.adminBoard);
+
+   //  app.get("/api/point", [authJwt.verifyToken], controller.userPoint);
+    app.get("/api/point",  controller.userPoint);
+
+    //  app.get("/api/test/mod", [authJwt.verifyToken, authJwt.isModerator], controller.moderatorBoard);
+
+   //  app.get("/api/test/admin", [authJwt.verifyToken, authJwt.isAdmin], controller.adminBoard);
 };

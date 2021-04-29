@@ -10,6 +10,8 @@ import SignupModal from "../SignupModal";
 import logo from "../../img/logo.png";
 import logoTxt from "../../img/logoTxt.png";
 import { logout } from "../../store/action";
+import { formatName } from "../../utils/mockData";
+import { setCurrentCountry } from "../../store/action";
 const NavBar = (props) => {
     const [showLogin, setShowLogin] = React.useState(false);
     const [showSignup, setShowSignup] = React.useState(false);
@@ -21,16 +23,25 @@ const NavBar = (props) => {
     const handleLogout = () => {
         dispatch(logout());
     };
+    const backToWorld = () => {
+        dispatch(setCurrentCountry("Globle"));
+    };
     //  const showForum = useSelector((state) => state.showForum);
+
     return (
         <div className="navBar">
-            <div className="groupLogo">
+            <div
+                className="groupLogo"
+                onClick={() => {
+                    backToWorld();
+                }}
+            >
                 <img src={logo} alt="logo" style={{ width: "30px", height: "30px", marginRight: "10px" }} />
                 <img src={logoTxt} alt="logoTxt" style={{ width: "150px", height: "20px" }} />
             </div>
             <div className="searchInput">
                 <input
-                    value={currentCountry}
+                    value={formatName(currentCountry)}
                     onChange={(e) => {
                         setKeyword(e.currentTarget.value);
                     }}
@@ -61,7 +72,7 @@ const NavBar = (props) => {
                         </div>
                         <div className="navBtn">
                             <Link to="Game">
-                                <Button>Game</Button>
+                                <Button>Profolio</Button>
                             </Link>
                         </div>
                         <div className="navBtn">

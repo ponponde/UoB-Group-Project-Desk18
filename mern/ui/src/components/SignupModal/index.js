@@ -19,31 +19,9 @@ const tailLayout = {
 
 const SignupModal = (props) => {
     const [form] = Form.useForm();
-    const dispatch = useDispatch();
     const onFinish = (values) => {
         console.log(values);
         fetch.signup(values, close);
-        console.log("signup", values);
-        //   axios.post(url.LOGIN_API, values).then(
-        //       (response) => {
-        //           console.log(response);
-        //           //  localStorage.setItem("token", response.data.accessToken);
-        //       },
-        //       (error) => {
-        //           console.log(error);
-        //       }
-        //   );
-
-        //    {
-        //       "username":"abc",
-        //       "email":"abc@gmail.com",
-        //       "password":"12345",
-        //       "roles":["user"]
-        //   }
-    };
-
-    const onReset = () => {
-        form.resetFields();
     };
 
     const onFill = () => {
@@ -53,18 +31,7 @@ const SignupModal = (props) => {
             password: "12345",
         });
     };
-    //  function setToken(userToken) {
-    //      sessionStorage.setItem("token", JSON.stringify(userToken));
-    //  }
-    //  const saveToken = (userToken) => {
-    //      localStorage.setItem("token", JSON.stringify(userToken));
-    //      setToken(userToken.token);
-    //  };
-    //  function getToken() {
-    //      const tokenString = sessionStorage.getItem("token");
-    //      const userToken = JSON.parse(tokenString);
-    //      return userToken?.token;
-    //  }
+
     const { visible, close } = props;
     return (
         <>
@@ -108,7 +75,7 @@ const SignupModal = (props) => {
                             },
                         ]}
                     >
-                        <Input />
+                        <Input.Password />
                     </Form.Item>
                     <Form.Item {...tailLayout}>
                         <Button type="primary" htmlType="submit">
