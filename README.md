@@ -4,6 +4,9 @@
 
 <p align="center">logo here</p>
 # **CovidSurvival**
+
+<h1 align="center"> Do or Die Fitness Tracker </h1>
+
 ## Introduction
 > one sentence
 
