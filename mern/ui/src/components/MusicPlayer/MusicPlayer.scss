@@ -1,5 +1,32 @@
+@import "../../common.scss";
 .MusicPlayer{
-    opacity: 0;
-    // position: fixed;
+    opacity: 1;
+    position: absolute;
     z-index: 300;
+    top: 88%;
+    left: 90%;
 }
+
+  .player__button {
+    width: fit-content;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+      svg {
+        color: green;
+      }
+    }
+
+    svg {
+      font-size: 4em;
+      color: $primary;
+    }
+  }
+
+  

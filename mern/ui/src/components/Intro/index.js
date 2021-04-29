@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Intro.scss";
 import logo_removebg from "../../img/logo_removebg.png";
 import logoTxt_removebg from "../../img/logoTxt_removebg.png";
-import logoSlide from "../../img/logoSlide.png"
+import logoSlide from "../../img/logoSlide.png";
 import introSlide0 from "../../img/introSlide0.png";
 import introSlide1 from "../../img/introSlide1.png";
 import introSlide2 from "../../img/introSlide2.gif";

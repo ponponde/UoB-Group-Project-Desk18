@@ -114,7 +114,7 @@ function App(props) {
         <div className="App">
 
             {isLogin ? null : <Intro />}
-            <MusicPlayer isMap={isMap}/>
+            <MusicPlayer/>
 
             <NavBar />
             <StatisticPanel data={countryRecord} />
