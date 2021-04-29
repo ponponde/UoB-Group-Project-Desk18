@@ -3,7 +3,7 @@
 >！！！ The prior example is https://github.com/Team-Jag/Do-or-die-fitness-tracker 
 
 <p align="center">logo here</p>
-# <big>CovidSurvival</big>
+# **CovidSurvival**
 ## Introduction
 > one sentence
 
