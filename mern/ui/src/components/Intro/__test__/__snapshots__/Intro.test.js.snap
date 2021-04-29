@@ -147,9 +147,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide3Text"
-                    >
+                    <h1>
                       AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID
                     </h1>
                   </div>
@@ -186,9 +184,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="logoSlideText"
-                    >
+                    <h1>
                       COVIDSURVIVAL IS A PLATFORM FOR EVERYONE TO LEARNING THE INFROMATION OF COVID-19 AND SHARE YOUR THOUGHTS
                     </h1>
                   </div>
@@ -225,9 +221,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide0Text"
-                    >
+                    <h1>
                       THE GLOBAL STATICS ARE SHOWN ON THE TOP LEFT OF THE PAGE
                     </h1>
                   </div>
@@ -264,9 +258,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide1Text"
-                    >
+                    <h1>
                       ONE CLICK ON MAP FOR REAL-TIME OFFICIAL STATISTICS OF COVID-19
                     </h1>
                   </div>
@@ -303,9 +295,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide2Text"
-                    >
+                    <h1>
                       FURTHER DETAILS OF TRAVEL POLICY AND NEWS ARE ON THE BOTTOM-LEFT OF THE PAGE
                     </h1>
                   </div>
@@ -342,9 +332,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide3Text"
-                    >
+                    <h1>
                       AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID
                     </h1>
                   </div>
@@ -380,9 +368,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="logoSlideText"
-                    >
+                    <h1>
                       COVIDSURVIVAL IS A PLATFORM FOR EVERYONE TO LEARNING THE INFROMATION OF COVID-19 AND SHARE YOUR THOUGHTS
                     </h1>
                   </div>
@@ -418,9 +404,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide0Text"
-                    >
+                    <h1>
                       THE GLOBAL STATICS ARE SHOWN ON THE TOP LEFT OF THE PAGE
                     </h1>
                   </div>
@@ -456,9 +440,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide1Text"
-                    >
+                    <h1>
                       ONE CLICK ON MAP FOR REAL-TIME OFFICIAL STATISTICS OF COVID-19
                     </h1>
                   </div>
@@ -494,9 +476,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide2Text"
-                    >
+                    <h1>
                       FURTHER DETAILS OF TRAVEL POLICY AND NEWS ARE ON THE BOTTOM-LEFT OF THE PAGE
                     </h1>
                   </div>
@@ -532,9 +512,7 @@ exports[`match snapshot 1`] = `
                   <div
                     className="slideTextBox"
                   >
-                    <h1
-                      className="slide3Text"
-                    >
+                    <h1>
                       AFTER SIGN-IN, YOU CAN ACCESS THE FORUM TO SHARE THE TIPS TO SURVIVE THE COVID
                     </h1>
                   </div>
