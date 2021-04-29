@@ -1,6 +1,6 @@
-# UoB-Group-Project desk 18
-## Team Profile
-### Project name  
+//logo here （居中！！）
+//
+# **CovidSurvival**
 ### Members
 
 | Name             | Email                   |
@@ -12,7 +12,10 @@
 | Yin-Te Lan       | <oq20204@bristol.ac.uk> |
 ### [Teams Channel](https://teams.microsoft.com/l/channel/19%3ab811a4a7be67448bb4bfafd8c70266a2%40thread.tacv2/Desk%252018?groupId=a9a647c8-66d1-4f10-bd04-9a5ed3f67e7b&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b)
 # Project Report
-## Introduction [10 marks]
+
+## Introduction 
+
+
 ### Abstract
 
 Motivation for the project, framing of the problem and a high-level overview of the system.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices dolor ac sodales pellentesque. In tincidunt diam viverra, pellentesque purus et, laoreet ligula. Curabitur sollicitudin metus a eleifend condimentum. Donec id dolor nibh. Praesent suscipit quam sed feugiat aliquam. Nunc tristique diam sit amet turpis sodales, quis convallis ante aliquet. In odio tortor, ultrices eget massa at, sodales suscipit mauris. Aenean a tincidunt erat. Mauris ornare quis augue a sagittis.
