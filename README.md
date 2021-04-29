@@ -1,8 +1,9 @@
 ！！！！！ It is just a draft. So all the content in Chinese is not important. They are just some idea of my own brainstorm without confirmation. Here is the draft⬇️
+！！！！！ The prior example is https://github.com/Team-Jag/Do-or-die-fitness-tracker 
 
 <p align="center">logo here</p>
-#<p align="center"> **CovidSurvival** </p>
-
+<p align="center"> **CovidSurvival** </p>
+## 
 ## Introduction 
 
 ### Abstract
@@ -85,7 +86,8 @@ Discussion of future work (in terms of design, development and evaluation)*
 > example : https://github.com/Team-Jag/Do-or-die-fitness-tracker 
 > Collect！
 
-## The Team https://teams.microsoft.com/l/channel/19%3ab811a4a7be67448bb4bfafd8c70266a2%40thread.tacv2/Desk%252018?groupId=a9a647c8-66d1-4f10-bd04-9a5ed3f67e7b&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b
+## [The Team]( https://teams.microsoft.com/l/channel/19%3ab811a4a7be67448bb4bfafd8c70266a2%40thread.tacv2/Desk%252018?groupId=a9a647c8-66d1-4f10-bd04-9a5ed3f67e7b&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b "悬停显示”）
+
 | Name             | Email                   |
 |:----------------:|:-----------------------:|
 | Jiayi Wu         | <kz20196@bristol.ac.uk> |
@@ -93,7 +95,6 @@ Discussion of future work (in terms of design, development and evaluation)*
 | Sheng-Han Tim Chu| <re20470@bristol.ac.uk> |
 | Yi-Tsen Ho       | <kv20880@bristol.ac.uk> |
 | Yin-Te Lan       | <oq20204@bristol.ac.uk> |
-
 
 
 ## Acknowledgement
