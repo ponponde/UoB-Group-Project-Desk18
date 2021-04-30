@@ -1,7 +1,7 @@
 import React, { createElement, useState } from "react";
 import { Comment, Avatar, Form, Button, List, Input } from "antd";
 import moment from "moment";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch, Provider } from "react-redux";
 
 import * as fetch from "../../utils/fetch";
 import { setPostData } from "../../store/action";
@@ -25,26 +25,30 @@ const Editor = () => {
         setContent("");
     };
     return (
-        <div
-            style={{
-                textAlign: "right",
-            }}
-        >
-            <Form.Item>
-                <TextArea
-                    rows={4}
-                    onChange={(e) => {
-                        setContent(e.target.value);
-                    }}
-                    value={content}
-                />
-            </Form.Item>
-            <Form.Item>
-                <Button htmlType="submit" onClick={submitPost} type="primary">
-                    New Post
-                </Button>
-            </Form.Item>
-        </div>
+        
+            <div
+                data-testid="Editor"
+                style={{
+                    textAlign: "right",
+                }}
+            >
+                <Form.Item>
+                    <TextArea
+                        rows={4}
+                        onChange={(e) => {
+                            setContent(e.target.value);
+                        }}
+                        value={content}
+                    />
+                </Form.Item>
+                <Form.Item>
+                    <Button htmlType="submit" onClick={submitPost} type="primary">
+                        New Post
+                    </Button>
+                </Form.Item>
+            </div> 
+    
+        
     );
 };
 export default Editor;

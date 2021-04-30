@@ -3,6 +3,7 @@
 exports[`match snapshot 1`] = `
 <div
   className="player MusicPlayer"
+  data-testid="MusicPlayer"
 >
   <audio
     id="audio"
@@ -22,6 +23,7 @@ exports[`match snapshot 1`] = `
     <button
       className="player__button"
       onClick={[Function]}
+      title="btnPause"
     >
       <span
         aria-label="pause-circle"

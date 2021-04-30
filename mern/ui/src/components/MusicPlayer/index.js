@@ -8,45 +8,22 @@ import theme from "../../music/themeMusic.mp3";
 import buttonSound from "../../music/button.mp3";
 
 function MusicPlayer() {
-const [audioButton] = useState(new Audio(buttonSound));
-const [curTime, setCurTime] = useState();
-const [playing, setPlaying] = useState(true);
-const [clickedTime, setClickedTime] = useState();
-const [volume] = useState(30);
-const [muted, setMuted] = useState(false)
-const finalVolume = muted ? 0 : (volume / 100) ** 2
+  const [audioButton] = useState(new Audio(buttonSound));
+  const [playing, setPlaying] = useState(true);
+  const [volume] = useState(30);
+  const finalVolume = (volume / 100) ** 2
 
-useEffect(() => {
+  useEffect(() => {
     const audio = document.getElementById("audio");
-       
-    const setAudioData = () => {
-        setCurTime(audio.currentTime);
+    if(audio != null){
+      audio.volume = finalVolume;
+      audio.loop = true;
+      playing ? audio.play() : audio.pause();
     }
-
-    const setAudioTime = () => setCurTime(audio.currentTime);
-     
-    audio.addEventListener("loadeddata", setAudioData);
-
-    audio.addEventListener("timeupdate", setAudioTime);
     
-    audio.volume = finalVolume;
-    audio.loop = true;
-    
-    playing ? audio.play() : audio.pause();
+  });
 
-    if (clickedTime && clickedTime !== curTime) {
-        audio.currentTime = clickedTime;
-        setClickedTime(null);
-    } 
-
-    // effect cleanup
-    return () => {
-        audio.removeEventListener("loadeddata", setAudioData);
-        audio.removeEventListener("timeupdate", setAudioTime);
-    }
-});
-
-useEffect(() => {
+  useEffect(() => {
     
          document.body.addEventListener('mousedown', soundEffect );
 
@@ -64,7 +41,7 @@ useEffect(() => {
 
   
   return (
-    <div className="player MusicPlayer">
+    <div className="player MusicPlayer" data-testid="MusicPlayer">
       <audio id="audio">
         <source src={theme} />
         Your browser does not support the <code>audio</code> element.
@@ -72,8 +49,8 @@ useEffect(() => {
       
       <div className="controls">
         {playing ? 
-          <Pause handleClick={() => setPlaying(false)} /> :
-          <Play handleClick={() => setPlaying(true)} />
+          <Pause  handleClick={() => setPlaying(false)} /> :
+          <Play data-testid="btnPlay" handleClick={() => setPlaying(true)} />
         }
       </div>
     </div>
