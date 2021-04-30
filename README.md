@@ -1,7 +1,6 @@
 <p align="center"><img src="resource_report/logo.png"width=30%>
-<p align="center"><img src="resource_report/logoTxt.png"width=30%>
+<p align="center"><img src="resource_report/logoTxt.png"width=50%>
 <h1 align="center"> CovidSurvival </h1>
----
 
 ## Introduction
 
