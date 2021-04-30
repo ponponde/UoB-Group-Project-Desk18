@@ -41,7 +41,7 @@ function MusicPlayer() {
 
   
   return (
-    <div className="player MusicPlayer" data-testid="MusicPlayer">
+    <div className="player MusicPlayer" title="MusicPlayer">
       <audio id="audio">
         <source src={theme} />
         Your browser does not support the <code>audio</code> element.

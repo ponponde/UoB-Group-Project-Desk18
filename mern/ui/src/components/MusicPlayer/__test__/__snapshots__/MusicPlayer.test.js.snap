@@ -3,7 +3,7 @@
 exports[`match snapshot 1`] = `
 <div
   className="player MusicPlayer"
-  data-testid="MusicPlayer"
+  title="MusicPlayer"
 >
   <audio
     id="audio"

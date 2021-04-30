@@ -29,7 +29,7 @@ const NavBar = (props) => {
     //  const showForum = useSelector((state) => state.showForum);
 
     return (
-        <div className="navBar">
+        <div className="navBar" data-testid="NavBar">
             <div
                 className="groupLogo"
                 onClick={() => {

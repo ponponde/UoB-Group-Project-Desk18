@@ -82,7 +82,7 @@ const SignupModal = (props) => {
                             Submit
                         </Button>
                         {/* <Button htmlType="button" onClick={onReset}> */}
-                        <Button htmlType="button" onClick={onFill}>
+                        <Button data-testid="btnReset" htmlType="button" onClick={onFill}>
                             Reset
                         </Button>
                     </Form.Item>

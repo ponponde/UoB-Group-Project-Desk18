@@ -21,7 +21,7 @@ const RankingList = () => {
         },
     ];
     return (
-        <List
+        <List data-testid="RankingList"
             itemLayout="horizontal"
             dataSource={data}
             renderItem={(item) => (
