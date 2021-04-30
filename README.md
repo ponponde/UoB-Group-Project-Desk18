@@ -1,14 +1,18 @@
->！！！ It is just a draft. So all the content in Chinese is not important. They are just some idea of my own brainstorm without confirmation. Here is the draft⬇️
-
->！！！ The prior example is https://github.com/Team-Jag/Do-or-die-fitness-tracker 
-
-<p align="center">logo here</p>
-# **CovidSurvival**
-
-<h1 align="center"> Do or Die Fitness Tracker </h1>
+<p align="center"><img src="resource_report/logo.png"width=30%>
+<p align="center"><img src="resource_report/logoTxt.png"width=30%>
+<h1 align="center"> CovidSurvival </h1>
+---
 
 ## Introduction
-> one sentence
+
+Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
+We have songs and wine, and especially, friends from all over the world to share their stories of life under quarantine.  
+We are waiting for you!
+> 在家隔离无聊吗？想听听来自世界的故事吗？我们这里有歌有酒，更有世界各地的朋友和你分享疫情隔离下的生活小故事，欢迎来玩呀～  
+> ！！！ It is just a draft. So all the content in Chinese is not important. They are just some idea of my own brainstorm without confirmation. Here is the draft⬇️  
+> ！！！ The prior example is https://github.com/Team-Jag/Do-or-die-fitness-tracker  
+
+
 
 ### Abstract
 Motivation for the project, framing of the problem and a high-level overview of the system.  
