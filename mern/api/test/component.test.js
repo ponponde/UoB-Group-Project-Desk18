@@ -94,7 +94,7 @@ describe("GET /api/forum/:country", () => {
                 const { body } = res;
                 expect(body.country === reqData.country).to.be.true;
                 expect(body.author === reqData.author).to.be.true;
-                expect(body.author_id === reqData.author_id).to.be.true;
+                expect(body.author_id == reqData.author_id).to.be.true;
                 expect(body.content === reqData.content).to.be.true;
             })
             .then(() => done())
@@ -169,7 +169,7 @@ describe("POST /api/forum/", () => {
                 const { body } = res;
                 expect(body.country === reqData.country).to.be.true;
                 expect(body.author === reqData.author).to.be.true;
-                expect(body.author_id === reqData.author_id).to.be.true;
+                expect(body.author_id == reqData.author_id).to.be.true;
                 expect(body.content === reqData.content).to.be.true;
             })
             .then(() => done())
