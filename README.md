@@ -1,8 +1,11 @@
 <p align="center"><img src="resource_report/logo.png"width=30%>
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
 <h1 align="center"> A short sentence to summarize the project </h1>
-<h2 align="center"> ** HERE is video ** </h2>
+<h1 align="center"> ** HERE is video ** </h1>
 <p align="center"><a href="视频链接">Click Here to Have a View of out project</a></p>
+---
+***
+___
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Introduction">Introduction</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Product-design">Product design</a></p>
@@ -11,7 +14,8 @@
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Evaluation">Evaluation</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Conclusion">Conclusion</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Acknowledgement">Acknowledgement</a></p>
-<h3 align="center"> CovidSurvival </h3>
+<h1 align="center"> CovidSurvival </h1>
+
 
 
 > ！！！ It is just a draft. So all the content in Chinese is not important. They are just some idea of my own brainstorm without confirmation. Here is the draft⬇️  
@@ -24,8 +28,8 @@
 
 > A longer advertisement or intoduction of the product
 >
->
 > 
+>
 > Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
 > We have songs and wine, and especially, friends from all over the world to share their stories of life under quarantine.  
 > We are waiting for you!
