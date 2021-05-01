@@ -2,9 +2,8 @@
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
 <h1 align="center"> A short sentence to summarize the project </h1>
 <h1 align="center"> video </h1>
-<h1 align="center"> content </h1>
-
-
+content
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/blob/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
 
  ## <h1 align="center"> CovidSurvival </h1>
 
@@ -14,6 +13,17 @@ We have songs and wine, and especially, friends from all over the world to share
 We are waiting for you!
 > 在家隔离无聊吗？想听听来自世界的故事吗？我们这里有歌有酒，更有世界各地的朋友和你分享疫情隔离下的生活小故事，欢迎来玩呀～  
 > ！！！ It is just a draft. So all the content in Chinese is not important. They are just some idea of my own brainstorm without confirmation. Here is the draft⬇️  
+
+```
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/blob/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
+```
+
+
+
+ ## What is CovidSurvival
+
+> A longer advertisement or intoduction of the product
+
 
 
 ## Introduction
@@ -95,7 +105,6 @@ We are waiting for you!
 
 
 ## Acknowledgement
-
 
 
 
