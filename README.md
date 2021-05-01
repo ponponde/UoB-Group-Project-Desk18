@@ -1,11 +1,8 @@
 <p align="center"><img src="resource_report/logo.png"width=30%>
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
 <h1 align="center"> A short sentence to summarize the project </h1>
-<h1 align="center"> ** HERE is video ** </h1>
-<p align="center"><a href="视频链接">Click Here to Have a View of out project</a></p>
----  
 
-***. 
+<p align="center"><a href="视频链接">Click Here to Have a View of out project</a></p>
 
 ___  
 
