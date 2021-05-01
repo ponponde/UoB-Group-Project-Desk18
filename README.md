@@ -127,8 +127,6 @@ ___
 >
 > 
 
-![截屏2021-05-01 17.00.19](/Users/jiayi/Library/Application Support/typora-user-images/截屏2021-05-01 17.00.19.png)
-
 
 
 ## Project Management / 工程管理
