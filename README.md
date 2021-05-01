@@ -1,17 +1,17 @@
 <p align="center"><img src="resource_report/logo.png"width=30%>
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
 <h1 align="center"> A short sentence to summarize the project </h1>
-<h1 align="center"> ** HERE is video ** </h1>
+<h2 align="center"> ** HERE is video ** </h2>
 <p align="center"><a href="视频链接">Click Here to Have a View of out project</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Introduction">Introduction</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Product-design">Product design</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#System-implementation">System implementation</a></p>
-<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Project-Management">Project Management/a></p>
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Project-Management">Project Management</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Evaluation">Evaluation</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Conclusion">Conclusion</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Acknowledgement">Acknowledgement</a></p>
-<h1 align="center"> CovidSurvival </h1>
+<h3 align="center"> CovidSurvival </h3>
 
 
 > ！！！ It is just a draft. So all the content in Chinese is not important. They are just some idea of my own brainstorm without confirmation. Here is the draft⬇️  
