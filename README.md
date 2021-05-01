@@ -3,8 +3,8 @@
 <h1 align="center"> A short sentence to summarize the project </h1>
 <h1 align="center"> video </h1>
 content
-<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/blob/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
-
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
+https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi
  ## <h1 align="center"> CovidSurvival </h1>
 
 > A longer advertisement or intoduction of the product
