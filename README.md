@@ -3,9 +3,12 @@
 <h1 align="center"> A short sentence to summarize the project </h1>
 <h1 align="center"> ** HERE is video ** </h1>
 <p align="center"><a href="视频链接">Click Here to Have a View of out project</a></p>
----
-***
-___
+---  
+
+***. 
+
+___  
+
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Introduction">Introduction</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Product-design">Product design</a></p>
