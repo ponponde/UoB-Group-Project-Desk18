@@ -17,15 +17,6 @@ ___
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Evaluation">Evaluation</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Conclusion">Conclusion</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Acknowledgement">Acknowledgement</a></p>
-<h1 align="center"> CovidSurvival </h1>
-
-
-
-> ！！！ It is just a draft. So all the content in Chinese is not important. They are just some idea of my own brainstorm without confirmation. Here is the draft⬇️  
-
-
-
-
 
  ## What is CovidSurvival
 
