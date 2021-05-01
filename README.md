@@ -2,8 +2,7 @@
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
 <h1 align="center"> A short sentence to summarize the project </h1>
 
-<p align="center"><a href="视频链接">Click Here to Have a View of out project</a></p>
-
+<p align="center"><a href="https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol">Click Here to Have a View of out project</a></p>
 ___  
 
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
