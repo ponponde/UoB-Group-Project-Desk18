@@ -1,13 +1,14 @@
 <p align="center"><img src="resource_report/logo.png"width=30%>
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
-<h1 align="center"> A short sentence to summarize the project </h1>
+<h1 align="center"> A short sentence to summarize the project*** </h1>
+> !!!!!! Waiting for a short sentence like " The most useful social media for ... "
 
 [![video](https://res.cloudinary.com/marcomontalbano/image/upload/v1619876092/video_to_markdown/images/youtube--4CGXvsjRjno-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol "video")
 
 <p align="center"><a href="https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol" target="_blank"> Click Here to Have a View of out project </a></p>
 
 
-___  
+___
 
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Introduction">Introduction</a></p>
@@ -20,14 +21,12 @@ ___
 
  ## What is CovidSurvival
 
-> A longer advertisement or intoduction of the product
+> !!!!!!A longer advertisement or intoduction of the product
 >
-> 
->
-> Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
+> ***Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
 > We have songs and wine, and especially, friends from all over the world to share their stories of life under quarantine.  
 > We are waiting for you!
-> 在家隔离无聊吗？想听听来自世界的故事吗？我们这里有歌有酒，更有世界各地的朋友和你分享疫情隔离下的生活小故事，欢迎来玩呀～  
+> 在家隔离无聊吗？想听听来自世界的故事吗？我们这里有歌有酒，更有世界各地的朋友和你分享疫情隔离下的生活小故事，欢迎来玩呀～***
 
 
 
@@ -57,7 +56,44 @@ ___
 
 ## Product design / 产品设计
 
-> Including UI design, 运行机制（mechanism？）, 用户调研（user requirement）
+### User Research
+
+#### Target User
+
+#### User Stories : Iteration and Estimation
+
+> Example:
+>
+> **3.1. Apply the requirements finding techniques**
+>
+> **3.1.1. Background Reading**
+>
+> For background reading, we found some relevant documentations, manuals of similar systems, like ofo and mobike. These documentations help us to establish a general understanding of the system. And we attempted to get the overview of the review procedures and general requirements of the similar system.
+>
+> **3.1.2. Interviewing**
+>
+> Interviewing is the technique which have been used most widely to obtain the requirements, and it’s a simple way for us to communicate with people face to face. We had a many–to-one interview with Dr Liang Dong in college who uses shared bikes application ofo to commute.
+> Interview question can be seen in the Appendix 7.
+>
+> **3.1.3. Questionnaire**
+>
+> In this section, we produced some special questions which can help to gather and capture the indeed needs of our software end users. Questionnaire can be seen in the Appendix 7.
+>
+> **3.1.4. Observation**
+>
+> Observation is also one of the methods of Fact-finding technique. Observing customers who are using the current system can provide us with a better understanding of the system to be designed and developed. 
+
+> .etc
+
+### Mechanism / 运行机制/介绍产品的大体内容应该用什么英语?对不起我连合适的中文都没想出来...
+
+> .etc
+
+### UI design
+
+#### Design Process and Early prototyping and ideation
+
+> .etc
 
 
 
