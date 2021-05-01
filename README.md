@@ -1,28 +1,35 @@
 <p align="center"><img src="resource_report/logo.png"width=30%>
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
 <h1 align="center"> A short sentence to summarize the project </h1>
-<h1 align="center"> video </h1>
-content
+<h1 align="center"> ** HERE is video ** </h1>
+<p align="center"><a href="视频链接">Click Here to Have a View of out project</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
-https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi
- ## <h1 align="center"> CovidSurvival </h1>
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Introduction">Introduction</a></p>
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Product-design">Product design</a></p>
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#System-implementation">System implementation</a></p>
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Project-Management">Project Management/a></p>
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Evaluation">Evaluation</a></p>
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Conclusion">Conclusion</a></p>
+<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Acknowledgement">Acknowledgement</a></p>
+<h1 align="center"> CovidSurvival </h1>
 
-> A longer advertisement or intoduction of the product
-> Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
-We have songs and wine, and especially, friends from all over the world to share their stories of life under quarantine.  
-We are waiting for you!
-> 在家隔离无聊吗？想听听来自世界的故事吗？我们这里有歌有酒，更有世界各地的朋友和你分享疫情隔离下的生活小故事，欢迎来玩呀～  
+
 > ！！！ It is just a draft. So all the content in Chinese is not important. They are just some idea of my own brainstorm without confirmation. Here is the draft⬇️  
 
-```
-<p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/blob/report_Jiayi#What-is-CovidSurvival">What is CovidSurvival</a></p>
-```
+
 
 
 
  ## What is CovidSurvival
 
 > A longer advertisement or intoduction of the product
+>
+>
+> 
+> Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
+> We have songs and wine, and especially, friends from all over the world to share their stories of life under quarantine.  
+> We are waiting for you!
+> 在家隔离无聊吗？想听听来自世界的故事吗？我们这里有歌有酒，更有世界各地的朋友和你分享疫情隔离下的生活小故事，欢迎来玩呀～  
 
 
 
@@ -111,13 +118,14 @@ We are waiting for you!
 
 ## [The Team](https://teams.microsoft.com/l/channel/19%3ab811a4a7be67448bb4bfafd8c70266a2%40thread.tacv2/Desk%252018?groupId=a9a647c8-66d1-4f10-bd04-9a5ed3f67e7b&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b)
 
-| Name             | Email                   |
-|:----------------:|:-----------------------:|
-| Jiayi Wu         | <kz20196@bristol.ac.uk> |
-| Ronel Mehmedov   | <yu20919@bristol.ac.uk> |
-| Sheng-Han Tim Chu| <re20470@bristol.ac.uk> |
-| Yi-Tsen Ho       | <kv20880@bristol.ac.uk> |
-| Yin-Te Lan       | <oq20204@bristol.ac.uk> |
+|       Name        |          Email          |
+| :---------------: | :---------------------: |
+|     Jiayi Wu      | <kz20196@bristol.ac.uk> |
+|  Ronel Mehmedov   | <yu20919@bristol.ac.uk> |
+| Sheng-Han Tim Chu | <re20470@bristol.ac.uk> |
+|    Yi-Tsen Ho     | <kv20880@bristol.ac.uk> |
+|    Yin-Te Lan     | <oq20204@bristol.ac.uk> |
 
 > 之前是不是有个TA帮助了我们之类的？然后再提一下老师吧虽然他们啥都没做
+>
 > >！！！ The prior example is https://github.com/Team-Jag/Do-or-die-fitness-tracker  
