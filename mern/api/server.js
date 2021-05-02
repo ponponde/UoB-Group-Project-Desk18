@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const PORT = 8080;
-// const connection = "mongodb://localhost:27017/mongo-test";
-const connection = "mongodb://mongo:27017/mongo-test";
+const connection = "mongodb://localhost:27017/mongo-test";
+// const connection = "mongodb://mongo:27017/mongo-test";
 
 app.use(cors());
 
