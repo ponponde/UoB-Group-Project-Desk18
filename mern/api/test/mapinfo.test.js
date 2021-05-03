@@ -5,7 +5,8 @@ const { app } = require("../server");
 
 const { expect } = chai;
 
-describe("GET /api/map/mapInfo/:id", () => {
+describe("GET /api/map/mapInfo/:id", function () {
+  this.timeout(100000);
     // before((done) => {
     //     conn.connect()
     //         .then(() => done())
