@@ -90,3 +90,20 @@ export const getMapInfo = (code) => {
         }
     );
 };
+
+export const addPoint = (data) => {
+    return; //@TODO: no time to complete it
+    return axios({
+        method: "POST",
+        url: ep.POINT_POST_API,
+        data,
+    }).then(
+        (response) => {
+            console.log("POINT_POST_API", response.data);
+            return response.data;
+        },
+        (error) => {
+            console.log(error);
+        }
+    );
+};

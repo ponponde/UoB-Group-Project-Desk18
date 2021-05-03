@@ -7,7 +7,7 @@ const InfoDrawer = (props) => {
     };
     //  console.log(props.data);
     React.useEffect(() => {
-        console.log(props.data);
+        console.log(9999898989898989, props.data);
     }, [props]);
     return (
         <>
@@ -20,7 +20,15 @@ const InfoDrawer = (props) => {
             >
                 {props.title == "Gov Info" ? (
                     <li key={props.title}>
-                        <img src={props.data}></img>
+                        {props.data.code == "cn" ? (
+                            //  <div onClick={window.open(props.url)}>
+                            <a href={props.url} target="_blank">
+                                疫情防控_中国政府网
+                            </a>
+                        ) : (
+                            //  </div>
+                            <img src={props.data}></img>
+                        )}
                     </li>
                 ) : (
                     <List

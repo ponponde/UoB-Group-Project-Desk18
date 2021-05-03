@@ -1,17 +1,31 @@
 import React, { createElement, useState } from "react";
-import { Comment, Avatar, Form, Button, List, Input } from "antd";
-import moment from "moment";
+import { Comment, Alert, Form, Button, List, Input } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 
+import { SmileOutlined } from "@ant-design/icons";
 import * as fetch from "../../utils/fetch";
 import { setPostData } from "../../store/action";
 const { TextArea } = Input;
 
 const Editor = () => {
+    const icon = <SmileOutlined />;
     const currentCountry = useSelector((state) => state.currentCountry);
     const currentUser = useSelector((state) => state.user);
     const [content, setContent] = React.useState("");
+    const [showAlert, setShowAlert] = React.useState(false);
     const dispatch = useDispatch();
+    React.useEffect(() => {
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 3000);
+    }, [showAlert]);
+    const addMyPoint = async () => {
+        const data = {
+            id: currentUser.id,
+            point: 3,
+        };
+        const res = await fetch.addPoint(data);
+    };
     const submitPost = async () => {
         const myPost = {
             country: currentCountry,
@@ -21,15 +35,19 @@ const Editor = () => {
         };
         let res = await fetch.sentPost(myPost);
         res = await fetch.getForumByCountry(currentCountry);
+        addMyPoint();
         dispatch(setPostData(res));
         setContent("");
+        setShowAlert(true);
     };
+
     return (
         <div
             style={{
                 textAlign: "right",
             }}
         >
+            {showAlert ? <Alert icon={icon} message="You got 3 point!" type="success" showIcon /> : null}
             <Form.Item>
                 <TextArea
                     rows={4}

@@ -1,5 +1,5 @@
 import React, { createElement, useState } from "react";
-import { Comment, Tooltip, Avatar } from "antd";
+import { Comment, Tooltip, Avatar, message } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import moment from "moment";
 import { DislikeOutlined, LikeOutlined, DislikeFilled, LikeFilled } from "@ant-design/icons";
@@ -15,6 +15,7 @@ const Post = (props) => {
 
     const like = () => {
         setLikes(1);
+        message.success(`You got ${1} points!`);
         setDislikes(0);
         setAction("liked");
     };

@@ -5,27 +5,22 @@ import InfoDrawer from "../../components/InfoDrawer";
 import World from "@svg-maps/world";
 import * as ep from "../../Endpoint";
 import * as fetch from "../../utils/fetch";
-import { setCountryCode, setUser, setCurrentCountryData } from "../../store/action";
+import { setUser, setCurrentCountryData } from "../../store/action";
 import { SVGMap } from "react-svg-map";
 import "./App.scss";
 import "react-svg-map/lib/index.css";
 import NavBar from "../../components/NavBar";
-import { Button } from "antd";
+import { Button, message } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import StatisticPanel from "../../components/StatisticPanel";
 import RankingList from "../../components/RankingList";
 import { setCurrentCountry } from "../../store/action";
-const GB = require("../../data/travel/gb.json");
-const dd = require("../../data/covid/0308.json");
-const apiUrl = `http://localhost:8080`;
+import { getRandomNum } from "../../utils/mockData";
 
 function App(props) {
     const [place, setPlace] = React.useState();
     const [position, setPosition] = React.useState({});
     const [isShow, setShow] = React.useState(false);
-    const [globalData, setGlobalData] = React.useState({});
-    const [countryData, setCountryData] = React.useState([]);
-    const [countryRecord, setCountryRecord] = React.useState("");
     const [openDrawer, setOpenDrawer] = useState(false);
     const [drawerData, setDrawerData] = useState({});
     const currentCountry = useSelector((state) => state.currentCountry);
@@ -44,23 +39,13 @@ function App(props) {
     }, [currentCountry]);
 
     async function getMapData() {
-        console.log("in!!!dddddd!!", currentCountry);
         const cData = await fetch.getMapInfo(currentCountry);
-        console.log("in!!!!!", cData);
-        const { Active, Confirmed, Deaths, Recovered } = cData;
-
-        //   setCountryRecord({
-        //       Active: Active || "-",
-        //       Confirmed: Confirmed || "-",
-        //       Deaths: Deaths || "-",
-        //       Recovered: Deaths || "-",
-        //   });
         dispatch(setCurrentCountryData(cData));
     }
     const tips = {
-        GB: "https://www.torbayandsouthdevon.nhs.uk/uploads/200305-catch-it-bin-it-kill-it.jpg",
-        TW: "https://www.seccm.org.tw/files/index_banner/20200323_002.jpg",
-        CN: "http://www.gov.cn/fuwu/zt/yqfwzq/fkzn.htm",
+        gb: "https://www.torbayandsouthdevon.nhs.uk/uploads/200305-catch-it-bin-it-kill-it.jpg",
+        tw: "https://www.seccm.org.tw/files/index_banner/20200323_002.jpg",
+        cn: "http://www.gov.cn/fuwu/zt/yqfwzq/fkzn.htm",
     };
 
     async function retrieveUserData() {
@@ -76,11 +61,15 @@ function App(props) {
     }, [props]);
 
     const showDrawer = (type) => {
+        console.log(3333333, currentCountry, tips[currentCountry]);
         switch (type) {
             case "Gov":
                 setDrawerData({
                     title: type + " Info",
-                    data: tips[currentCountry] || tips.GB,
+                    data: {
+                        code: currentCountry,
+                        url: tips[currentCountry] || tips.GB,
+                    },
                     derection: "bottom",
                 });
                 break;
@@ -103,21 +92,16 @@ function App(props) {
     };
 
     const setLocationID = (e) => {
-        let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
-        setCountryRecord(d[0]);
-        //         Date: "2021-02-16T14:55:54.762Z"
-        // ID: "c2d733a7-9e4b-48bb-b6c8-d2ce38761119"
-        // NewConfirmed: 53883
-        // NewDeaths: 989
-        // NewRecovered: 0
-        // Premium: {}
-        // Slug: "united-states"
-        // TotalConfirmed: 27694165
-        // TotalDeaths: 486325
-
         dispatch(setCurrentCountry(e.target.id));
         setPlace(e.target.id);
+        randomGetPoint();
         setShow(true);
+    };
+    const randomGetPoint = () => {
+        if (getRandomNum(100) % 7 == 0) {
+            const point = getRandomNum(1, 5);
+            message.success(`You got ${point} points!`);
+        }
     };
     const getScreenPosition = (e) => {
         const style = {
