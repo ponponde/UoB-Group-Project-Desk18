@@ -15,7 +15,13 @@ exports.mapInfo = async (req, res) => {
         },
     });
     let dataObj = {};
-
+    const getRandomNum = (max, min) => {
+        if (!min) {
+            min = 0;
+            max--;
+        }
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    };
     const id = req.params.id;
     if (id === "Global") {
         const summaryApi = `https://api.covid19api.com/summary`;
@@ -33,7 +39,9 @@ exports.mapInfo = async (req, res) => {
             Notes: "",
             NewConfirmed: rowData[id].NewConfirmed,
             statistics: getMockStatistics(),
-            rankList:getRanklist().sort((a,b)=>a.points < b.points),
+            rankList: getRanklist().sort((a, b) => a.points < b.points),
+            posts: getRandomNum(6000, 9000),
+            feedback: getRandomNum(4000, 12000),
         };
     } else {
         const str1 = `https://api.covid19api.com/live/country/`;
@@ -81,7 +89,9 @@ exports.mapInfo = async (req, res) => {
             Recommendation: resp2.Recommendation,
             Notes: notesArray,
             statistics: getMockStatistics(),
-            rankList:getRanklist(),
+            rankList: getRanklist(),
+            posts: getRandomNum(6000, 9000),
+            feedback: getRandomNum(4000, 12000),
         };
     }
     res.status(200).send(dataObj);
