@@ -5,7 +5,7 @@ import InfoDrawer from "../../components/InfoDrawer";
 import World from "@svg-maps/world";
 import * as ep from "../../Endpoint";
 import * as fetch from "../../utils/fetch";
-import { setCountryCode, setUser } from "../../store/action";
+import { setCountryCode, setUser, setCurrentCountryData } from "../../store/action";
 import { SVGMap } from "react-svg-map";
 import "./App.scss";
 import "react-svg-map/lib/index.css";
@@ -30,13 +30,41 @@ function App(props) {
     const [drawerData, setDrawerData] = useState({});
     const currentCountry = useSelector((state) => state.currentCountry);
     const isLogin = useSelector((state) => state.isLogin);
+    const mainData = useSelector((state) => state.currentCountryData);
+
     const dispatch = useDispatch();
+    React.useEffect(() => {
+        console.log("mainData", mainData);
+    }, [mainData]);
+
+    React.useEffect(() => {
+        getMapData();
+    }, [currentCountry]);
+
+    async function getMapData() {
+        console.log("in!!!!!");
+        const cData = await fetch.getMapInfo(currentCountry);
+        const { Active, Confirmed, Deaths, Recovered } = cData;
+        //   setCountryRecord({
+        //       Active: Active || "-",
+        //       Confirmed: Confirmed || "-",
+        //       Deaths: Deaths || "-",
+        //       Recovered: Deaths || "-",
+        //   });
+        dispatch(setCurrentCountryData(cData));
+    }
+    const tips = {
+        GB: "https://www.torbayandsouthdevon.nhs.uk/uploads/200305-catch-it-bin-it-kill-it.jpg",
+        TW: "https://www.seccm.org.tw/files/index_banner/20200323_002.jpg",
+        CN: "http://www.gov.cn/fuwu/zt/yqfwzq/fkzn.htm",
+    };
 
     React.useEffect(() => {
         const gData = dd.Global;
         setGlobalData(gData);
         setCountryData(dd.Countries);
     }, []);
+
     async function retrieveUserData() {
         const TOKEN = localStorage.getItem(ep.SESSION_KEY);
         if (TOKEN) {
@@ -46,20 +74,22 @@ function App(props) {
     }
     React.useEffect(() => {
         retrieveUserData();
+        getMapData();
     }, [props]);
+
     const showDrawer = (type) => {
         switch (type) {
-            case "Details":
+            case "Gov":
                 setDrawerData({
-                    title: type,
-                    data: GB.Country,
+                    title: type + " Info",
+                    data: tips[currentCountry] || tips.GB,
                     derection: "bottom",
                 });
                 break;
             case "Travel":
                 setDrawerData({
                     title: type + " Policy",
-                    data: GB.Notes,
+                    data: mainData.notes,
                     derection: "bottom",
                 });
                 break;
@@ -99,26 +129,23 @@ function App(props) {
         setPosition(style);
         setShow(false);
     };
-    const countryList = [
-        "NewConfirmed",
-        "NewDeaths",
-        "NewRecovered",
-        "TotalConfirmed",
-        "TotalDeaths",
-        "TotalRecovered",
-    ];
+    const countryList = ["Active", "Confirmed", "Deaths", "Recovered"];
 
-    
     return (
         <div className="App">
-
             {isLogin ? null : <Intro />}
             <MusicPlayer />
 
             <NavBar />
-            <StatisticPanel data={countryRecord} />
+            <StatisticPanel
+                data={mainData.statistics}
+                Active={mainData.Active}
+                Recovered={mainData.Recovered}
+                posts={mainData.posts}
+                feedback={mainData.feedback}
+            />
             <div className="rank_list">
-                <RankingList data={countryRecord} />
+                <RankingList data={mainData.rankList} />
             </div>
             <div className="main_map">
                 <SVGMap
@@ -130,12 +157,11 @@ function App(props) {
 
             {isShow ? (
                 <div className="popup" style={position}>
-                    {place.toUpperCase()}
+                    {mainData.Country}
                     <ul>
-                        {countryList &&
-                            countryRecord &&
+                        {mainData.Active &&
                             countryList.map((txt) => {
-                                return <li>{txt + ":" + countryRecord[txt]}</li>;
+                                return <li>{txt + ":" + mainData[txt]}</li>;
                             })}
                     </ul>
                 </div>

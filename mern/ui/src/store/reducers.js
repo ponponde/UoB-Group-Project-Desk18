@@ -4,7 +4,7 @@ const initialState = {
     isLogin: false,
     currentCountry: "Globle",
     showForum: false,
-    currentCountry_code: "",
+    currentCountryData: {},
     post_data: [],
 };
 export function dataReducer(state = initialState, action) {
@@ -15,6 +15,13 @@ export function dataReducer(state = initialState, action) {
                 ...state,
                 post_data: action.data,
             };
+        case types.SET_COUNTRY_DATA:
+            console.log("SET_COUNTRY_DATA", action.data);
+            return {
+                ...state,
+                currentCountryData: action.data,
+            };
+
         case types.SET_USER:
             console.log("SET_USER", action.data);
             return {

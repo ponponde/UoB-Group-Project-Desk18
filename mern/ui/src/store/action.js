@@ -28,7 +28,12 @@ export const setPostData = (v) => {
         data: v,
     };
 };
-
+export function setCurrentCountryData(data) {
+    return {
+        type: types.SET_COUNTRY_DATA,
+        data,
+    };
+}
 // export function setDetailData(data, events) {
 //     return {
 //         type: types.UPDATE_DETAIL,
