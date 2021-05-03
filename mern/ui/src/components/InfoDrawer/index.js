@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Drawer, Button } from "antd";
+import { Drawer, Button, List } from "antd";
 
 const InfoDrawer = (props) => {
     const onClose = () => {
@@ -18,33 +18,24 @@ const InfoDrawer = (props) => {
                 onClose={onClose}
                 visible={props.visible}
             >
-                {props.title == "Details" ? (
+                {props.title == "Gov Info" ? (
                     <li key={props.title}>
                         <img src={props.data}></img>
                     </li>
                 ) : (
-                    <ul>
-                        <>
-                            {props.data &&
-                                Array.isArray(props.data) &&
-                                props.data.map((n) => {
-                                    return (
-                                        <li key={n.ID}>
-                                            {n.Date}:{n.Note}
-                                        </li>
-                                    );
-                                })}
-                            {props.data &&
-                                !Array.isArray(props.data) &&
-                                Object.keys(props.data).map((n) => {
-                                    return (
-                                        <li key={n}>
-                                            {n}: {props.data[n]}
-                                        </li>
-                                    );
-                                })}
-                        </>
-                    </ul>
+                    <List
+                        itemLayout="horizontal"
+                        dataSource={props.data}
+                        renderItem={(item) => (
+                            <List.Item>
+                                <List.Item.Meta
+                                    title={
+                                        <a href="https://ant.design">{item.Date.split("T")[0] + ": " + item.Note}</a>
+                                    }
+                                />
+                            </List.Item>
+                        )}
+                    />
                 )}
             </Drawer>
         </>

@@ -101,6 +101,7 @@ exports.signin = (req, res) => {
                 username: user.username,
                 email: user.email,
                 roles: authorities,
+                points: user.points,
                 accessToken: token,
             });
         });
@@ -127,6 +128,7 @@ exports.getUserInfo = async (req, res) => {
                 id: user._id,
                 username: user.username,
                 email: user.email,
+                points: user.points,
                 accessToken: req.body.token,
             });
         });

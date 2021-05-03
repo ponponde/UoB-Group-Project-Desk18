@@ -13,7 +13,7 @@ const StatisticPanel = (props) => {
         <div className="site-statistic-demo-card StatisticPanel">
             <Row gutter={16}>
                 <Col span={12}>
-                    <Statistic title="Active" value={props.Active || 29051} />
+                    <Statistic title="Confirmed" value={props.Confirmed || 29051} />
                 </Col>
                 <Col span={12}>
                     <Statistic title="Recovered" value={props.Recovered || 1190188} />

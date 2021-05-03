@@ -31,8 +31,10 @@ function App(props) {
     const currentCountry = useSelector((state) => state.currentCountry);
     const isLogin = useSelector((state) => state.isLogin);
     const mainData = useSelector((state) => state.currentCountryData);
-
     const dispatch = useDispatch();
+    React.useEffect(() => {
+        getMapData();
+    }, [props]);
     React.useEffect(() => {
         console.log("mainData", mainData);
     }, [mainData]);
@@ -42,9 +44,11 @@ function App(props) {
     }, [currentCountry]);
 
     async function getMapData() {
-        console.log("in!!!!!");
+        console.log("in!!!dddddd!!", currentCountry);
         const cData = await fetch.getMapInfo(currentCountry);
+        console.log("in!!!!!", cData);
         const { Active, Confirmed, Deaths, Recovered } = cData;
+
         //   setCountryRecord({
         //       Active: Active || "-",
         //       Confirmed: Confirmed || "-",
@@ -58,12 +62,6 @@ function App(props) {
         TW: "https://www.seccm.org.tw/files/index_banner/20200323_002.jpg",
         CN: "http://www.gov.cn/fuwu/zt/yqfwzq/fkzn.htm",
     };
-
-    React.useEffect(() => {
-        const gData = dd.Global;
-        setGlobalData(gData);
-        setCountryData(dd.Countries);
-    }, []);
 
     async function retrieveUserData() {
         const TOKEN = localStorage.getItem(ep.SESSION_KEY);
@@ -89,14 +87,14 @@ function App(props) {
             case "Travel":
                 setDrawerData({
                     title: type + " Policy",
-                    data: mainData.notes,
+                    data: mainData.Notes,
                     derection: "bottom",
                 });
                 break;
             case "News":
                 setDrawerData({
                     title: type,
-                    data: [],
+                    data: mainData.Notes,
                     derection: "bottom",
                 });
                 break;
@@ -139,7 +137,7 @@ function App(props) {
             <NavBar />
             <StatisticPanel
                 data={mainData.statistics}
-                Active={mainData.Active}
+                Confirmed={mainData.Confirmed}
                 Recovered={mainData.Recovered}
                 posts={mainData.posts}
                 feedback={mainData.feedback}
@@ -168,8 +166,8 @@ function App(props) {
             ) : null}
 
             <div className="footer">
-                <Button type="primary" onClick={() => showDrawer("Details")}>
-                    Details
+                <Button type="primary" onClick={() => showDrawer("Gov")}>
+                    Gov' info
                 </Button>
                 <Button type="primary" onClick={() => showDrawer("Travel")}>
                     Travel Policy
