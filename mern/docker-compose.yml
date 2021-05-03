@@ -1,5 +1,11 @@
 version: "2"
 services:
+    ui:
+        build: ./ui
+        ports:
+            - "3000:80"
+        depends_on:
+            - api
     api:
         build: ./api
         ports:

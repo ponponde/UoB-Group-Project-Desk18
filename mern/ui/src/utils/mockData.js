@@ -41,7 +41,7 @@ export const getMockLike = () => {
 };
 
 export const formatName = (code) => {
-    if (code == "Globle") {
+    if (code == "Global") {
         return code;
     }
     let res = "";
