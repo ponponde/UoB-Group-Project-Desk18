@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import LoginModal from "../LoginModal";
 import SideForum from "../SideForum";
 import SignupModal from "../SignupModal";
+import * as ep from "../../Endpoint";
 import logo from "../../img/logo.png";
 import logoTxt from "../../img/logoTxt.png";
 import { logout } from "../../store/action";
@@ -21,6 +22,7 @@ const NavBar = (props) => {
     const currentCountry = useSelector((state) => state.currentCountry);
     const dispatch = useDispatch();
     const handleLogout = () => {
+        localStorage.clear(ep.SESSION_KEY);
         dispatch(logout());
     };
     const backToWorld = () => {

@@ -75,3 +75,18 @@ export const sentPost = (data) => {
         }
     );
 };
+
+export const getMapInfo = (code) => {
+    return axios({
+        method: "GET",
+        url: ep.MAP_GET_API + code,
+    }).then(
+        (response) => {
+            console.log("MAP_GET_API", response.data);
+            return response.data;
+        },
+        (error) => {
+            console.log(error);
+        }
+    );
+};
