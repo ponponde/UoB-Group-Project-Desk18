@@ -117,25 +117,18 @@ exports.getUserInfo = async (req, res) => {
 
         User.findOne({
             _id: decoded.id,
-        })
-            .populate("roles", "-__v")
-            .exec((err, user) => {
-                if (err) {
-                    res.status(500).send({ message: err });
-                    return;
-                }
-                var authorities = [];
+        }).exec((err, user) => {
+            if (err) {
+                res.status(500).send({ message: err });
+                return;
+            }
 
-                for (let i = 0; i < user.roles.length; i++) {
-                    authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
-                }
-                res.status(200).send({
-                    id: user._id,
-                    username: user.username,
-                    email: user.email,
-                    roles: authorities,
-                    accessToken: req.body.token,
-                });
+            res.status(200).send({
+                id: user._id,
+                username: user.username,
+                email: user.email,
+                accessToken: req.body.token,
             });
+        });
     }
 };
