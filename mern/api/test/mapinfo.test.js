@@ -6,7 +6,6 @@ const { app } = require("../server");
 const { expect } = chai;
 
 describe("GET /api/map/mapInfo/:id", function () {
-  this.timeout(100000);
     // before((done) => {
     //     conn.connect()
     //         .then(() => done())
@@ -41,18 +40,24 @@ describe("GET /api/map/mapInfo/:id", function () {
         supertest(app)
             .get("/api/map/mapInfo/GB")
             .then((res) => {
-                const { body } = res;
-                expect(body).to.have.property("Country");
-                expect(body).to.have.property("CountryCode");
-                expect(body).to.have.property("Confirmed");
-                expect(body).to.have.property("Deaths");
-                expect(body).to.have.property("Recovered");
-                expect(body).to.have.property("Active");
-                expect(body).to.have.property("Recommendation");
-                expect(body).to.have.property("Notes");
-                expect(body).to.have.property("NewConfirmed");
-                expect(body).to.have.property("statistics");
-                expect(body).to.have.property("rankList");
-    });
+              const {body} = res;
+              expect(body).to.have.property("Country");
+              expect(body).to.have.property("CountryCode");
+              expect(body).to.have.property("Confirmed");
+              expect(body).to.have.property("Deaths");
+              expect(body).to.have.property("Recovered");
+              expect(body).to.have.property("Active");
+              expect(body).to.have.property("Recommendation");
+              expect(body).to.have.property("Notes");
+              expect(body).to.have.property("NewConfirmed");
+              expect(body).to.have.property("statistics");
+              expect(body).to.have.property("rankList");
+            })
+          .then(() => {
+            done();
+          })
+          .catch((error) => {
+            done(error);
+          });
   });
 });
