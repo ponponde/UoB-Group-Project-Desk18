@@ -18,16 +18,11 @@ ___
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Conclusion">Conclusion</a></p>
 <p align="center"> <a href="https://github.com/ponponde/UoB-Group-Project-Desk18/tree/report_Jiayi#Acknowledgement">Acknowledgement</a></p>
 
- ## What is CovidSurvival
-
-> !!!!!!A longer advertisement or intoduction of the product
->
-> ***Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
-> We have songs and wine, and especially, friends from all over the world to share their stories of life under quarantine.  
-> We are waiting for you!
-> 在家隔离无聊吗？想听听来自世界的故事吗？我们这里有歌有酒，更有世界各地的朋友和你分享疫情隔离下的生活小故事，欢迎来玩呀～***
-
-
+ ## What is ***CovidSurvival***
+How to survival in this post COVID would?  
+Check if you want to travel. There's travelling policy for each country  
+Check if you fear of cases. There's real time statistics of each country  
+Check if you feel alone. There's people around the world sharing and supporting each others  
 
 ## Introduction
 
@@ -51,84 +46,24 @@ ___
 
 
 
-
-
-## Product design / 产品设计
-
-### User Research
-
-#### Target User
-
-#### User Stories : Iteration and Estimation
-
-> Example:
->
-> **3.1. Apply the requirements finding techniques**
->
-> **3.1.1. Background Reading**
->
-> For background reading, we found some relevant documentations, manuals of similar systems, like ofo and mobike. These documentations help us to establish a general understanding of the system. And we attempted to get the overview of the review procedures and general requirements of the similar system.
->
-> **3.1.2. Interviewing**
->
-> Interviewing is the technique which have been used most widely to obtain the requirements, and it’s a simple way for us to communicate with people face to face. We had a many–to-one interview with Dr Liang Dong in college who uses shared bikes application ofo to commute.
-> Interview question can be seen in the Appendix 7.
->
-> **3.1.3. Questionnaire**
->
-> In this section, we produced some special questions which can help to gather and capture the indeed needs of our software end users. Questionnaire can be seen in the Appendix 7.
->
-> **3.1.4. Observation**
->
-> Observation is also one of the methods of Fact-finding technique. Observing customers who are using the current system can provide us with a better understanding of the system to be designed and developed. 
-
-> .etc
-
-### Mechanism / 运行机制/介绍产品的大体内容应该用什么英语?对不起我连合适的中文都没想出来...
-
-> .etc
-
-### UI design
-
-#### Design Process and Early prototyping and ideation
-
-> .etc
-
+## Product design
+**View our [product document](resource_report/ProductDesign.md) to see**
+*
+* 
 
 
 ## System implementation
-
-> ### Stack architecture and system design
->
-> e.g. class diagrams, dequence diagrams
->
-> ### Back End - MongoDB
->
-> database implementation, the data model that you developed your back end from (e.g. entity relationsip diagrams).
->
-> ### Middle Tier - Express Node, the RESTful API
->
-> ### Front End - Angular
->
-> Details of implementation
->
-> ### Additional elements and components
->
-> e.g. authentification. Tell us about any other aspects not covered above!
->
-> ### Deployment datails (including Docker)
->
-> include how you have been achieving continuous integration and deployment
->
-> ### Testing
->
-> ***Important : It is not important that we do do these, but I think it is important to write that we do have done these.***
->
-> 
+**View our [system implementation document](resource_report/SystemImplementation.md) to see**
+*
+*
 
 
+> This is the only part that I can not complete... Waiting for your help!
 
 ## Project Management / 工程管理
+
+* ####Click [Team Member](resource_report/Member Responsibilities and Achievement.md) to see our team and member responsibility.
+* View our 
 
 > Including Sprint, gant, 流程图, Team use of Git, ,etc. / NOTE for myself : gant和流程图都可以用代码写，别用截图，这个好看又装ac
 >
