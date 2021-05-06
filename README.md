@@ -21,6 +21,10 @@ However, [anti-lockdown](https://www.reuters.com/world/uk/anti-lockdown-proteste
 
 In order to control the Covid, all of us should work together, believe in science and should take the initiative and prevent the Covid. However, for different reasons, many people find it difficult to accept the scientific knowledge and are reluctant to comply with coronavirus prevention policies. This has greatly helped the spread of the coronavirus. So, how can we make people more aware of outbreaks around the world and comply with the policy through a fun website?
 
+CovidSurvival is an online social platform. On our webpage one can see real-time coronavirus statistics from around the world. It is also possible to see people from other different parts of the world sharing their lives with the coronavirus. By seeing how people in other regions are living, we hope that users will gain a clearer understanding of the dangers of coronavirus and be proactive in keeping their social distance and protection.
+
+**Click to see the introduction [video]()
+
 [![video](https://res.cloudinary.com/marcomontalbano/image/upload/v1619876092/video_to_markdown/images/youtube--4CGXvsjRjno-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol "video")
 
 <p align="center"><a href="https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol" target="_blank"> temporary video </a></p>
