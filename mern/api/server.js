@@ -12,9 +12,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./models");
+const conn = require("./db");
 const Role = db.role;
 
-
+/*
 db.mongoose
     .connect(connection, {
         useNewUrlParser: true,
@@ -28,6 +29,7 @@ db.mongoose
         console.error("Connection error", err);
         process.exit();
     });
+*/
 
 function initial() {
     Role.estimatedDocumentCount((err, count) => {
@@ -55,12 +57,25 @@ function initial() {
     });
 }
 
+if (process.env.NODE_ENV !== "test") {
+    conn.connect()
+        .then(() => {
+            console.log("Successfully connect to MongoDB.");
+            initial();
+        })
+        .catch((err) => {
+            console.error("Connection error", err);
+            process.exit();
+        });
+}
 
 require("./routes/auth.routes")(app);
-require("./routes/user.routes")(app);
+// require("./routes/user.routes")(app);
 require("./routes/map.routes")(app);
 require("./routes/forum.route")(app);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
+
+module.exports = { app };
