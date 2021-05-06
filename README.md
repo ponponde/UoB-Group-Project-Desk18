@@ -1,12 +1,6 @@
 <p align="center"><img src="resource_report/logo.png"width=30%>
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
-<p align="center"> !!!!!! Waiting for a short sentence like " The most useful social media for ... " </p>
-
-[![video](https://res.cloudinary.com/marcomontalbano/image/upload/v1619876092/video_to_markdown/images/youtube--4CGXvsjRjno-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol "video")
-
-<p align="center"><a href="https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol" target="_blank"> temporary video </a></p>
-
-
+ 
 ___
 
  ## What is ***CovidSurvival***
@@ -24,6 +18,10 @@ This is the latest data from [WHO Coronavirus (COVID-19) Dashboard](https://covi
 As the Covid-19 epidemic spreads around the world, the virus continues to evolve, which severely affecting people's lives around the world. According to UK [government figures](https://www.bbc.com/news/uk-51768274), there have been over 4.4 million confirmed cases of coronavirus in the UK and more than 127,000 people have died. However, the heart-breaking scenes not only happen in the UK. Coronavirus has caused many humanitarian crises around the world. For example, [India has descended into Covid-19 chaos] (https://www.bbc.com/news/world-asia-india-56977653) because of its poor healthcare infrastructure.  Coupled with the wave of [globalisation](https://www.bbc.com/news/uk-56864100), it is no longer possible for any country to stand alone. Therefore, even though the COVID has subsided in the UK, we cannot stop protecting ourselves.
 
 However, [anti-lockdown](https://www.reuters.com/world/uk/anti-lockdown-protesters-defy-restrictions-central-london-march-2021-04-24/) and [anti-mask](https://www.thestar.com/news/canada/2021/05/01/hundreds-of-anti-lockdown-anti-mask-protesters-take-to-the-streets-again-in-downtown-barrie.html) activities around the world have not ceased either. From this we can conclude that despite the [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks)'s insistence on 'Make wearing a mask a normal part of being around other people', many people are still not convinced of the need to wear masks and maintain social distance.
+
+[![video](https://res.cloudinary.com/marcomontalbano/image/upload/v1619876092/video_to_markdown/images/youtube--4CGXvsjRjno-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol "video")
+
+<p align="center"><a href="https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol" target="_blank"> temporary video </a></p>
 
 
 ## Product design
