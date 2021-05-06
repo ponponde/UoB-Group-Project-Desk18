@@ -64,6 +64,9 @@ const NavBar = (props) => {
                 {!isLogin ? (
                     <>
                         <div className="navBtn">
+                            <Button onClick={() => setShowForum(true)}>Forum</Button>
+                        </div>
+                        <div className="navBtn">
                             <Button onClick={() => setShowSignup(true)}>Sign up</Button>
                         </div>
                         <div className="navBtn">

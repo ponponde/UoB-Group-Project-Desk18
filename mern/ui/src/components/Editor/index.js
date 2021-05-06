@@ -1,5 +1,5 @@
-import React, { createElement, useState } from "react";
-import { Comment, Alert, Form, Button, List, Input } from "antd";
+import React from "react";
+import { Alert, Form, Button, message, Input } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 
 import { SmileOutlined } from "@ant-design/icons";
@@ -11,6 +11,7 @@ const Editor = () => {
     const icon = <SmileOutlined />;
     const currentCountry = useSelector((state) => state.currentCountry);
     const currentUser = useSelector((state) => state.user);
+    const isLogin = useSelector((state) => state.isLogin);
     const [content, setContent] = React.useState("");
     const [showAlert, setShowAlert] = React.useState(false);
     const dispatch = useDispatch();
@@ -27,6 +28,10 @@ const Editor = () => {
         const res = await fetch.addPoint(data);
     };
     const submitPost = async () => {
+        if (!isLogin) {
+            message.warning(`Please login first!`);
+            return;
+        }
         const myPost = {
             country: currentCountry,
             author: currentUser.username,

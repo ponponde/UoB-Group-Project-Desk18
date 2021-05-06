@@ -30,9 +30,6 @@ function App(props) {
     React.useEffect(() => {
         getMapData();
     }, [props]);
-    React.useEffect(() => {
-        console.log("mainData", mainData);
-    }, [mainData]);
 
     React.useEffect(() => {
         getMapData();
@@ -61,7 +58,6 @@ function App(props) {
     }, [props]);
 
     const showDrawer = (type) => {
-        console.log(3333333, currentCountry, tips[currentCountry]);
         switch (type) {
             case "Gov":
                 setDrawerData({
@@ -112,7 +108,9 @@ function App(props) {
         setShow(false);
     };
     const countryList = ["Active", "Confirmed", "Deaths", "Recovered"];
-
+    function toCurrency(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
     return (
         <div className="App">
             {isLogin ? null : <Intro />}
@@ -120,14 +118,14 @@ function App(props) {
 
             <NavBar />
             <StatisticPanel
-                data={mainData.statistics}
-                Confirmed={mainData.Confirmed}
-                Recovered={mainData.Recovered}
-                posts={mainData.posts}
-                feedback={mainData.feedback}
+                data={mainData?.statistics}
+                Confirmed={mainData?.Confirmed}
+                Recovered={mainData?.Recovered}
+                posts={mainData?.posts}
+                feedback={mainData?.feedback}
             />
             <div className="rank_list">
-                <RankingList data={mainData.rankList} />
+                <RankingList data={mainData?.rankList} />
             </div>
             <div className="main_map">
                 <SVGMap
@@ -139,11 +137,11 @@ function App(props) {
 
             {isShow ? (
                 <div className="popup" style={position}>
-                    {mainData.Country}
+                    {mainData?.Country}
                     <ul>
-                        {mainData.Active &&
+                        {mainData?.Active &&
                             countryList.map((txt) => {
-                                return <li>{txt + ":" + mainData[txt]}</li>;
+                                return <li>{txt + ": " + toCurrency(mainData[txt])}</li>;
                             })}
                     </ul>
                 </div>

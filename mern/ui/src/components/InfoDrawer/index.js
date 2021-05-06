@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import { Drawer, Button, List } from "antd";
+import React from "react";
+import { Drawer, List } from "antd";
 
 const InfoDrawer = (props) => {
     const onClose = () => {
         props.onClose && props.onClose();
     };
-    //  console.log(props.data);
-    React.useEffect(() => {
-        console.log(9999898989898989, props.data);
-    }, [props]);
+
     return (
         <>
             <Drawer

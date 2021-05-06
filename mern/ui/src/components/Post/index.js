@@ -12,8 +12,12 @@ const Post = (props) => {
     const [dislikes, setDislikes] = useState(0);
     const [action, setAction] = useState(null);
     const post_data = useSelector((state) => state.post_data);
-
+    const isLogin = useSelector((state) => state.isLogin);
     const like = () => {
+        if (!isLogin) {
+            message.warning(`Please login first!`);
+            return;
+        }
         setLikes(1);
         message.success(`You got ${1} points!`);
         setDislikes(0);

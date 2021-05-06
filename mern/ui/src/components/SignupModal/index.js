@@ -20,7 +20,6 @@ const tailLayout = {
 const SignupModal = (props) => {
     const [form] = Form.useForm();
     const onFinish = (values) => {
-        console.log(values);
         fetch.signup(values, close);
     };
 
