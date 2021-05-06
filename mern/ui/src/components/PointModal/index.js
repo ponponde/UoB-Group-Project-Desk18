@@ -1,13 +1,8 @@
-import React, { useState } from "react";
-import { Form, Input, Avatar, Modal, List } from "antd";
-import { useDispatch } from "react-redux";
+import React from "react";
+import { Avatar, Modal, List } from "antd";
 import * as mockData from "../../utils/mockData";
 import "./style.scss";
 const LoginModal = (props) => {
-    //  const user = useSelector((state) => state.user);
-    React.useEffect(() => {
-        console.log(props.user);
-    }, [props]);
     const { visible, close, user } = props;
     const data = [user];
     return (

@@ -6,7 +6,6 @@ const StatisticPanel = (props) => {
     const { data, posts, feedback } = props;
     const [statistic, setStatistic] = useState({});
     React.useEffect(() => {
-        console.log(data);
         setStatistic(data);
     }, [data]);
     return (

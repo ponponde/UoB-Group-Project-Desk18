@@ -51,7 +51,6 @@ export const getForumByCountry = (country_code) => {
         url: `http://localhost:8080/api/forum/${country_code}`,
     }).then(
         (response) => {
-            console.log("getForumByCountry", response.data);
             return response.data;
         },
         (error) => {
@@ -67,7 +66,6 @@ export const sentPost = (data) => {
         data,
     }).then(
         (response) => {
-            console.log("sentPost", response.data);
             return response.data;
         },
         (error) => {
@@ -82,7 +80,6 @@ export const getMapInfo = (code) => {
         url: ep.MAP_GET_API + code,
     }).then(
         (response) => {
-            console.log("MAP_GET_API", response.data);
             return response.data;
         },
         (error) => {
