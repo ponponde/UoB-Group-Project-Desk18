@@ -23,6 +23,8 @@ In order to control the Covid, all of us should work together, believe in scienc
 
 CovidSurvival is an online social platform. On our webpage one can see real-time coronavirus statistics from around the world. It is also possible to see people from other different parts of the world sharing their lives with the coronavirus. More participation, more points, more exposure. By seeing how people in other regions are living, we hope that users will gain a clearer understanding of the dangers of coronavirus and be proactive in keeping their social distance and protection.
 
+## Video
+
 **Click to see the introduction [video]()**
 
 [![video](https://res.cloudinary.com/marcomontalbano/image/upload/v1619876092/video_to_markdown/images/youtube--4CGXvsjRjno-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol "video")
