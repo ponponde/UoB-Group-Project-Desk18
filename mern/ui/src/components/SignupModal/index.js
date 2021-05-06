@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Input, Button, Modal } from "antd";
-import { useSelector, useDispatch } from "react-redux";
 import * as fetch from "../../utils/fetch";
 const layout = {
     labelCol: {
@@ -25,9 +24,9 @@ const SignupModal = (props) => {
 
     const onFill = () => {
         form.setFieldsValue({
-            username: "abc",
-            email: "abc@gmail.com",
-            password: "12345",
+            username: "",
+            email: "",
+            password: "",
         });
     };
 

@@ -18,7 +18,6 @@ import { setCurrentCountry } from "../../store/action";
 import { getRandomNum } from "../../utils/mockData";
 
 function App(props) {
-    const [place, setPlace] = React.useState();
     const [position, setPosition] = React.useState({});
     const [isShow, setShow] = React.useState(false);
     const [openDrawer, setOpenDrawer] = useState(false);
@@ -89,13 +88,12 @@ function App(props) {
 
     const setLocationID = (e) => {
         dispatch(setCurrentCountry(e.target.id));
-        setPlace(e.target.id);
         randomGetPoint();
         setShow(true);
     };
     const randomGetPoint = () => {
-        if (getRandomNum(100) % 7 == 0) {
-            const point = getRandomNum(1, 5);
+        if (getRandomNum(100) % 11 == 0) {
+            const point = getRandomNum(1, 3);
             message.success(`You got ${point} points!`);
         }
     };
