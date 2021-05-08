@@ -8,8 +8,8 @@
 - [**Planning**](#planning)
   - [General Objectives](#general-objectives)
   - [Work Breakdown and Gantt Chart](#work-breakdown-and-gantt-chart)
-- [**Appendix : Sprint**](#appendix:sprints)
-- [**Appendix : Backlog**](#appendix:backlog)
+- [**Appendix : Sprint**](#appendix-sprints)
+- [**Appendix : Backlog**](#appendix-backlog)
 
 ## Introduction
 
@@ -51,11 +51,11 @@ For example, as a project facing to the user all aroung the world, end user can 
 
 ## Planning
 
-#### General objectives
+### General objectives
 
 
 
-#### Work Breakdown and Gantt Chart
+### Work Breakdown and Gantt Chart
 
 A Work Breakdown Structure is used to separate a large and sophisticated project into simpler, controllable and independent tasks.
 
@@ -81,7 +81,8 @@ Those will help us to arrange and manage tasks when developing project more effi
 |              | T14. Test and Review                                 | 2             | T12, T13         | Project and Test Feedback   |
 |              | T15. Finish the final report                         | 4             | T14              | Final report for submission |
 
-```mermaid
+
+mermaid
 gantt
 Title The expected refining schedule
 section Preparation
