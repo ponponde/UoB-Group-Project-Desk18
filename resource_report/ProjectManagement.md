@@ -82,7 +82,10 @@ Those will help us to arrange and manage tasks when developing project more effi
 |              | T15. Finish the final report                         | 4             | T14              | Final report for submission |
 
 
-mermaid
+<script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+
+<div class="mermaid">
 gantt
 Title The expected refining schedule
 section Preparation
@@ -103,7 +106,7 @@ section Final
 T13 : done, 2021-04-30, 10d
 T14 : done, 2021-04-30, 10d
 T15 : done, 2021-04-15, 25d
-
+</div>
 
 
 
