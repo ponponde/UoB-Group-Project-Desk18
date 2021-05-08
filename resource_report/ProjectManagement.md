@@ -3,6 +3,10 @@
 ## Table of Contents
 - [**Introduction**](#introduction) 
 - [**Individual Contribution**](#individual-contribution)
+- [**Risk Management**](#risk-management)
+- [**Planning**](#planning)
+	- [General Objectives](#general-objectives)
+- [**Appendix : Sprint**](#Breakdown-of-project-into-sprints)
 
 ## Introduction
 
@@ -46,3 +50,74 @@ For example, as a project facing to the user all aroung the world, end user can 
 
 
 ## Team use of Git
+
+## Breakdown of Project into Sprints
+
+#### Sprint 1: Brainstorming
+
+- Key meeting points:
+  - ideas
+  - motivations
+  - Five project proposals
+
+- Reflections
+  - not sure which one we can complete with time
+  - need more survey
+
+ 
+#### Sprint 2: Estimate development scope and core function
+
+- Key meeting points:
+  - survey result1: usable third party api for covid data
+  - survey result2: map component for angular and react
+  - Decision of the topic of our project
+  - Decision: MongoDB, Express, React, Node.js + Docker
+
+
+- ​	Reflections
+  - Can't find a sutible map component of angular
+  - find a supervisor for react
+
+
+#### Sprint 3: Define architecture & interactions & first prototype
+
+- Key meeting points:
+  - Defined and agreed on overall infrastructure .
+  - Defined minimum viable product (MVP) with functions/classes/variables.
+  - Defined interactions between subsystems including a first iteration of the request types and their JSON syntax.
+  - Decide a basic UI interface mockup for admin user story.
+
+  
+- Reflections
+  - gaming system?
+
+
+#### Sprint 4 : Alpha version release 
+
+- Key meeting points:
+  - frontend with mock data
+  - Ethical issue: should we change or gaming system?
+  - Replace prediction game by forum and point system
+
+ 
+#### Sprint 5 : Beta version release 
+
+- Key meeting points:
+  - Key function: authorization, map, forum
+  - additional feature: statistics , ranking list with mock data
+
+
+#### Sprint 6 : Auto testing & Version 1.0 release 
+
+- Key meeting points:
+  - build backend testing by mockgoose, supertest and chai for testing api's request and response.
+  - build frontend testing 
+ 
+
+#### Sprint 7 : Resolving issues and enhancing features 
+
+- Key meeting points:
+  - point system
+ 
+
+#### Sprint 8 : Write-up
