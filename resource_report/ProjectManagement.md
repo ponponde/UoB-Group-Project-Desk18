@@ -1,26 +1,30 @@
-# Project Management
+# Project ManagementProject Management
 
 ## Table of Contents
+
 - [**Introduction**](#introduction) 
 - [**Individual Contribution**](#individual-contribution)
 - [**Risk Management**](#risk-management)
 - [**Planning**](#planning)
-	- [General Objectives](#general-objectives)
-- [**Appendix : Sprint**](#Breakdown-of-project-into-sprints)
+  - [General Objectives](#general-objectives)
+  - [Work Breakdown and Gantt Chart](#work-breakdown-and-gantt-chart)
+- [**Appendix : Sprint**](#appendix:sprints)
+- [**Appendix : Backlog**](#appendix:backlog)
 
 ## Introduction
 
 For our flexible and extensible project, we use Agile which is a set of best practices in software development based on Scrum, Extreme Programming and Lean. Besides, Agile also requires a different approach, which is adapted to incremental development and the particular strengths of agile methods.
-We mainly use the Scrum approach which is a general Agile method but its focus is on managing iterative development rather than specific agile practices. There are three core phases in Scrum including making the outline planning, planning the series of sprint cycles and closure phase. More details about the sprint cycle information and so on can be acquired from Appendix 10.
+We mainly use the Scrum approach which is a general Agile method but its focus is on managing iterative development rather than specific agile practices. There are three core phases in Scrum including making the outline planning, planning the series of sprint cycles and closure phase. More details about the sprint cycle information and so on can be acquired from [**Appendix : Backlog**](#appendix:backlog).
 
 The reason why we choose Scrum as our core method is that the clear process helps us to plan the whole work and to divide them into several stages. The project of CovidSurvival is broken down into a series of the manageable and understandable chunk so that it becomes much easier for our team to reach an agreement on the detail of the project requirement. Also, unstable requirements can never hold up the process. Through several stand-up meetings, the whole team can have visibility of everything which helps us to keep the same pace and share the information about the schedule and existing problem.
 
 For example, as a project facing to the user all aroung the world, end user can easily participate in the whole developing process, which gives us a convenient channel to obtain the feedback, so that later increment can be successfully conducted based on end users’ evaluation. Besides, to make the project to be easy enough to use, the System user interfaces are developed using an interactive development system with pictures and a few animations in order to prove the end users’ engagement.
 
 <p align="center"><img src="EachIteration.png"width=70%>
+
   
-  
-  
+
+
 ## Individual Contribution
 
 |       Name        |                         Email                         | Responsibility  |
@@ -35,23 +39,85 @@ For example, as a project facing to the user all aroung the world, end user can 
 
 ## Risk Management
 
-| **Possible Risks**  | **Risk Type** | **Occurrence Possibility** | **Solutions**  |
+| **Possible Risks**                                           | **Risk Type**             | **Occurrence Possibility** | **Solutions**                                                |
 | ------------------------------------------------------------ | ------------------------- | -------------------------- | ------------------------------------------------------------ |
-| A member is ill or non-available circumstances | People    | Medium   | Dynamically adjust personnel tasks in terms of unforeseen  |
-| Difficult to integrate all projects from sub-groups due to different configurations | Tools   | High | Unified development environment and commit code regularly for test |
-| Computer crashed  | Tools    | Medium      | Use Github and store regularly   |
-| Inefficient allocation of team work leads to low efficiency  | Organizational  | Low   | In early stage, task allocation should be in detail and task load should be well estimated. |
-| Low quality code can result in needless test and re-code repeatedly | Design and Implementation | Medium   | Before committing code, one of member for sub-group need to review the code in advance. |
-| The requirements have not been fully analyzed. | Requirements  | Medium   | In early stage, we need take sufficient time for requirement analysis, and when designing, any change for requirements should be discussed if it is necessary. |
+| A member is ill or non-available circumstances               | People                    | Medium                     | Dynamically adjust personnel tasks in terms of unforeseen    |
+| Difficult to integrate all projects from sub-groups due to different configurations | Tools                     | High                       | Unified development environment and commit code regularly for test |
+| Computer crashed                                             | Tools                     | Medium                     | Use Github and store regularly                               |
+| Inefficient allocation of team work leads to low efficiency  | Organizational            | Low                        | In early stage, task allocation should be in detail and task load should be well estimated. |
+| Low quality code can result in needless test and re-code repeatedly | Design and Implementation | Medium                     | Before committing code, one of member for sub-group need to review the code in advance. |
+| The requirements have not been fully analyzed.               | Requirements              | Medium                     | In early stage, we need take sufficient time for requirement analysis, and when designing, any change for requirements should be discussed if it is necessary. |
 
 
 ## Planning
+
+#### General objectives
+
+
+
+#### Work Breakdown and Gantt Chart
+
+A Work Breakdown Structure is used to separate a large and sophisticated project into simpler, controllable and independent tasks.
+
+The Gantt Chart is a traditional tool to represent the timing of tasks. (see appendix[1])
+
+Those will help us to arrange and manage tasks when developing project more efficiently.
+
+| **Stage**    | **Activity**                                         | **Durations** | **Dependencies** | **Deliverables**            |
+| ------------ | ---------------------------------------------------- | ------------- | ---------------- | --------------------------- |
+| Preparation  | T1. Sketch for objective restricts and risk analysis | 1             |                  |                             |
+|              | T2. Identify member allocation                       | 1             |                  | Schedule                    |
+|              | T3. Write stories and prioritize them                | 2             |                  | Stories                     |
+|              | T4. Product backlog                                  | 2             | T3               | Backlog                     |
+|              | T5. Paper prototype user interface                   | 1             |                  | Prototype                   |
+| Sprint Cycle | T6. Adjust functions                                 | 1             | T4               |                             |
+|              | T7. Estimation and iteration plan                    | 1             | T6               |                             |
+|              | T8. Identify and design API                          | 2             | T7               |                             |
+|              | T9. Assign the tasks                                 | 2             | T8               |                             |
+|              | T10. Development                                     | 2             | T8, T9           |                             |
+|              | T11. Implementation                                  | 1             | T10              | Code                        |
+|              | T12. Test and Review                                 | 2             | T11              | Project and Test Feedback   |
+| Final        | T13. Adjust the interface to make more friendly      | 1             | T5               |                             |
+|              | T14. Test and Review                                 | 2             | T12, T13         | Project and Test Feedback   |
+|              | T15. Finish the final report                         | 4             | T14              | Final report for submission |
+
+```mermaid
+gantt
+Title The expected refining schedule
+section Preparation
+T1 : done, 2021-04-02, 1d
+T2 : done, 2d
+T3 : done, 2d
+T4 : done, 2d
+T5 : done, 1d
+section Sprint Cycle
+T6 : done, 2021-04-09, 20d
+T7 : done, 2021-04-09, 20d
+T8 : done, 2021-04-09, 20d
+T9 : done, 2021-04-09, 20d
+T10 : done, 2021-04-15, 16d
+T11 : done, 2021-04-17, 16d
+T12 : done, 2021-04-19, 14d
+section Final
+T13 : done, 2021-04-30, 10d
+T14 : done, 2021-04-30, 10d
+T15 : done, 2021-04-15, 25d
+
+
+```
+
+
+
+
+
+
+
 
 
 
 ## Team use of Git
 
-## Breakdown of Project into Sprints
+## Appendix:Sprints
 
 #### Sprint 1: Brainstorming
 
@@ -64,7 +130,7 @@ For example, as a project facing to the user all aroung the world, end user can 
   - not sure which one we can complete with time
   - need more survey
 
- 
+
 #### Sprint 2: Estimate development scope and core function
 
 - Key meeting points:
@@ -74,9 +140,9 @@ For example, as a project facing to the user all aroung the world, end user can 
   - Decision: MongoDB, Express, React, Node.js + Docker
 
 
-- ​	Reflections
-  - Can't find a sutible map component of angular
-  - find a supervisor for react
+- 	Reflections
+   - Can't find a sutible map component of angular
+   - find a supervisor for react
 
 
 #### Sprint 3: Define architecture & interactions & first prototype
@@ -87,7 +153,6 @@ For example, as a project facing to the user all aroung the world, end user can 
   - Defined interactions between subsystems including a first iteration of the request types and their JSON syntax.
   - Decide a basic UI interface mockup for admin user story.
 
-  
 - Reflections
   - gaming system?
 
@@ -99,7 +164,7 @@ For example, as a project facing to the user all aroung the world, end user can 
   - Ethical issue: should we change or gaming system?
   - Replace prediction game by forum and point system
 
- 
+
 #### Sprint 5 : Beta version release 
 
 - Key meeting points:
@@ -112,12 +177,21 @@ For example, as a project facing to the user all aroung the world, end user can 
 - Key meeting points:
   - build backend testing by mockgoose, supertest and chai for testing api's request and response.
   - build frontend testing 
- 
+
 
 #### Sprint 7 : Resolving issues and enhancing features 
 
 - Key meeting points:
   - point system
- 
 
 #### Sprint 8 : Write-up
+
+
+
+
+
+## Appendix:Backlog
+
+| Story ID | Story Name | Description | Priority | Iteration (Sprint) number | Acceptance Criteria | Notes | Date started (actual date) | Date finished (actual  date) |
+| -------- | ---------- | ----------- | -------- | ------------------------- | ------------------- | ----- | -------------------------- | ---------------------------- |
+|          |            |             |          |                           |                     |       |                            |                              |
