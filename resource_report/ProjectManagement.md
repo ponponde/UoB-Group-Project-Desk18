@@ -6,8 +6,9 @@
 - [**Individual Contribution**](#individual-contribution)
 - [**Risk Management**](#risk-management)
 - [**Planning**](#planning)
-  - [General Objectives](#general-objectives)
-  - [Work Breakdown and Gantt Chart](#work-breakdown-and-gantt-chart)
+  - [Time Estimating](#Time-Estimating)
+  - [Work Breakdownt](#work-breakdown)
+  - [Gantt Chart](#gantt-chart)
 - [**Appendix : Sprint**](#appendix-sprints)
 - [**Appendix : Backlog**](#appendix-backlog)
 
@@ -22,7 +23,8 @@ For example, as a project facing to the user all aroung the world, end user can 
 
 <p align="center"><img src="EachIteration.png"width=70%>
 
-  
+
+
 
 
 ## Individual Contribution
@@ -51,11 +53,25 @@ For example, as a project facing to the user all aroung the world, end user can 
 
 ## Planning
 
-### General objectives
+A Work Breakdown Structure is used to separate a large and sophisticated project into simpler, controllable and independent tasks.
+
+The Gantt Chart is a traditional tool to represent the timing of tasks. (see appendix[1])
+
+Those will help us to arrange and manage tasks when developing project more efficiently.
 
 
 
-### Work Breakdown and Gantt Chart
+### Time Estimating
+
+|    **Items**     |        **Time**        | Task                                                         |
+| :--------------: | :--------------------: | ------------------------------------------------------------ |
+| Outline planning | April 2nd - April 10th | Establish the general objectives and design the software structure. |
+|   Sprint cycle   |  April 9th - May 3rd   | Plan the backlog, select the function to be complete and write the code. |
+| Project closure  |   May 3rd -May 10th    | Wraps up the project and complete required documentation.    |
+
+
+
+### Work Breakdown
 
 A Work Breakdown Structure is used to separate a large and sophisticated project into simpler, controllable and independent tasks.
 
@@ -81,6 +97,7 @@ Those will help us to arrange and manage tasks when developing project more effi
 |              | T14. Test and Review                                 | 2             | T12, T13         | Project and Test Feedback   |
 |              | T15. Finish the final report                         | 4             | T14              | Final report for submission |
 
+### Gantt Chart
 
 ```mermaid
 gantt
@@ -104,9 +121,6 @@ T13 : done, 2021-04-30, 10d
 T14 : done, 2021-04-30, 10d
 T15 : done, 2021-04-15, 25d
 ```
-
-
-
 
 
 
@@ -191,3 +205,4 @@ T15 : done, 2021-04-15, 25d
 | Story ID | Story Name | Description | Priority | Iteration (Sprint) number | Acceptance Criteria | Notes | Date started (actual date) | Date finished (actual  date) |
 | -------- | ---------- | ----------- | -------- | ------------------------- | ------------------- | ----- | -------------------------- | ---------------------------- |
 |          |            |             |          |                           |                     |       |                            |                              |
+
