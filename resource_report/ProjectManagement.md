@@ -9,7 +9,7 @@ The reason why we choose Scrum as our core method is that the clear process help
 
 For example, as a project facing to the user all aroung the world, end user can easily participate in the whole developing process, which gives us a convenient channel to obtain the feedback, so that later increment can be successfully conducted based on end users’ evaluation. Besides, to make the project to be easy enough to use, the System user interfaces are developed using an interactive development system with pictures and a few animations in order to prove the end users’ engagement.
 
-<p align="center"><img src="resource_report/EachIteration.png"width=50%>
+<p align="center"><img src="EachIteration.png"width=50%>
   
 ## Individual Contribution
 
