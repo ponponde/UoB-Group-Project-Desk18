@@ -82,7 +82,7 @@ Those will help us to arrange and manage tasks when developing project more effi
 |              | T15. Finish the final report                         | 4             | T14              | Final report for submission |
 
 
-<div class="mermaid">
+```mermaid
 gantt
 Title The expected refining schedule
 section Preparation
@@ -103,7 +103,7 @@ section Final
 T13 : done, 2021-04-30, 10d
 T14 : done, 2021-04-30, 10d
 T15 : done, 2021-04-15, 25d
-</div>
+```
 
 
 
