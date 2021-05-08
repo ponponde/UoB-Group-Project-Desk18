@@ -127,6 +127,10 @@ T15 : done, 2021-04-15, 25d
 
 ## Team use of Git
 
+
+
+
+
 ## Appendix Sprints
 
 #### Sprint 1: Brainstorming
@@ -202,7 +206,26 @@ T15 : done, 2021-04-15, 25d
 
 ## Appendix Backlog
 
-| Story ID | Story Name | Description | Priority | Iteration (Sprint) number | Acceptance Criteria | Notes | Date started (actual date) | Date finished (actual  date) |
-| -------- | ---------- | ----------- | -------- | ------------------------- | ------------------- | ----- | -------------------------- | ---------------------------- |
-|          |            |             |          |                           |                     |       |                            |                              |
+这里麻烦参考我之前发在群里的那个报告的附件10.
 
+| Story ID | Story Name                           | Description                                                  | Priority | Iteration number | Acceptance Criteria                                          | Notes                                                        | Date started | Date finished |
+| -------- | ------------------------------------ | ------------------------------------------------------------ | -------- | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------ | ------------- |
+| S01      | Map display in blocks                | As a user, I want to view the condition of each country by clicking chunks on map. | 1        | 1                | Verify that the screen can display the map while each chunk refers to a country. | 1. User can view the map without login.                      | 4/9          | 4/15          |
+| S02      | Register                             | As a user, I want to register an account.                    | 1        | 1                |                                                              | 1. User should input their information include 注册需要用的信息、唯一性等等对用户的要求 |              |               |
+| S03      | Login                                | As a user, I want to have a personal account which can be keeped permanently. | 1        | 1                |                                                              | 1. User should register first.   2.(加一个账号的唯一性？根据数据存储的方式？) | 4/9          | 4/15          |
+| S04      | Check my account                     | As a user, I want to check my account information.           | 1        | 1                |                                                              | 1. User should first login, then view the account information. |              |               |
+| S05      | Display information for each country | As a user, I want to view the information group by countries when click the chunk. | 1        | 1                |                                                              |                                                              |              |               |
+| S05a     | Display information for each country | As a user, I want to view the world information when 鼠标不放在国家上？ | 1        | 1                |                                                              | 对于S05a和b的解释：a是根据国家区分提供的信息，b是不根据国家提供的信息 |              |               |
+| S05b     | Display information for each country | As a user, I want to view 什么信息group by countries when 鼠标放在国家上？ | 1        | 1                |                                                              | 如果这里有不太一样的内容的话，可以拆开写。                   |              |               |
+|          |                                      |                                                              |          |                  |                                                              | ⬆️note这栏可以根据技术的内容说一下你们准备做什么？（我不是很看得懂这块😭 |              |               |
+|          |                                      |                                                              |          |                  |                                                              |                                                              |              |               |
+|          |                                      |                                                              |          |                  |                                                              |                                                              |              |               |
+| S04      | Personal  Point                      | As a user, I want to collect point by interacting with others. | 2        |                  |                                                              |                                                              |              |               |
+| S04a     | Personal  Point                      | As a user, I want to own the initial point  at the beginning. | 2        |                  | The users may got 300 points when register.                  |                                                              |              |               |
+| S04b     | Personal  Point                      | As a user, I want to collect point by gambling, comment, sending messages and agree on other's comment . | 2        |                  | When the users gamble, or comment on other's message, sending messages, or aggree on other's message, the point increase. |                                                              |              |               |
+| S04c     | Personal  Point                      | As a user, I want to collect point by commenting, sending messages and agree on other's comment . | 2        |                  | When the users comment on other's message, sending messages, or aggree on other's message, the point increase. **The function of gambling was dropped due to ethical reason.** |                                                              |              |               |
+|          |                                      |                                                              |          |                  |                                                              |                                                              |              |               |
+|          |                                      |                                                              |          |                  |                                                              |                                                              |              |               |
+|          |                                      |                                                              |          |                  |                                                              |                                                              |              |               |
+| S        | Interaction interface beautification | As a user, I want 这边除了鼠标变成了个啥之外，还做了别的么   | 3        |                  |                                                              | 这个功能对用户这里有什么要求么                               |              |               |
+| S        | Tutorial                             | As a user, I want to have a tutorial that can show me how to interact with this website. | 3        | 3                | Verify that the user who is the first time to be here would get a guidance. |                                                              | 4/25         | 5/5           |
