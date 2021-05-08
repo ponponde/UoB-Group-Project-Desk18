@@ -45,7 +45,7 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 ## Project Management / 工程管理
 **View our [project management document](resource_report/ProjectManagement.md) to see :**
 * Introduction
-* Responsibility
+* Individual Contribution
 * Planning
 * Team use of Git
 
