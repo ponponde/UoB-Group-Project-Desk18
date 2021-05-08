@@ -1,5 +1,9 @@
 # Project Management
 
+## Table of Contents
+- [**Introduction**](#introduction) 
+- [**Individual Contribution**](#individual-contribution)
+
 ## Introduction
 
 For our flexible and extensible project, we use Agile which is a set of best practices in software development based on Scrum, Extreme Programming and Lean. Besides, Agile also requires a different approach, which is adapted to incremental development and the particular strengths of agile methods.
