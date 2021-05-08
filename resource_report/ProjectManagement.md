@@ -15,6 +15,8 @@ For example, as a project facing to the user all aroung the world, end user can 
 
 <p align="center"><img src="EachIteration.png"width=70%>
   
+  
+  
 ## Individual Contribution
 
 |       Name        |                         Email                         | Responsibility  |
@@ -24,6 +26,8 @@ For example, as a project facing to the user all aroung the world, end user can 
 | Sheng-Han Tim Chu | [re20470@bristol.ac.uk](mailto:re20470@bristol.ac.uk) | Coder           |
 |    Yi-Tsen Ho     | [kv20880@bristol.ac.uk](mailto:kv20880@bristol.ac.uk) | Leader          |
 |    Yin-Te Lan     | [oq20204@bristol.ac.uk](mailto:oq20204@bristol.ac.uk) | Coder           |
+
+
 
 ## Risk Management
 
@@ -35,6 +39,10 @@ For example, as a project facing to the user all aroung the world, end user can 
 | Inefficient allocation of team work leads to low efficiency  | Organizational  | Low   | In early stage, task allocation should be in detail and task load should be well estimated. |
 | Low quality code can result in needless test and re-code repeatedly | Design and Implementation | Medium   | Before committing code, one of member for sub-group need to review the code in advance. |
 | The requirements have not been fully analyzed. | Requirements  | Medium   | In early stage, we need take sufficient time for requirement analysis, and when designing, any change for requirements should be discussed if it is necessary. |
+
+
+## Planning
+
 
 
 ## Team use of Git
