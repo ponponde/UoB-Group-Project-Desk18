@@ -9,7 +9,7 @@ The reason why we choose Scrum as our core method is that the clear process help
 
 For example, as a project facing to the user all aroung the world, end user can easily participate in the whole developing process, which gives us a convenient channel to obtain the feedback, so that later increment can be successfully conducted based on end users’ evaluation. Besides, to make the project to be easy enough to use, the System user interfaces are developed using an interactive development system with pictures and a few animations in order to prove the end users’ engagement.
 
-<p align="center"><img src="EachIteration.png"width=50%>
+<p align="center"><img src="EachIteration.png"width=70%>
   
 ## Individual Contribution
 
@@ -21,7 +21,16 @@ For example, as a project facing to the user all aroung the world, end user can 
 |    Yi-Tsen Ho     | [kv20880@bristol.ac.uk](mailto:kv20880@bristol.ac.uk) | Leader          |
 |    Yin-Te Lan     | [oq20204@bristol.ac.uk](mailto:oq20204@bristol.ac.uk) | Coder           |
 
-## Planning
+## Risk Management
+
+| **Possible Risks**  | **Risk Type** | **Occurrence Possibility** | **Solutions**  |
+| ------------------------------------------------------------ | ------------------------- | -------------------------- | ------------------------------------------------------------ |
+| A member is ill or non-available circumstances | People    | Medium   | Dynamically adjust personnel tasks in terms of unforeseen  |
+| Difficult to integrate all projects from sub-groups due to different configurations | Tools   | High | Unified development environment and commit code regularly for test |
+| Computer crashed  | Tools    | Medium      | Use Github and store regularly   |
+| Inefficient allocation of team work leads to low efficiency  | Organizational  | Low   | In early stage, task allocation should be in detail and task load should be well estimated. |
+| Low quality code can result in needless test and re-code repeatedly | Design and Implementation | Medium   | Before committing code, one of member for sub-group need to review the code in advance. |
+| The requirements have not been fully analyzed. | Requirements  | Medium   | In early stage, we need take sufficient time for requirement analysis, and when designing, any change for requirements should be discussed if it is necessary. |
 
 
 ## Team use of Git
