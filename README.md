@@ -37,21 +37,17 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 
 ## System implementation
-**View our [system implementation document](resource_report/SystemImplementation.md) to see**
+**View our [system implementation document](resource_report/SystemImplementation.md) to see :**
 *
 *
 
-
-> This is the only part that I can not complete... Waiting for your help!
 
 ## Project Management / 工程管理
-
-* ####Click [Team Member](resource_report/Member Responsibilities and Achievement.md) to see our team and member responsibility.
-* View our 
-
-> Including Sprint, gant, 流程图, Team use of Git, ,etc. / NOTE for myself : gant和流程图都可以用代码写，别用截图，这个好看又装ac
->
-> 
+** View our [project management document](resource_report/ProjectManagement.md) to see :**
+* Introduction
+* Responsibility
+* Planning
+* Team use of Git
 
 ## Evaluation / 最终成品展示、评估和反思
 
@@ -62,14 +58,5 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 ## Acknowledgement
 
-## [The Team](https://teams.microsoft.com/l/channel/19%3ab811a4a7be67448bb4bfafd8c70266a2%40thread.tacv2/Desk%252018?groupId=a9a647c8-66d1-4f10-bd04-9a5ed3f67e7b&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b)
-
-|       Name        |          Email          | 
-| :---------------: | :---------------------: | 
-|     Jiayi Wu      | <kz20196@bristol.ac.uk> |
-|  Ronel Mehmedov   | <yu20919@bristol.ac.uk> |
-| Sheng-Han Tim Chu | <re20470@bristol.ac.uk> |
-|    Yi-Tsen Ho     | <kv20880@bristol.ac.uk> |
-|    Yin-Te Lan     | <oq20204@bristol.ac.uk> | 
 
 
