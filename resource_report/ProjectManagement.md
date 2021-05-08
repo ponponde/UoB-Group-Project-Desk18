@@ -105,11 +105,6 @@ T14 : done, 2021-04-30, 10d
 T15 : done, 2021-04-15, 25d
 
 
-```
-
-
-
-
 
 
 
@@ -118,7 +113,7 @@ T15 : done, 2021-04-15, 25d
 
 ## Team use of Git
 
-## Appendix:Sprints
+## Appendix Sprints
 
 #### Sprint 1: Brainstorming
 
@@ -191,7 +186,7 @@ T15 : done, 2021-04-15, 25d
 
 
 
-## Appendix:Backlog
+## Appendix Backlog
 
 | Story ID | Story Name | Description | Priority | Iteration (Sprint) number | Acceptance Criteria | Notes | Date started (actual date) | Date finished (actual  date) |
 | -------- | ---------- | ----------- | -------- | ------------------------- | ------------------- | ----- | -------------------------- | ---------------------------- |
