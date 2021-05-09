@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Intro from "../../components/Intro";
 import MusicPlayer from "../../components/MusicPlayer";
 import InfoDrawer from "../../components/InfoDrawer";
+import DynamicMsg from "../../components/DynamicMsg";
 import World from "@svg-maps/world";
 import * as ep from "../../Endpoint";
 import * as fetch from "../../utils/fetch";
@@ -124,6 +125,9 @@ function App(props) {
             />
             <div className="rank_list">
                 <RankingList data={mainData?.rankList} />
+            </div>
+            <div className="dynamicMsg">
+                <DynamicMsg />
             </div>
             <div className="main_map">
                 <SVGMap

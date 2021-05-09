@@ -28,8 +28,6 @@
 }
 
 .StatisticPanel {
-    //  top: 60px;
-    //  position: fixed;
     position: absolute;
     padding-left: 15px;
     padding-top: 70px;
@@ -41,4 +39,12 @@
     padding-left: 15px;
     padding-top: 400px;
     width: 300px;
+}
+
+.dynamicMsg {
+    position: absolute;
+    padding-right: 15px;
+    padding-top: 70px;
+    right: 0;
+    width: 400px;
 }
