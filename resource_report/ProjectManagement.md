@@ -7,8 +7,9 @@
 - [**Risk Management**](#risk-management)
 - [**Planning**](#planning)
   - [Time Estimating](#Time-Estimating)
-  - [Work Breakdownt](#work-breakdown)
+  - [Work Breakdown](#work-breakdown)
   - [Gantt Chart](#gantt-chart)
+- [Team use of Git](#team-use-of-git)
 - [**Appendix : Sprint**](#appendix-sprints)
 - [**Appendix : Backlog**](#appendix-backlog)
 
