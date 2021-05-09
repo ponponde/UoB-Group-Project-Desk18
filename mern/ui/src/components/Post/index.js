@@ -1,5 +1,5 @@
 import React, { createElement, useState } from "react";
-import { Comment, Tooltip, Avatar } from "antd";
+import { Comment, Tooltip, Avatar, message } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import moment from "moment";
 import { DislikeOutlined, LikeOutlined, DislikeFilled, LikeFilled } from "@ant-design/icons";
@@ -12,9 +12,14 @@ const Post = (props) => {
     const [dislikes, setDislikes] = useState(0);
     const [action, setAction] = useState(null);
     const post_data = useSelector((state) => state.post_data);
-
+    const isLogin = useSelector((state) => state.isLogin);
     const like = () => {
+        if (!isLogin) {
+            message.warning(`Please login first!`);
+            return;
+        }
         setLikes(1);
+        message.success(`You got ${1} points!`);
         setDislikes(0);
         setAction("liked");
     };

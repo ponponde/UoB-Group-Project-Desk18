@@ -1,0 +1,13 @@
+.ant-modal-body {
+    text-align: center;
+}
+.photo {
+    margin-top: 30px;
+    height: 100px;
+    > span {
+        transform: scale(3);
+    }
+    > img {
+        transform: scale(3);
+    }
+}

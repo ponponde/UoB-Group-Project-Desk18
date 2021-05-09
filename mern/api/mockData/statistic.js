@@ -1,45 +1,45 @@
 const statsArrayUp = [
     {
         title: "Shopping online",
-        rate: "48.72%",
+        rate: 48.7,
     },
     {
         title: "Broke up",
-        rate: "8.6%",
+        rate: 8.6,
     },
     {
         title: "Start backing",
-        rate: "17.2%",
+        rate: 17.2,
     },
     {
         title: "Wear masks",
-        rate: "43.62%",
+        rate: 43.6,
     },
     {
         title: "Cooking by myself",
-        rate: "52.1%",
+        rate: 52.1,
     },
 ];
 const statsArrayDown = [
     {
         title: "Dating",
-        rate: "19.64%",
+        rate: 19.6,
     },
     {
         title: "Jogging",
-        rate: "6.82%",
+        rate: 6.8,
     },
     {
         title: "Go on a holiday",
-        rate: "38.97%",
+        rate: 38.9,
     },
     {
         title: "Approve the government",
-        rate: "12.34%",
+        rate: 12.3,
     },
     {
         title: "Eat away",
-        rate: "69.51%",
+        rate: 69.5,
     },
 ];
 const getRandomNum = (max, min) => {

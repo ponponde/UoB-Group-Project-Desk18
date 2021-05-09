@@ -2,28 +2,31 @@ import * as types from "./types";
 const initialState = {
     user: {},
     isLogin: false,
-    currentCountry: "Globle",
+    currentCountry: "Global",
     showForum: false,
-    currentCountry_code: "",
+    currentCountryData: {},
     post_data: [],
 };
 export function dataReducer(state = initialState, action) {
     switch (action.type) {
         case types.SET_POST_DATA:
-            console.log("SET_POST_DATA", action.data);
             return {
                 ...state,
                 post_data: action.data,
             };
+        case types.SET_COUNTRY_DATA:
+            return {
+                ...state,
+                currentCountryData: action.data,
+            };
+
         case types.SET_USER:
-            console.log("SET_USER", action.data);
             return {
                 ...state,
                 user: action.data,
                 isLogin: true,
             };
         case types.SET_CURRENT_COUNTRY:
-            console.log("SET_CURRENT_COUNTRY", action.data);
             return {
                 ...state,
                 currentCountry: action.data,

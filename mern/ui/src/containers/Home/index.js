@@ -5,38 +5,45 @@ import InfoDrawer from "../../components/InfoDrawer";
 import World from "@svg-maps/world";
 import * as ep from "../../Endpoint";
 import * as fetch from "../../utils/fetch";
-import { setCountryCode, setUser } from "../../store/action";
+import { setUser, setCurrentCountryData } from "../../store/action";
 import { SVGMap } from "react-svg-map";
 import "./App.scss";
 import "react-svg-map/lib/index.css";
 import NavBar from "../../components/NavBar";
-import { Button } from "antd";
+import { Button, message } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import StatisticPanel from "../../components/StatisticPanel";
 import RankingList from "../../components/RankingList";
 import { setCurrentCountry } from "../../store/action";
-const GB = require("../../data/travel/gb.json");
-const dd = require("../../data/covid/0308.json");
-const apiUrl = `http://localhost:8080`;
+import { getRandomNum } from "../../utils/mockData";
 
 function App(props) {
-    const [place, setPlace] = React.useState();
     const [position, setPosition] = React.useState({});
     const [isShow, setShow] = React.useState(false);
-    const [globalData, setGlobalData] = React.useState({});
-    const [countryData, setCountryData] = React.useState([]);
-    const [countryRecord, setCountryRecord] = React.useState("");
     const [openDrawer, setOpenDrawer] = useState(false);
     const [drawerData, setDrawerData] = useState({});
     const currentCountry = useSelector((state) => state.currentCountry);
     const isLogin = useSelector((state) => state.isLogin);
+    const mainData = useSelector((state) => state.currentCountryData);
     const dispatch = useDispatch();
+    React.useEffect(() => {
+        getMapData();
+    }, [props]);
 
     React.useEffect(() => {
-        const gData = dd.Global;
-        setGlobalData(gData);
-        setCountryData(dd.Countries);
-    }, []);
+        getMapData();
+    }, [currentCountry]);
+
+    async function getMapData() {
+        const cData = await fetch.getMapInfo(currentCountry);
+        dispatch(setCurrentCountryData(cData));
+    }
+    const tips = {
+        gb: "https://www.torbayandsouthdevon.nhs.uk/uploads/200305-catch-it-bin-it-kill-it.jpg",
+        tw: "https://www.seccm.org.tw/files/index_banner/20200323_002.jpg",
+        cn: "http://www.gov.cn/fuwu/zt/yqfwzq/fkzn.htm",
+    };
+
     async function retrieveUserData() {
         const TOKEN = localStorage.getItem(ep.SESSION_KEY);
         if (TOKEN) {
@@ -46,27 +53,32 @@ function App(props) {
     }
     React.useEffect(() => {
         retrieveUserData();
+        getMapData();
     }, [props]);
+
     const showDrawer = (type) => {
         switch (type) {
-            case "Details":
+            case "Gov":
                 setDrawerData({
-                    title: type,
-                    data: GB.Country,
+                    title: type + " Info",
+                    data: {
+                        code: currentCountry,
+                        url: tips[currentCountry] || tips.GB,
+                    },
                     derection: "bottom",
                 });
                 break;
             case "Travel":
                 setDrawerData({
                     title: type + " Policy",
-                    data: GB.Notes,
+                    data: mainData.Notes,
                     derection: "bottom",
                 });
                 break;
             case "News":
                 setDrawerData({
                     title: type,
-                    data: [],
+                    data: mainData.Notes,
                     derection: "bottom",
                 });
                 break;
@@ -75,21 +87,15 @@ function App(props) {
     };
 
     const setLocationID = (e) => {
-        let d = countryData && countryData.filter((i) => i.CountryCode === e.target.id.toUpperCase());
-        setCountryRecord(d[0]);
-        //         Date: "2021-02-16T14:55:54.762Z"
-        // ID: "c2d733a7-9e4b-48bb-b6c8-d2ce38761119"
-        // NewConfirmed: 53883
-        // NewDeaths: 989
-        // NewRecovered: 0
-        // Premium: {}
-        // Slug: "united-states"
-        // TotalConfirmed: 27694165
-        // TotalDeaths: 486325
-
         dispatch(setCurrentCountry(e.target.id));
-        setPlace(e.target.id);
+        randomGetPoint();
         setShow(true);
+    };
+    const randomGetPoint = () => {
+        if (getRandomNum(100) % 11 == 0) {
+            const point = getRandomNum(1, 3);
+            message.success(`You got ${point} points!`);
+        }
     };
     const getScreenPosition = (e) => {
         const style = {
@@ -99,26 +105,25 @@ function App(props) {
         setPosition(style);
         setShow(false);
     };
-    const countryList = [
-        "NewConfirmed",
-        "NewDeaths",
-        "NewRecovered",
-        "TotalConfirmed",
-        "TotalDeaths",
-        "TotalRecovered",
-    ];
-
-    
+    const countryList = ["Active", "Confirmed", "Deaths", "Recovered"];
+    function toCurrency(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
     return (
         <div className="App">
-
             {isLogin ? null : <Intro />}
             <MusicPlayer />
 
             <NavBar />
-            <StatisticPanel data={countryRecord} />
+            <StatisticPanel
+                data={mainData?.statistics}
+                Confirmed={mainData?.Confirmed}
+                Recovered={mainData?.Recovered}
+                posts={mainData?.posts}
+                feedback={mainData?.feedback}
+            />
             <div className="rank_list">
-                <RankingList data={countryRecord} />
+                <RankingList data={mainData?.rankList} />
             </div>
             <div className="main_map">
                 <SVGMap
@@ -130,20 +135,19 @@ function App(props) {
 
             {isShow ? (
                 <div className="popup" style={position}>
-                    {place.toUpperCase()}
+                    {mainData?.Country}
                     <ul>
-                        {countryList &&
-                            countryRecord &&
+                        {mainData?.Active &&
                             countryList.map((txt) => {
-                                return <li>{txt + ":" + countryRecord[txt]}</li>;
+                                return <li>{txt + ": " + toCurrency(mainData[txt])}</li>;
                             })}
                     </ul>
                 </div>
             ) : null}
 
             <div className="footer">
-                <Button type="primary" onClick={() => showDrawer("Details")}>
-                    Details
+                <Button type="primary" onClick={() => showDrawer("Gov")}>
+                    Gov' info
                 </Button>
                 <Button type="primary" onClick={() => showDrawer("Travel")}>
                     Travel Policy
