@@ -69,8 +69,10 @@ It(“match snapshot”, () => {
 Code 4. Frontend snapshot test
 
  ![](https://i.imgur.com/y3HcAxv.png)
+ 
 Figure 2. Frontend snapshot testing file structure
 
 [1]    ‘Jest · 🃏 Delightful JavaScript Testing’. https://jestjs.io/ (accessed May 09, 2021).
+
 [2]    ‘React Testing Library | Testing Library’. https://testing-library.com/docs/react-testing-library/intro (accessed May 09, 2021).
 
