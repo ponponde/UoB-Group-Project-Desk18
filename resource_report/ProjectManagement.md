@@ -9,7 +9,7 @@
   - [Time Estimating](#Time-Estimating)
   - [Work Breakdown](#work-breakdown)
   - [Gantt Chart](#gantt-chart)
-- [Team use of Git](#team-use-of-git)
+- [**Team use of Git**](#team-use-of-git)
 - [**Appendix : Sprint**](#appendix-sprints)
 - [**Appendix : Backlog**](#appendix-backlog)
 
