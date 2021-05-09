@@ -140,7 +140,7 @@ This ensures all of our members have consensus on how to develop locally and rem
 
 Our git repository have main, dev, feature and report branches. Main branch, which is merged from dev branch, stores stable version of our project and should pass all the tests. Dev branch, which is an integration branch of features, serves as our primary working branch and any feature must branch from dev. To prevent accidnetly changing main and dev, branch protection rules are set so members cannot push to these branches directly. Instead, we use pull requests when there is need to merge to main or dev. Feature branches are created when someone wants to add or adjust code. After finishing the development work on feature branch, the member should create a pull request to dev and others can help to test the functionality. Once other members have reviewed the change, the feature can be merged to dev branch. The report branch is made to cooperate on our final report. Finally, we made a diagram to illustrate our workflow therefore we can stick to the plan easier.
 
-![](https://i.imgur.com/gupOUrL.png =350x)![](https://i.imgur.com/jqGSSoy.png =280x)
+<img src="https://i.imgur.com/gupOUrL.png" width=350><img src="https://i.imgur.com/jqGSSoy.png" width=280>
 
 ### Developing
 
