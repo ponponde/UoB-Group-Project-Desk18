@@ -7,6 +7,7 @@
 We implemented our webpage frontend with some libraries and some well-built Html components. Generally, our main implement methods and libraries used can be shown in Table 1.  
 
 ![](https://i.imgur.com/JRxxAtG.png)
+
 Table 1. Frontend libraries overview
 
 ### Framework – React + Redux
@@ -19,10 +20,14 @@ There are plenty of frontend frameworks nowadays. The most popular ones are the 
 
 First, popularity, According the research by Elar Saks[3],  react have got the highest package downloads which means that the resources must be sufficient to do a good project. We indeed found a perfect react-svg-map[4] for our data visualization  and a fantastic UI library ant-design[5].Second, easy to make separate components. Our components lie in the components folder, like figure 1. Third, simplicity, well defined methods, HTML like in-javascript tags for component rendering, and a full CSS support make the user learn quickly with some basic of frontend skills. We arranged our components like Figure 2.  Fourth, testability, with a bunch of testing library[6][7][8] and components structure React web app is very easy to test.
 
+
 ![](https://i.imgur.com/YoCjRnZ.png)
+
 Figure 1. Frontend Structure
 
+
  ![](https://i.imgur.com/yvgBfur.png)
+ 
 Figure 2. Frontend Component structure
 
 #### Redux
@@ -41,15 +46,19 @@ We introduce a novel method to visualize the data in map. Because the shape of e
 
 Gif 1. React-svg-map interaction
 
+
 #### UI Design – Ant-Design[5]
 
 To make our webpage keep a neat and nice design, We adopt Ant-Design for our UI design library. Ant-Design provides a complete program including lots of common component like buttons, modal and carousel. For example, the modal for Forum button( Gif. 2 ) and the carousel for intro tutorial( Gif. 3 ).
 
+
  ![](https://i.imgur.com/kojuIm3.gif)
 Gif 2. Forum modal
 
+
 ![](https://i.imgur.com/OfhgDH7.gif)
 Gif 3. Carousel for intro tutorial information
+
 
 ## Additional elements and components
 
@@ -63,6 +72,7 @@ To accomplish a login function, a reliable method to do Authentication is very i
 
 We use JavaScript to control the primitive Audio component in Html. We considered other music frameworks like Tone.js and Howler.js. However, we found that the build in Audio component is enough for our work. We implemented this in the MusicPlayer component ( Figure. 1 ). We implement whole page click sound by document.body.addEventListener() (Code 1.). Background music play by document.getElementById() (Code 2.). We create an easy toggle for play and stop of the background music (Gif 4 ). 
 
+
  ```
 useEffect(() => {
          document.body.addEventListener('mousedown', soundEffect );
@@ -72,6 +82,7 @@ useEffect(() => {
   },[]);
   ```
 Code 1. Whole page click sound
+
 
 ```
 useEffect(() => {
