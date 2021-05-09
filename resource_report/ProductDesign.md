@@ -43,8 +43,8 @@ Original prediction game and map wireframe design for desktop UI (up), and updat
 
 - Original prediction game and map wireframe
 
-<p align="center"><img src="Wire1a.png"width=80%>
-<p align="center"><img src="Wire1b.png"width=80%>
+<p align="center"><img src="Wire1a.png"width=45%>
+<p align="center"><img src="Wire1b.png"width=45%>
 
 ------
 
