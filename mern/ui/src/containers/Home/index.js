@@ -24,6 +24,7 @@ function App(props) {
     const [openDrawer, setOpenDrawer] = useState(false);
     const [drawerData, setDrawerData] = useState({});
     const currentCountry = useSelector((state) => state.currentCountry);
+    const showForum = useSelector((state) => state.showForum);
     const isLogin = useSelector((state) => state.isLogin);
     const mainData = useSelector((state) => state.currentCountryData);
     const dispatch = useDispatch();
@@ -126,9 +127,11 @@ function App(props) {
             <div className="rank_list">
                 <RankingList data={mainData?.rankList} />
             </div>
-            <div className="dynamicMsg">
-                <DynamicMsg />
-            </div>
+            {showForum ? null : (
+                <div className="dynamicMsg">
+                    <DynamicMsg />
+                </div>
+            )}
             <div className="main_map">
                 <SVGMap
                     map={World}
