@@ -37,7 +37,7 @@
 
 ### Wireframes and interaction flow diagrams for final key subsystems
 
-### DESKTOP UI WIREFRAME
+### Desktop UI wireframe
 
 Original prediction game and map wireframe design for desktop UI (up), and updated with forum wireframe design (down):
 
