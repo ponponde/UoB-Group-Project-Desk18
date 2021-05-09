@@ -44,14 +44,14 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 ## Project Management / 工程管理
 **View our [project management document](resource_report/ProjectManagement.md) to see :**
-* Introduction
-* Individual Contribution
-* Risk Management
-* Planning
- * Time Estimating
- * Word Breakdown
- * Gantt Chart
-* Team use of Git
+- Introduction
+- Individual Contribution
+- Risk Management
+- Planning
+ - Time Estimating
+ - Word Breakdown
+ - Gantt Chart
+- Team use of Git
 
 ## Evaluation / 最终成品展示、评估和反思
 
