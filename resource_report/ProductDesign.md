@@ -42,10 +42,10 @@
 Original prediction game and map wireframe design for desktop UI (up), and updated with forum wireframe design (down):
 
 - Original prediction game and map wireframe
-
-<p align="center"><img src="Wire1a.png"width=45%>
-<p align="center"><img src="Wire1b.png"width=45%>
-
+<div class="d-flex flex-justify-between">
+<div><p align="center"><img src="Wire1a.png"width=45%></div>
+<div><p align="center"><img src="Wire1b.png"width=45%></div>
+</div>
 ------
 
 - updated with forum wireframe
