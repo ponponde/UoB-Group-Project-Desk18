@@ -127,7 +127,26 @@ T15 : done, 2021-04-15, 25d
 
 
 ## Team use of Git
+In this project, we use git and github to manage and cooperate all of our codes and reports. In order to keep everything tidy and to practice continuous integration and deployment, Gitflow Workflow is used to setup a neat but also robust framework for managing collaborative projects.
 
+### Planning
+Before starting to develop our product, we have discussed several times in our weekly meeting to establish:
+- Personal workflow (including usage of git command)
+- Branching rules
+- Pull request
+- Branch protection rules
+
+This ensures all of our members have consensus on how to develop locally and remotely at the same time. Building develop rules before starting to develop could benefit in separating tasks and environments, debugging and finding historic version especailly in sprint development where dozens of commits will be pushed to remote everyday. 
+
+Our git repository have main, dev, feature and report branches. Main branch, which is merged from dev branch, stores stable version of our project and should pass all the tests. Dev branch, which is an integration branch of features, serves as our primary working branch and any feature must branch from dev. To prevent accidnetly changing main and dev, branch protection rules are set so members cannot push to these branches directly. Instead, we use pull requests when there is need to merge to main or dev. Feature branches are created when someone wants to add or adjust code. After finishing the development work on feature branch, the member should create a pull request to dev and others can help to test the functionality. Once other members have reviewed the change, the feature can be merged to dev branch. The report branch is made to cooperate on our final report. Finally, we made a diagram to illustrate our workflow therefore we can stick to the plan easier.
+
+![](https://i.imgur.com/gupOUrL.png =350x)![](https://i.imgur.com/jqGSSoy.png =280x)
+
+### Developing
+
+During development, we found that it's hard to keep everything to the plan. Because this is the first time we collaborate using git, we sometimes forgot to ```git fetch``` before creating feature branches. Furthermore, we were not sure when to merge to dev and main and what kind of tests should be applied before the merged. The solution is that every member builds the project during weekly meeting and tests together if there is any problem. Then we merge those finished feature branches. In this case, 
+
+### Evaluation
 
 
 
