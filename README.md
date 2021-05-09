@@ -48,9 +48,9 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 * Individual Contribution
 * Risk Management
 * Planning
-** Time Estimating
-** Word Breakdown
-** Gantt Chart
+ * Time Estimating
+ * Word Breakdown
+ * Gantt Chart
 * Team use of Git
 
 ## Evaluation / 最终成品展示、评估和反思
