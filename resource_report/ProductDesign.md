@@ -1,16 +1,16 @@
 <p align="center"><img src="logoTxt.png"width=80%>
 
 
-
 # Product Design
 
 ## Table of Contents
 
 - [**User Requirement**](#user-requirement)
   - [Apply the requirements finding techniques](#Apply-the-requirements-finding-techniques)
-  - [User Story](Backlog.md)
+  - [User Story](#user-story)
   - [General User Persona](#general-user-persona)
-- [**UX Design**](#ux-design)
+- [**Design Process and Early prototyping and Ideation**](#Design-Process-and-Early-prototyping-and-Ideation)
+- [**UX approach**](#UX-approach)
 - [**Wireframes and interaction flow diagrams**](#Wireframes-and-interaction-flow-diagrams)
 - [**Appendix: Interview**](#appendix-interview)
 
@@ -60,13 +60,13 @@ User environment : Forced to stay at home for long periods of time because of th
 
 
 
-### Design Process and Early prototyping and ideation
+## Design Process and Early prototyping and Ideation
 
  (including mood boards and paper prototyping)
 
 
 
-### UX approach
+## UX approach
 
 – design heuristics/approach, design methods (design fiction / heuristics)
 
@@ -76,7 +76,7 @@ User environment : Forced to stay at home for long periods of time because of th
 
 
 
-### Wireframes and interaction flow diagrams
+## Wireframes and interaction flow diagrams
 
 Original prediction game and map wireframe design for desktop UI (up), and updated with forum wireframe design (down):
 
@@ -93,31 +93,25 @@ We picked a world map to attract users to click and search the current situation
 
 <p align="center"><img src="Wire2.jpeg"width=50%>
 
-
 - Prototype of the main page
 
 <p align="center"><img src="Wire3.png"width=50%>
-
 
 - Prototype of the news, gov’s info and travel policy
 
 <p align="center"><img src="Wire4.png"width=50%>
 
-
 Because of ethical issue, we finally modified our product. We add new game system with socail interaction like forum and likes, and added more information not only about official unumbers of covid but also trending tags and hot words.
 
 <p align="center"><img src="Wire5.jpeg"width=50%>
 
-
 <p align="center"><img src="Wire6.png"width=50%>
-
 
 We want to make our product more friendly, after interviewed many users and collect their feedback, it’s necessary for us to add introduction and tutorial in the begining.
 
 - Prototype of the intro page
 
 <p align="center"><img src="Wire7.png"width=50%>
-
 
 #### Interaction flow diagrams for final key subsystems
 
@@ -128,7 +122,6 @@ Map is the key feature for our product so we choose destoop ui for this project.
   - With authentication, the user could collect points by post, like, reply in the forum or click map to check the data of other countries.
 
 <p align="center"><img src="Wire8.jpeg"width=50%>
-
 
 
 ## Appendix Interview
