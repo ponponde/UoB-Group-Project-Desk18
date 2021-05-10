@@ -21,12 +21,51 @@ There are plenty of frontend frameworks nowadays. The most popular ones are the 
 First, popularity, According the research by Elar Saks[3],  react have got the highest package downloads which means that the resources must be sufficient to do a good project. We indeed found a perfect react-svg-map[4] for our data visualization  and a fantastic UI library ant-design[5].Second, easy to make separate components. Our components lie in the components folder, like figure 1. Third, simplicity, well defined methods, HTML like in-javascript tags for component rendering, and a full CSS support make the user learn quickly with some basic of frontend skills. We arranged our components like Figure 2.  Fourth, testability, with a bunch of testing library[6][7][8] and components structure React web app is very easy to test.
 
 
-![](https://i.imgur.com/YoCjRnZ.png)
+```
+├── ui
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   |   │   ├──Editor
+│   |   │   ├──InfoDrawer
+│   |   │   ├──Intro
+│   |   │   ├──LoginModal
+│   |   │   ├──MusicPlayer
+│   |   │   ├──NavBar
+│   |   │   ├──Post
+│   |   │   ├──RankingList
+│   |   │   ├──Reply
+│   |   │   ├──SideForum
+│   |   │   ├──SignupModal
+│   |   │   └──StatisticPanel
+│   │   ├── containers
+│   │   ├── data
+│   │   ├── Endpoint
+│   │   ├── img
+│   │   ├── music
+│   │   ├── store
+│   │   │   ├── action.js
+│   │   │   ├── reducer.js
+│   │   │   └── types.js
+│   │   ├── utils
+│   │   ├── common.scss
+│   │   ├── index.scss
+│   │   └── index.js
+│   ├── Dockerfile
+│   └── package.json
+├── docker-compose.yml
+└── README.md*
+```
 
 Figure 1. Frontend Structure
 
 
- ![](https://i.imgur.com/yvgBfur.png)
+```
+├──Intro
+│   ├──__test__
+│   ├──index.js
+│   └──intro.scss
+```
  
 Figure 2. Frontend Component structure
 
