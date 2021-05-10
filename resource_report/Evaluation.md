@@ -16,6 +16,7 @@ The frontend testing method design is mainly focus on what user see and what use
 In the folder of every component, there exist a corresponding xxx.test.js file in __test__ folder, which is responsible for testing the component. Which is clear and easy to manage (figure 1).
 
 ![](https://i.imgur.com/mvcwuuX.png)
+
 Figure 1. Frontend Testing file structure
 
 #### Crash test
