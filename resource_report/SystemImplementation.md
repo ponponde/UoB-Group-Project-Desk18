@@ -126,6 +126,74 @@ Gif 5. Intro animation
 
 
 
+## Deployment Details
+In this project, we use docker to test and deploy our product and to achieve continuous integration and deployment. We created 3 images including ui, api, and mongo and set up a network to communicate to each other.
+
+### ui
+```dockerfile=
+# build environment
+FROM node:12.2.0-alpine as build
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY package.json /app/package.json
+RUN npm install --silent
+RUN npm install react-scripts@3.0.1 -g --silent
+COPY . /app
+RUN yarn build
+
+# production environment
+FROM nginx:1.16.0-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+The ui image deploys our frontend part of our project. We use multi-stage builds to create our ui image. First, we use the node official image to build our project including installing all modules in `package.json`. Next, since we use React as our frontend web framework, `npm install react-scripts` download scripts and configuration used by React. After setting up the environment, we then use `nginx` to deploy our server-side and listen on port 80.
+
+
+### api
+```dockerfile=
+FROM node:8
+# Create app directory
+WORKDIR /usr/src/app
+# Install app dependencies
+COPY package*.json ./
+
+RUN npm install
+# Copy app source code
+COPY . .
+
+#Expose port and start application
+EXPOSE 8080
+CMD [ "npm", "start" ]
+```
+This image is for creating multiple api and receive any request from ui image. Node official image is used as the base image and listen on port 8080. 
+
+
+### mongo
+Instead of creating a database image, we use the official mongo image directly pulled from the docker hub.
+
+### docker-compose.yml
+```yaml=
+version: '2'
+services:
+  ui:
+    build: ./ui
+    ports:
+      - '3000:80'
+    depends_on:
+      - api
+  api:
+    build: ./api
+    ports:
+      - '8080:8080'
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+```
+
 
 
 
