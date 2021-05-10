@@ -49,7 +49,6 @@ describe("GET /api/map/mapInfo/:id", function () {
               expect(body).to.have.property("Active");
               expect(body).to.have.property("Recommendation");
               expect(body).to.have.property("Notes");
-              expect(body).to.have.property("NewConfirmed");
               expect(body).to.have.property("statistics");
               expect(body).to.have.property("rankList");
             })
