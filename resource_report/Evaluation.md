@@ -15,8 +15,14 @@ The frontend testing method design is mainly focus on what user see and what use
 #### Testing file
 In the folder of every component, there exist a corresponding xxx.test.js file in __test__ folder, which is responsible for testing the component. Which is clear and easy to manage (figure 1).
 
-![](https://i.imgur.com/mvcwuuX.png)
-
+```
+├──Intro
+│   ├──__test__
+|   │   ├──__Snapshot__
+|   |   └──Intro.test.js
+│   ├──index.js
+│   └──intro.scss
+```
 Figure 1. Frontend Testing file structure
 
 #### Crash test
@@ -69,7 +75,15 @@ It(“match snapshot”, () => {
 ```
 Code 4. Frontend snapshot test
 
- ![](https://i.imgur.com/y3HcAxv.png)
+```
+├──Intro
+│   ├──__test__
+|   │   ├──__Snapshot__
+│   |   |   └──Intro.test.js.snap
+|   |   └──Intro.test.js
+│   ├──index.js
+│   └──intro.scss
+```
  
 Figure 2. Frontend snapshot testing file structure
 
