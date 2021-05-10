@@ -6,7 +6,7 @@
 
 We implemented our webpage frontend with some libraries and some well-built Html components. Generally, our main implement methods and libraries used can be shown in Table 1.  
 
-![](https://i.imgur.com/JRxxAtG.png)
+![](https://i.imgur.com/7GOGINu.png)
 
 Table 1. Frontend libraries overview
 
