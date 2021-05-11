@@ -165,8 +165,8 @@ Gif 5. Intro animation
 
 
 
-## Deployment Details
-In this project, we use docker to test and deploy our product and to achieve continuous integration and deployment. We created 3 images including ui, api, and mongo and set up a network to communicate to each other.
+## Deployment details
+In this project, we use docker to test and deploy our product and to achieve continuous integration and deployment. We created 3 images including ui, api, and mongo and set up network for communicate to each other.
 
 ### ui
 ```dockerfile=
@@ -209,7 +209,7 @@ This image is for creating multiple api and receive any request from ui image. N
 
 
 ### mongo
-Instead of creating a database image, we use the official mongo image directly pulled from the docker hub.
+Instead of creating the database image, we use the official mongo image directly pulled from the docker hub.
 
 ### docker-compose.yml
 ```yaml=
@@ -232,9 +232,6 @@ services:
     ports:
       - '27017:27017'
 ```
-
-
-
-
+We use `docker-compose up --build` to build our whole product including ui, api, and mongo image. Because the api container requires the service from the mongo container, we need to start the mongo container first. This is the same as ui and api container. `depends_on` is used to start containers in dependency order.
 
 
