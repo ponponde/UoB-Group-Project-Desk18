@@ -169,7 +169,7 @@ Gif 5. Intro animation
 In this project, we use docker to test and deploy our product and to achieve continuous integration and deployment. We created 3 images including ui, api, and mongo and set up network for communicate to each other.
 
 ### ui
-```dockerfile=
+```dockerfile
 # build environment
 FROM node:12.2.0-alpine as build
 WORKDIR /app
@@ -190,7 +190,7 @@ The ui image deploys our frontend part of our project. We use multi-stage builds
 
 
 ### api
-```dockerfile=
+```dockerfile
 FROM node:8
 # Create app directory
 WORKDIR /usr/src/app
@@ -212,7 +212,7 @@ This image is for creating multiple api and receive any request from ui image. N
 Instead of creating the database image, we use the official mongo image directly pulled from the docker hub.
 
 ### docker-compose.yml
-```yaml=
+```yaml
 version: '2'
 services:
   ui:
