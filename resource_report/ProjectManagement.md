@@ -94,11 +94,11 @@ Those will help us to arrange and manage tasks when developing project more effi
 |             | T8. Identify and design API                          | 2             | T7               |                             |
 |             | T9. Assign the tasks                                 | 2             | T8               |                             |
 |             | T10. Development                                     | 2             | T8, T9           |                             |
-|             | T11. Implementation                                  | 1             | T10              | Code                        |
+|             | T11. Implementation                                  | 2             | T10              | Code                        |
 |             | T12. Test and Review                                 | 2             | T11              | Project and Test Feedback   |
 | Final       | T13. Adjust the interface to make more friendly      | 1             | T5               |                             |
 |             | T14. Test and Review                                 | 2             | T12, T13         | Project and Test Feedback   |
-|             | T15. Finish the final report                         | 4             | T14              | Final report for submission |
+|             | T15. Finish the final report                         | 2             | T14              | Final report for submission |
 
 ### Gantt Chart
 
@@ -106,53 +106,29 @@ Those will help us to arrange and manage tasks when developing project more effi
 gantt
 Title Gantt Chart
 section Preparation
-T1 : done, 2021-02-04, 3d
-T2 : done, 5d
-T3 : done, 5d
-T4 : done, 10d
-T5 : done, 3d
+T1 : done, 2021-02-04, 7d
+T2 : done, 2021-02-04, 7d
+T3 : done, 2021-02-04, 14d
+T4 : done, 2021-02-15, 14d
+T5 : done, 2021-02-15, 7d
 section Iteration
-T6 : done, 2021-03-01, 20d
-T7 : done, 2021-04-09, 20d
-T8 : done, 2021-04-09, 20d
-T9 : done, 2021-04-09, 20d
-T10 : done, 2021-04-15, 16d
-T11 : done, 2021-04-17, 16d
-T12 : done, 2021-04-19, 14d
+T6 : done, 2021-03-01, 7d
+T7 : done, 2021-03-08, 7d
+T8 : done, 2021-03-15, 14d
+T9 : done, 2021-03-22, 14d
+T10 : done, 2021-03-29, 14d
+T11 : done, 2021-04-05, 14d
+T12 : done, 2021-04-12, 14d
 section Final
-T13 : done, 2021-04-30, 10d
-T14 : done, 2021-04-30, 10d
-T15 : done, 2021-04-15, 25d
+T13 : done, 2021-04-26, 7d
+T14 : done, 2021-04-26, 14d
+T15 : done, 2021-04-26, 14d
 ```
 
 
 
 
 ## Team use of Git
-In this project, we use Git and GitHub to manage and cooperate on all of our codes and reports. In order to keep everything tidy and to practice continuous integration and deployment, Gitflow workflow is used to set up a neat but also robust framework for managing collaborative projects.
-
-### Planning
-Before starting to develop our product, we have discussed several times in our weekly meeting to establish:
-- Personal workflow (including usage of Git command)
-- Branching rules
-- Pull request
-- Branch protection rules
-
-This ensures all of our members have a consensus on how to develop locally and remotely at the same time. Building developing rules before starting to develop could benefit in separating tasks and environments, debugging and finding historic version especially in sprint development where dozens of commits will be pushed to remote every day. 
-
-Our Git repository has main, dev, feature and report branches. The main branch, which is merged from the dev branch, stores a stable version of our project and should pass all the tests. Dev branch, which is an integration branch of features, serves as our primary working branch and any feature must branch from dev. To prevent accidentally changing main and dev, branch protection rules are set so members cannot push to these branches directly. Instead, we use pull requests when there is a need to merge to main or dev. Feature branches are created when someone wants to add or adjust code. After finishing the development work on the feature branch, the member should create a pull request to dev and others can help to test the functionality. Once other members have reviewed the change, the feature can be merged to the dev branch. The report branch is made to cooperate on our final report. Finally, we made a diagram to illustrate our workflow therefore we can stick to the plan easier.
-
-<img src="https://i.imgur.com/Kg4TCJQ.png">
-
-### Developing
-During development, we found that it's hard to keep everything to the plan. Because this is the first time we collaborate using Git, we sometimes forgot to ```git fetch``` before creating feature branches. Furthermore, we were not sure when to merge to dev and main and what kind of tests should be applied before the merge. The solution is that every member builds the project during weekly meeting and tests together if there is any problem. Then we merge those finished feature branches. In this case, we keep the working tree clean and members can easily track changes of each commit.
-
-Sometimes bugs appear after merging, fortunately, with this developing routine, we can simply ```git reset``` and try to merge manually to verify if every conflict was solved correctly. 
-
-### Evaluation
-Because Git has many advantages like speed, simplicity and integrity, using git as our version control tool definitely facilitates our project development. Although we did not stick to the Gitflow at all times and we mess the working tree occasionally, our project is maintained well by this powerful version control system. 
-
-There is still something we can improve on using Git. First, each member should be more familiar with Git commands and the version control system. Therefore, we will not need to spend a huge amount of time fixing disordered branches and solving issues in the individual local repository. Second, we should follow Gitflow as possible to keep main, dev, and feature branches doing their works. As a result, the working tree will be more straightforward and easier to maintain and release. Last but not least, everyone should make clearer commit messages so that others could understand at a glance. People don't really have the patience to look into every commit and check changes in files. This is especially important when there are hundreds of commits in the repository.
 
 
 
