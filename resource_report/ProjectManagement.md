@@ -12,6 +12,9 @@
   - [Work Breakdown](#work-breakdown)
   - [Gantt Chart](#gantt-chart)
 - [**Team use of Git**](#team-use-of-git)
+	- [Planning](#Planning)
+	- [Developing](#Developing)
+	- [Evaluation](#Evaluation)
 - [**Appendix : Sprint**](#appendix-sprints)
 
 ## Introduction
