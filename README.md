@@ -16,7 +16,7 @@ We are waiting for you!
 
 **Click to see our introduction [video](https://www.youtube.com/watch?v=jRbCMJ7fJa8)**
  
-[![video](![](https://i.imgur.com/OXibJVa.png)](https://www.youtube.com/watch?v=jRbCMJ7fJa8 "video")
+[![video](https://i.imgur.com/OXibJVa.png)](https://www.youtube.com/watch?v=jRbCMJ7fJa8 "video")
 
 
 ## Introduction
