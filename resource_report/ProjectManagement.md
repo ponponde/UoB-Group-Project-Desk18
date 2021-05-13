@@ -221,11 +221,23 @@ There is still something we can improve on using Git. First, each member should 
   - build frontend testing 
 
 
-#### Sprint 7 : Resolving issues and enhancing features 
+#### Sprint 7 : Resolving issues and enhancing features & Write-up
 
 - Key meeting points:
   - point system
 
-#### Sprint 8 : Write-up
 
+### Manage team's tasks with Asana
 
+1. With Asana, we created tickets, which contains api spec and description, in the requirement block and assigned a member to each ticket. 
+
+<p align="center"><img src="https://i.imgur.com/FzvvOAS.png"width=80%>
+
+<p align="center"><img src="https://i.imgur.com/KJ8wo4g.png"width=80%>
+
+2. As our sprints go, the tickets will be moved to the progress or complete block. 
+   -  members could create subtask based on their tickets.
+<p align="center"><img src="asana2.png"width=80%>
+
+3. At the end, all the tasks should in the completec block besides those which is good to have for this stage but could be put into the next stage in the future.
+<p align="center"><img src="asana3.png"width=80%>
