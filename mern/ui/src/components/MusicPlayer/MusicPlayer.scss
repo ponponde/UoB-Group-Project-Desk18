@@ -1,7 +1,7 @@
 @import "../../common.scss";
 .MusicPlayer{
     opacity: 1;
-    position: absolute;
+    position: fixed;
     z-index: 300;
     top: 88%;
     left: 90%;
