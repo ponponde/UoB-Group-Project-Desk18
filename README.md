@@ -1,9 +1,11 @@
 <p align="center"><img src="resource_report/logo.png"width=30%>
 <p align="center"><img src="resource_report/logoTxt.png"width=50%>
- 
+
+
 ___
 
  ## What is ***CovidSurvival***
+
 How to survival in this post COVID would?  
 Check if you want to travel. There's travelling policy for each country  
 Check if you fear of cases. There's real time statistics of each country  
@@ -31,29 +33,70 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 
 ## Product design
-**View our [product document](resource_report/ProductDesign.md) to see**
-*
-* 
+
+**View our [product design document](resource_report/ProductDesign.md) to see**
+
+- User Requirement
+  - Apply the requirements finding techniques
+  - User Story
+  - General User Persona
+- [**Design Process and Early prototyping and Ideation**](#Design-Process-and-Early-prototyping-and-Ideation)
+- [**UX approach**](#UX-approach)
+- [**Wireframes and interaction flow diagrams**](#Wireframes-and-interaction-flow-diagrams)
+- [**Appendix: Interview**](#appendix-interview)
 
 
 ## System implementation
+
 **View our [system implementation document](resource_report/SystemImplementation.md) to see :**
-*
-*
+
+- Stack architecture and system design
+- Back End
+- Middle Tier
+- Frontend implementation 
+  - Frontend Overview 
+  - Framework – React + Redux
+    - React
+    - Redux
+    - Data Visualization - react-svg-map
+    - UI Design – Ant-Design
+- Additional elements and components
+  - Authentication
+  - Sound
+  - Animation
+- Deployment details
+  - ui
+    - build environment
+    - production environment
+  - api
+  - mongo
+  - docker-compose.yml
 
 
-## Project Management / 工程管理
+
+
+## Project Management
+
 **View our [project management document](resource_report/ProjectManagement.md) to see :**
+
 - Introduction
 - Individual Contribution
 - Risk Management
 - Planning
- - Time Estimating
- - Word Breakdown
- - Gantt Chart
+  - Time Estimating
+  - Work Breakdown
+  - Gantt Chart
 - Team use of Git
+  - Planning
+  - Developing
+  - Evaluation
+- Appendix : Sprint
 
-## Evaluation / 最终成品展示、评估和反思
+
+
+## Evaluation
+
+**View our [evaluation document](resource_report/Evaluation.md) to see :**
 
 
 
@@ -61,6 +104,3 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 
 ## Acknowledgement
-
-
-
