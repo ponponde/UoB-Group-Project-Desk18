@@ -5,7 +5,7 @@ import { List, Avatar } from "antd";
 const RankingList = (props) => {
     const { data } = props;
     return (
-        <List
+        <List data-testid="RankingList"
             itemLayout="horizontal"
             dataSource={data}
             renderItem={(item) => (

@@ -1,6 +1,10 @@
-import React from "react";
-import { Alert, Form, Button, message, Input } from "antd";
-import { useSelector, useDispatch } from "react-redux";
+
+import React, { createElement, useState } from "react";
+import { Comment, Avatar, Form, Button, List, Input } from "antd";
+import moment from "moment";
+import { useSelector, useDispatch, Provider } from "react-redux";
+
+
 
 import { SmileOutlined } from "@ant-design/icons";
 import * as fetch from "../../utils/fetch";
@@ -47,27 +51,28 @@ const Editor = () => {
     };
 
     return (
-        <div
-            style={{
-                textAlign: "right",
-            }}
-        >
-            {showAlert ? <Alert icon={icon} message="You got 3 point!" type="success" showIcon /> : null}
-            <Form.Item>
-                <TextArea
-                    rows={4}
-                    onChange={(e) => {
-                        setContent(e.target.value);
-                    }}
-                    value={content}
-                />
-            </Form.Item>
-            <Form.Item>
-                <Button htmlType="submit" onClick={submitPost} type="primary">
-                    New Post
-                </Button>
-            </Form.Item>
-        </div>
+      
+            <div
+                style={{
+                    textAlign: "right",
+                }}
+            >
+                <Form.Item>
+                    <TextArea
+                        rows={4}
+                        onChange={(e) => {
+                            setContent(e.target.value);
+                        }}
+                        value={content}
+                    />
+                </Form.Item>
+                <Form.Item>
+                    <Button htmlType="submit" onClick={submitPost} type="primary">
+                        New Post
+                    </Button>
+                </Form.Item>
+            </div> 
     );
 };
 export default Editor;
+
