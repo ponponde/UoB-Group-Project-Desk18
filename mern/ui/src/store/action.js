@@ -33,9 +33,3 @@ export function setCurrentCountryData(data) {
         data,
     };
 }
-// export function setDetailData(data, events) {
-//     return {
-//         type: types.UPDATE_DETAIL,
-//         payload: { data, events },
-//     };
-// }

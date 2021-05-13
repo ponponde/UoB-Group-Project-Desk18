@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Intro from "../../components/Intro";
 import MusicPlayer from "../../components/MusicPlayer";
 import InfoDrawer from "../../components/InfoDrawer";
+import DynamicMsg from "../../components/DynamicMsg";
 import World from "@svg-maps/world";
 import * as ep from "../../Endpoint";
 import * as fetch from "../../utils/fetch";
@@ -23,6 +24,7 @@ function App(props) {
     const [openDrawer, setOpenDrawer] = useState(false);
     const [drawerData, setDrawerData] = useState({});
     const currentCountry = useSelector((state) => state.currentCountry);
+    const showForum = useSelector((state) => state.showForum);
     const isLogin = useSelector((state) => state.isLogin);
     const mainData = useSelector((state) => state.currentCountryData);
     const dispatch = useDispatch();
@@ -125,6 +127,11 @@ function App(props) {
             <div className="rank_list">
                 <RankingList data={mainData?.rankList} />
             </div>
+            {showForum ? null : (
+                <div className="dynamicMsg">
+                    <DynamicMsg />
+                </div>
+            )}
             <div className="main_map">
                 <SVGMap
                     map={World}

@@ -75,7 +75,7 @@ const NavBar = (props) => {
                     </>
                 ) : (
                     <>
-                        <div className="navBtn"> Welcome back! {user.username} </div>
+                        <div className="navBtn"> Welcome back! {user?.username} </div>
                         <div className="navBtn">
                             <Button onClick={() => setShowForum(true)}>Forum</Button>
                         </div>
