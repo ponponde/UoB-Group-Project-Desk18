@@ -1,1 +1,4 @@
-
+| **Story ID** | **Story Name** | **User Story** | **Priority** | **Iteration Number** | **Acceptance Criteria** | **Notes** |
+| ------------ | -------------- | -------------- | ------------ | -------------------- | ----------------------- | --------- |
+| S01          | Information    | As a user, I want to view information clearly either by country or by date. | 1 | 1 | Verify that the screen can display the map while each chunk refers to a country. | User can view the map without login. | 
+| S02          | Register       | As a user, I want to register an account to share information with the world so as to collect points. | 1 | 1 | Verify that user can login and have the access to forum. | |
