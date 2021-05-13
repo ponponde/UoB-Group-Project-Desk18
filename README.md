@@ -1,77 +1,97 @@
-# UoB-Group-Project desk 18
-## Team Profile
-### Project name  
-### Members
+<p align="center"><img src="resource_report/logo.png"width=30%>
+<p align="center"><img src="resource_report/logoTxt.png"width=50%>
 
-| Name             | Email                   |
-|:----------------:|:-----------------------:|
-| Jiayi Wu         | <kz20196@bristol.ac.uk> |
-| Ronel Mehmedov   | <yu20919@bristol.ac.uk> |
-| Sheng-Han Tim Chu| <re20470@bristol.ac.uk> |
-| Yi-Tsen Ho       | <kv20880@bristol.ac.uk> |
-| Yin-Te Lan       | <oq20204@bristol.ac.uk> |
-### [Teams Channel](https://teams.microsoft.com/l/channel/19%3ab811a4a7be67448bb4bfafd8c70266a2%40thread.tacv2/Desk%252018?groupId=a9a647c8-66d1-4f10-bd04-9a5ed3f67e7b&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b)
-# Project Report
-## Introduction [10 marks]
-### Abstract
+___
 
-Motivation for the project, framing of the problem and a high-level overview of the system.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultrices dolor ac sodales pellentesque. In tincidunt diam viverra, pellentesque purus et, laoreet ligula. Curabitur sollicitudin metus a eleifend condimentum. Donec id dolor nibh. Praesent suscipit quam sed feugiat aliquam. Nunc tristique diam sit amet turpis sodales, quis convallis ante aliquet. In odio tortor, ultrices eget massa at, sodales suscipit mauris. Aenean a tincidunt erat. Mauris ornare quis augue a sagittis.
-### Project Objectives
-The high level goals of the project and the contribution towards solving the problem. A checklist against which the team can evaluate their success.  Nunc purus mauris, tristique id venenatis vel, hendrerit eu nibh. Duis cursus iaculis lorem id molestie. Donec tempor lacinia lacus ut fermentum. Nam in purus a leo viverra laoreet. Suspendisse sed felis tincidunt, faucibus lorem eu, rutrum arcu. Nulla risus eros, ultricies at vehicula quis, tincidunt sed erat. Quisque mattis in diam euismod aliquet. Ut vel nulla a odio congue laoreet. Donec sed tellus et eros dignissim ornare. Phasellus in cursus erat, imperdiet suscipit orci. Nunc sapien magna, ornare in eleifend non, scelerisque eget ex. Ut diam tortor, auctor ac lectus ac, convallis porta lacus.
-### Video
+ ## What is ***CovidSurvival***
+How to survival in this post COVID would?  
+Check if you want to travel. There's travelling policy for each country  
+Check if you fear of cases. There's real time statistics of each country  
+Check if you feel alone. There's people around the world sharing and supporting each others  
 
-Short (1-2min) demo video to explain your system (think Kickstarter)
-![404lol](video/test.gif)
-## Background and Motivation [10 marks]
-### Background literature
-Academic research review. Aenean venenatis fermentum lacinia. Aenean pretium justo vitae felis congue posuere. Cras accumsan lectus sit amet massa eleifend, in iaculis urna elementum. Etiam molestie hendrerit purus, eget tempus ante gravida vel. Duis ultrices, lacus vel dignissim porttitor, ipsum quam dapibus sapien, et bibendum lacus diam nec sapien. Ut sollicitudin sem non imperdiet rhoncus. Pellentesque semper vel est vel malesuada. Sed sit amet sapien sit amet sapien pulvinar tempus.
-### State of the art survey
-Current industry review. Aenean rutrum iaculis felis a vulputate. Pellentesque vehicula eleifend velit, mollis mattis sem. Donec velit sem, pretium convallis sollicitudin ultricies, suscipit vitae ipsum. Phasellus vel justo non dui blandit accumsan. Integer nec ex vitae ante gravida lacinia. Pellentesque rhoncus vel dolor a convallis. Phasellus suscipit sit amet eros at congue. Aliquam condimentum ligula vel risus congue varius. Mauris scelerisque sem a nulla tempus, a venenatis velit efficitur. Donec at sem in lectus euismod tristique et a magna. Curabitur nec tempus ipsum. Etiam sem dolor, cursus tincidunt efficitur eu, blandit eu ipsum. Nullam non leo aliquet velit sagittis dapibus eget vel mi. Nulla placerat ante non imperdiet volutpat. Phasellus ac turpis id tortor sodales pulvinar. In aliquam varius mattis.
-### Clear definition of the problem
-How does your project relate to the above? We will be marking the ability of your team to identify a worthwhile and important problem and clearly articulate the scope and challenge of the problem. Aliquam erat volutpat. Nam ac diam et felis blandit laoreet a ac odio. Curabitur ac orci eu est euismod malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc auctor erat ut felis scelerisque, ac tincidunt nunc mattis. Aenean mi orci, molestie eu tortor non, viverra vulputate leo. Vestibulum auctor diam eget dui sodales lacinia. Suspendisse at porta ligula, lacinia hendrerit arcu. Aliquam augue enim, rhoncus sed lectus in, scelerisque dapibus ligula. Pellentesque at placerat sem, ut rhoncus justo. Morbi nec dui tristique, placerat tortor nec, commodo massa. Donec non commodo leo, id sagittis nisi. Donec bibendum risus molestie libero sollicitudin, dignissim mollis nisl placerat.
-## System Implmentation [20 marks]
-### Stack architecture and system design
-e.g. class diagrams, dequence diagrams
-### Back End - MongoDB
-database implementation, the data model that you developed your back end from (e.g. entity relationsip diagrams).
-### Middle Tier - Express Node, the RESTful API
-### Front End - Angular
-Details of implementation
-### Additional elements and components
-e.g. authentification. Tell us about any other aspects not covered above!
-### Deployment datails (including Docker)
-include how you have been achieving continuous integration and deployment
-## UX Design [15 marks]
-### Design Process and Early prototyping and ideation
-including mood boards and paper prototyping
-### Identification of interacting users and broader stakeholders
-### UX approach
-design heuristic/approach, degisn methods (design fiction/heuristics)
-### Understanding of user group
-questionnaires / user stories / interviews
-### Wireframes and interaction flow diagrams for final key subsystems
-## Sprints & Project Management [15 marks]
-### Group working methods used
-for instance did your team choose a particular style of agile? what communication channel did you use?
-### Discussion of team roles (specialisation if ok!)
-A summary of individual contributions (note: this is for reference, your team will receive the same grade!)
-### Documentation of your sprints
-including both high level overview, timeline, and selected highlights that were critical points in the project (remember to show the users stories implemented in each sprint). We expect a summary of metting logs (including for instance apologies for absence etc)
-### Team use of Git
-how your team used continuous integration / continuous deployment. Streamlining of workflow throughout.
-## Evaluation [15 marks]
-### Details of how you evaluated your designs (techniques used & awareness of their limitations). 
-Description of techniques suitable for your particular design. A timeline of evaluation of your design.
-### Unit testing / Functional testing.
-### User acceptance testing. 
-Evaluation of your design with users – methods undertaken, findings, implications.
+## Introduction
 
-## Conclusion [10 marks]
-Reflect on the working practices of your group, how well they did or did not work, e.g, management of issues, communication, Agile (etc).
-Reflective discussion of the success of the project. How well did your project fulfil the brief? Were all of your own objectives met
-This is a chance to reflect on how coronavirus has affected your project (remote working practices etc)
-Discussion of Social and Ethical implications of your work.
-Discussion of future work (in terms of design, development and evaluation)
+> （提交作业前最后更新一下）***Globally**, as of **12:18pm CEST, 5 May 2021**, there have been **153,738,171 confirmed cases** of COVID-19, including **3,217,281 deaths**, reported to WHO. As of **3 May 2021**, a total of **1,047,825,481 vaccine doses** have been administered.
 
-## Presentation [5 marks]
-There is a 5% mark for presentation, including formatting. We are looking for consistency, readability, conciseness, good use of figures and with the ultimate aim of this being a readable and useful public repo! 
+This is the latest data from [WHO Coronavirus (COVID-19) Dashboard](https://covid19.who.int/).
+
+As the Covid-19 epidemic spreads around the world, the virus continues to evolve, which severely affecting people's lives around the world. According to UK [government figures](https://www.bbc.com/news/uk-51768274), there have been over 4.4 million confirmed cases of coronavirus in the UK and more than 127,000 people have died. However, the heart-breaking scenes not only happen in the UK. Coronavirus has caused many humanitarian crises around the world. For example, [India has descended into Covid-19 chaos] (https://www.bbc.com/news/world-asia-india-56977653) because of its poor healthcare infrastructure.  Coupled with the wave of [globalisation](https://www.bbc.com/news/uk-56864100), it is no longer possible for any country to stand alone. Therefore, even though the COVID has subsided in the UK, we cannot stop protecting ourselves.
+
+However, [anti-lockdown](https://www.reuters.com/world/uk/anti-lockdown-protesters-defy-restrictions-central-london-march-2021-04-24/) and [anti-mask](https://www.thestar.com/news/canada/2021/05/01/hundreds-of-anti-lockdown-anti-mask-protesters-take-to-the-streets-again-in-downtown-barrie.html) activities around the world have not ceased either. From this we can conclude that despite the [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks)'s insistence on 'Make wearing a mask a normal part of being around other people', many people are still not convinced of the need to wear masks and maintain social distance.
+
+In order to control the Covid, all of us should work together, believe in science and should take the initiative and prevent the Covid. However, for different reasons, many people find it difficult to accept the scientific knowledge and are reluctant to comply with coronavirus prevention policies. This has greatly helped the spread of the coronavirus. So, how can we make people more aware of outbreaks around the world and comply with the policy through a fun website?
+
+CovidSurvival is an online social platform. On our webpage one can see real-time coronavirus statistics from around the world. It is also possible to see people from other different parts of the world sharing their lives with the coronavirus. More participation, more points, more exposure. By seeing how people in other regions are living, we hope that users will gain a clearer understanding of the dangers of coronavirus and be proactive in keeping their social distance and protection.
+
+## Video
+
+**Click to see our introduction [video]()**
+
+[![video](https://res.cloudinary.com/marcomontalbano/image/upload/v1619876092/video_to_markdown/images/youtube--4CGXvsjRjno-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol "video")
+
+
+## Product design
+**View our [product design document](resource_report/ProductDesign.md) to see**
+- User Requirement
+  - Apply the requirements finding techniques
+  - User Story
+  - General User Persona
+- Design Process and Early prototyping and Ideation
+- UX approach
+- Wireframes and interaction flow diagrams
+- Appendix: Interview
+
+
+## System implementation
+**View our [system implementation document](resource_report/SystemImplementation.md) to see :**
+- Stack architecture and system design
+- Back End
+- Middle Tier
+- Frontend implementation 
+	- Frontend Overview 
+	- Framework – React + Redux
+		- React
+		- Redux
+		- Data Visualization - react-svg-map
+		- UI Design – Ant-Design
+-  Additional elements and components
+	- Authentication
+	- Sound
+	- Animation
+- Deployment details
+  - ui
+  	- build environment
+  	- production environment
+  - api
+  - mongo
+  - docker-compose.yml
+
+
+## Project Management
+**View our [project management document](resource_report/ProjectManagement.md) to see :**
+- Introduction
+- Individual Contribution
+- Risk Management
+- Planning
+  - Time Estimating
+  - Work Breakdown
+  - Gantt Chart
+- Team use of Git
+	- Planning
+	- Developing
+	- Evaluation
+- Appendix : Sprint
+
+
+## Evaluation
+**View our [evaluation document](resource_report/Evaluation.md) to see :**
+- Evaluate the designs
+- Testing
+- User acceptance testing
+
+
+
+## Conclusion
+
+
+## Acknowledgement

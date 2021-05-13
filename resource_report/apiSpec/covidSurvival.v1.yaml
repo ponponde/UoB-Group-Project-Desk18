@@ -1,0 +1,679 @@
+openapi: 3.0.0
+info:
+  title: CovidSurvival
+  version: '1.0'
+  description: Backend service endpoints of CovidSurvival
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /api/auth/signup:
+    post:
+      summary: Sign up
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  message:
+                    type: string
+                    minLength: 1
+                required:
+                  - message
+      operationId: post-signin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                username:
+                  type: string
+                  minLength: 1
+                email:
+                  type: string
+                  minLength: 1
+                password:
+                  type: string
+                  minLength: 1
+              required:
+                - username
+                - email
+                - password
+            examples:
+              example-1:
+                value:
+                  username: abc5
+                  email: abc5@gmail.com
+                  password: '12345'
+        description: ''
+      description: |-
+        Register 
+        Email and Name should not be duplicated.
+    parameters: []
+  /api/auth/signin:
+    post:
+      summary: Sign in
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  id:
+                    type: string
+                    minLength: 1
+                  username:
+                    type: string
+                    minLength: 1
+                  email:
+                    type: string
+                    minLength: 1
+                  accessToken:
+                    type: string
+                    minLength: 1
+                required:
+                  - id
+                  - username
+                  - email
+                  - accessToken
+              examples:
+                example-1:
+                  value:
+                    id: 608aa1cc309675001a015c98
+                    username: abc5
+                    email: abc5@gmail.com
+                    roles:
+                      - ROLE_USER
+                    accessToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOGFhMWNjMzA5Njc1MDAxYTAxNWM5OCIsImlhdCI6MTYxOTY5ODE1MywiZXhwIjoxNjE5Nzg0NTUzfQ.I-ty7nPFTX2W2MvdR2sE9TPEbMfyp9IaOHFhKJTbu00
+      operationId: post-api-auth-signin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                username:
+                  type: string
+                  minLength: 1
+                password:
+                  type: string
+                  minLength: 1
+              required:
+                - username
+                - password
+            examples:
+              example-1:
+                value:
+                  username: abc5
+                  password: '12345'
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+      description: |
+        Get JWT accessToken & user information
+  '/api/map/mapInfo/:id':
+    get:
+      summary: Get covid info by country
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  Country:
+                    type: string
+                    minLength: 1
+                  CountryCode:
+                    type: string
+                    minLength: 1
+                  Confirmed:
+                    type: number
+                  Deaths:
+                    type: number
+                  Recovered:
+                    type: number
+                  Active:
+                    type: string
+                  Recommendation:
+                    type: string
+                  Notes:
+                    type: string
+                  NewConfirmed:
+                    type: number
+                  statistics:
+                    type: object
+                    properties:
+                      up:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            minLength: 1
+                          rate:
+                            type: string
+                            minLength: 1
+                        required:
+                          - title
+                          - rate
+                      down:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            minLength: 1
+                          rate:
+                            type: string
+                            minLength: 1
+                        required:
+                          - title
+                          - rate
+                    required:
+                      - up
+                      - down
+                  rankList:
+                    type: array
+                    uniqueItems: true
+                    minItems: 1
+                    items:
+                      required:
+                        - points
+                        - name
+                        - photo
+                      properties:
+                        points:
+                          type: number
+                        name:
+                          type: string
+                          minLength: 1
+                        photo:
+                          type: string
+                          minLength: 1
+                required:
+                  - Country
+                  - CountryCode
+                  - Confirmed
+                  - Deaths
+                  - Recovered
+                  - Active
+                  - Recommendation
+                  - Notes
+                  - NewConfirmed
+                  - statistics
+                  - rankList
+              examples:
+                Global:
+                  value:
+                    Country: Global
+                    CountryCode: Global
+                    Confirmed: 149407874
+                    Deaths: 3148318
+                    Recovered: 86817042
+                    Active: ''
+                    Recommendation: ''
+                    Notes: ''
+                    NewConfirmed: 661727
+                    statistics:
+                      up:
+                        title: Cooking by myself
+                        rate: 52.1%
+                      down:
+                        title: Jogging
+                        rate: 6.82%
+                    rankList:
+                      - points: 11685
+                        name: Eyrdin
+                        photo: 'https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg'
+                      - points: 5046
+                        name: nmcj1996
+                        photo: 'https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg'
+                      - points: 3048
+                        name: TirNanog84
+                        photo: 'https://api.time.com/wp-content/uploads/2014/05/166259035.jpg'
+                      - points: 2518
+                        name: Kitbuqa
+                        photo: 'https://api.time.com/wp-content/uploads/2014/05/166259035.jpg'
+                      - points: 1804
+                        name: Eyrdin
+                        photo: 'https://api.time.com/wp-content/uploads/2021/04/self-love.jpg'
+        '':
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  Country:
+                    type: string
+                    minLength: 1
+                  CountryCode:
+                    type: string
+                    minLength: 1
+                  Confirmed:
+                    type: number
+                  Deaths:
+                    type: number
+                  Recovered:
+                    type: number
+                  Active:
+                    type: string
+                  Recommendation:
+                    type: string
+                  Notes:
+                    type: string
+                  NewConfirmed:
+                    type: number
+                  statistics:
+                    type: object
+                    properties:
+                      up:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            minLength: 1
+                          rate:
+                            type: string
+                            minLength: 1
+                        required:
+                          - title
+                          - rate
+                      down:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            minLength: 1
+                          rate:
+                            type: string
+                            minLength: 1
+                        required:
+                          - title
+                          - rate
+                    required:
+                      - up
+                      - down
+                  rankList:
+                    type: array
+                    uniqueItems: true
+                    minItems: 1
+                    items:
+                      required:
+                        - points
+                        - name
+                        - photo
+                      properties:
+                        points:
+                          type: number
+                        name:
+                          type: string
+                          minLength: 1
+                        photo:
+                          type: string
+                          minLength: 1
+                required:
+                  - Country
+                  - CountryCode
+                  - Confirmed
+                  - Deaths
+                  - Recovered
+                  - Active
+                  - Recommendation
+                  - Notes
+                  - NewConfirmed
+                  - statistics
+                  - rankList
+              examples:
+                example-1:
+                  value:
+                    Country: Global
+                    CountryCode: Global
+                    Confirmed: 149407874
+                    Deaths: 3148318
+                    Recovered: 86817042
+                    Active: ''
+                    Recommendation: ''
+                    Notes: ''
+                    NewConfirmed: 661727
+                    statistics:
+                      up:
+                        title: Cooking by myself
+                        rate: 52.1%
+                      down:
+                        title: Jogging
+                        rate: 6.82%
+                    rankList:
+                      - points: 11685
+                        name: Eyrdin
+                        photo: 'https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg'
+                      - points: 5046
+                        name: nmcj1996
+                        photo: 'https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg'
+                      - points: 3048
+                        name: TirNanog84
+                        photo: 'https://api.time.com/wp-content/uploads/2014/05/166259035.jpg'
+                      - points: 2518
+                        name: Kitbuqa
+                        photo: 'https://api.time.com/wp-content/uploads/2014/05/166259035.jpg'
+                      - points: 1804
+                        name: Eyrdin
+                        photo: 'https://api.time.com/wp-content/uploads/2021/04/self-love.jpg'
+      operationId: get-111
+      parameters: []
+      description: |
+        Get information of the country
+        - travel policy
+        - Gov's info
+        - Ranking (Mock)
+        - Statistics (Mock)
+        - News (TBC)
+    parameters: []
+  /api/point:
+    get:
+      summary: Add points
+      tags: []
+      responses: {}
+      operationId: get-api-point
+      description: |-
+        User could add points by
+        - clicking map by chance
+        - post in forum
+        - reply a post
+        - like a post
+
+        (TBC)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                id:
+                  type: string
+                  minLength: 1
+                points:
+                  type: number
+              required:
+                - id
+                - points
+            examples:
+              example-1:
+                value:
+                  id: 608aa1cc309675001a015c98
+                  points: 303
+        description: |-
+          {
+             "id": "608aa1cc309675001a015c98",
+             "points":3
+          }
+  /api/forum:
+    post:
+      summary: Make a post in forum
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  country:
+                    type: string
+                    minLength: 1
+                  author:
+                    type: string
+                    minLength: 1
+                  author_id:
+                    type: string
+                    minLength: 1
+                  content:
+                    type: string
+                    minLength: 1
+                required:
+                  - country
+                  - author
+                  - author_id
+                  - content
+              examples:
+                example-1:
+                  value:
+                    country: string
+                    author: string
+                    author_id: string
+                    content: string
+      operationId: post-api-forum
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                country:
+                  type: string
+                  minLength: 1
+                author:
+                  type: string
+                  minLength: 1
+                author_id:
+                  type: string
+                  minLength: 1
+                content:
+                  type: string
+                  minLength: 1
+              required:
+                - country
+                - author
+                - author_id
+                - content
+            examples:
+              example-1:
+                value:
+                  country: GB
+                  author: Han Solo
+                  author_id: '2'
+                  content: 'We supply a series of design principles, practical patterns and high quality design resources(Sketch and Axure), to help people create their product prototypes beautifully and efficiently.'
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+          multipart/form-data:
+            schema:
+              description: ''
+              type: object
+              properties:
+                country:
+                  type: string
+                  minLength: 1
+                author:
+                  type: string
+                  minLength: 1
+                author_id:
+                  type: string
+                  minLength: 1
+                content:
+                  type: string
+                  minLength: 1
+              required:
+                - country
+                - author
+                - author_id
+                - content
+            examples:
+              example-1:
+                value:
+                  country: GB
+                  author: Han Solo
+                  author_id: '2'
+                  content: 'We supply a series of design principles, practical patterns and high quality design.'
+        description: ''
+      description: make a post in a forum
+  '/api/forum/:country':
+    get:
+      summary: Get posts of a country
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                description: ''
+                minItems: 1
+                uniqueItems: true
+                items:
+                  type: object
+                  required:
+                    - country
+                    - author
+                    - author_id
+                    - content
+                  properties:
+                    country:
+                      type: string
+                      minLength: 1
+                    author:
+                      type: string
+                      minLength: 1
+                    author_id:
+                      type: string
+                      minLength: 1
+                    content:
+                      type: string
+                      minLength: 1
+              examples:
+                example-1:
+                  value:
+                    - country: string
+                      author: string
+                      author_id: string
+                      content: string
+                    - country: string
+                      author: string
+                      author_id: string
+                      content: string
+                    - country: string
+                      author: string
+                      author_id: string
+                      content: string
+      operationId: 'get-api-forum-:country'
+      description: get array of posts of a country
+components:
+  schemas:
+    User:
+      title: User
+      type: object
+      description: |2-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         new mongoose.Schema({
+                username: String,
+                email: String,
+                password: String,
+                points: Number,
+                roles: [
+                    {
+                        type: mongoose.Schema.Types.ObjectId,
+                        ref: "Role",
+                    },
+                ],
+            })
+      x-examples:
+        Alice Smith:
+          id: 142
+          firstName: Alice
+          lastName: Smith
+          email: alice.smith@gmail.com
+          dateOfBirth: '1997-10-31'
+          emailVerified: true
+          signUpDate: '2019-08-24'
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the given user.
+        username:
+          type: string
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+        points:
+          type: integer
+        roles:
+          type: array
+          items: {}
+      required:
+        - id
+        - username
+        - email
+    Forum:
+      title: Forum
+      type: object
+      description: |-
+        const forum = mongoose.model(
+            "forum",
+            new mongoose.Schema({
+                country: String,
+                author: String,
+                author_id: String,
+                content: String,
+                likes: Number,
+                date: Date,
+            })
+        );
+      properties:
+        id:
+          type: string
+        country:
+          type: string
+        author:
+          type: string
+        author_id:
+          type: string
+        content:
+          type: string
+        likes:
+          type: number
+        date:
+          type: string
