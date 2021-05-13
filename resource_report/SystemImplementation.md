@@ -65,7 +65,7 @@ MongoDB and Mongoose were used for database implementation.  MongoDB is a NoSQL 
 
 The setup for the mongoose connection is defined in api/db/index.js and the models are defined in api/db/models. Each of the files in the latter folder defines a mongoose schema that is used to map the data stored in MongoDB. Below is a map illustrating the relationship between the models used for the website:
 
-<p align="center"><img src="models2.png"width=50%>
+<p align="center"><img src="models2.png"width=80%>
 
 
 The data received from third party API’s for statistical information about COVID is not being stored as it’s being simply redirected to the user through the map.controller.js.
@@ -106,7 +106,7 @@ The map.controller.js deals with displaying statistical information about covid 
 API spec is on [swagger](https://app.swaggerhub.com/apis-docs/covidsurvival/covid-survival/1.0), which will be expired on 05/22/2021 on swagger free pages. 
 If it is expired, please refer to [Yaml](resource_report/covidSurvival.v1.yaml) or [Html](resource_report/covidSurvivalApiSpec.html) 
 
-<p align="center"><img src="https://i.imgur.com/rwppF87.png"width=50%>
+<p align="center"><img src="![](https://i.imgur.com/w2hoimn.png"width=80%>
 
 We designed six APIs as below:
 
@@ -196,11 +196,7 @@ When the user click a country on the map, the front-end will fetch this api for 
 
 #### [POST] /api/point
 
-User could add points by
-- clicking map by chance
-- post in forum
-- reply a post
-- like a post
+User could add points by clicking map by chance,posting in a forum, replying a post or like a post.
 
 - Request body
 ```
