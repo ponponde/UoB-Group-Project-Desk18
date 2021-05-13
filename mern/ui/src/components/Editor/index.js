@@ -27,7 +27,6 @@ const Editor = () => {
     return (
         
             <div
-                data-testid="Editor"
                 style={{
                     textAlign: "right",
                 }}
