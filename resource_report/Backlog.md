@@ -1,4 +1,12 @@
 | **Story ID** | **Story Name** | **User Story** | **Priority** | **Iteration Number** | **Acceptance Criteria** | **Notes** |
 | ------------ | -------------- | -------------- | ------------ | -------------------- | ----------------------- | --------- |
 | S01          | Information    | As a user, I want to view information clearly either by country or by date. | 1 | 1 | Verify that the screen can display the map while each chunk refers to a country. | User can view the map without login. | 
-| S02          | Register       | As a user, I want to register an account to share information with the world so as to collect points. | 1 | 1 | Verify that user can login and have the access to forum. | |
+| S02          | Register       | As a user, I want to register an account to share information with the world so as to collect points. | 1 | 1 | Verify that user can register and have the access to forum. | |
+| S03          | Login          | As a user, I want to have a password-protected account to keep my personal data as well as using the username to post. | 1 | 1 | Verify that user details is stored safely and users can post and interact with the community using username. | |
+| S04          | Account Management | As a user, I want to change my username, email, or password and might want to delete my account. | 3 | 1 | Verify that user information can be changed by owner and account can be deleted. | |
+| S05          | Forum          | As a user, I want to get information from people around the world so as to get points to show that I'm getting knowledge from the platform. | 2 | 1 | Verify that user can see the post in different countries as well as get points from visiting them. | |
+| S05a         | Forum          | As a user, I want to post and share information and personal thoughts to the world so as to get points to prove my contribution. | 1 | 1 | Verify that users can post in the forum and get points. | | 
+| S05b         | Forum          | As a user, I want to like someone's post to support an idea or information so as to get points. | 1 | 1 | Verify that user can like a post and get points. | |
+| S05c         | Forum          | As a user, I want to reply to posts to discuss with people so as to get points. | 1 | 1 | Verify that users can reply someone's post and earn points. | |
+| S05d         | Forum          | As a user, I want to find some posts with hashtag to find information quicker. | 3 | 1 | Verify that hashtags in posts are recorded correctly. | |
+| S06a         | 
