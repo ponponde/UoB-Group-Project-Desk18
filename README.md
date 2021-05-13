@@ -1,5 +1,4 @@
-<p align="center"><img src="resource_report/logo.png"width=30%>
-<p align="center"><img src="resource_report/logoTxt.png"width=50%>
+<p align="center"><img src="resource_report/mainImg.png"width=30%>
 
 ___
 
@@ -11,7 +10,8 @@ Check if you feel alone. There's people around the world sharing and supporting 
 
 ## Introduction
 
-> （提交作业前最后更新一下）***Globally**, as of **12:18pm CEST, 5 May 2021**, there have been **153,738,171 confirmed cases** of COVID-19, including **3,217,281 deaths**, reported to WHO. As of **3 May 2021**, a total of **1,047,825,481 vaccine doses** have been administered.
+> ***Globally***, as of **3:42pm CEST, 13 May 2021**, there have been **160,074,267 confirmed cases** of COVID-19, including **3,325,260 deaths**, reported to WHO. As of **12 May 2021**, a total of 1,264,164,553 vaccine doses have been administered.
+
 
 This is the latest data from [WHO Coronavirus (COVID-19) Dashboard](https://covid19.who.int/).
 
@@ -27,7 +27,7 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 **Click to see our introduction [video]()**
 
-[![video](https://res.cloudinary.com/marcomontalbano/image/upload/v1619876092/video_to_markdown/images/youtube--4CGXvsjRjno-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=4CGXvsjRjno&ab_channel=UniversityofBristol "video")
+[![video](https://i.imgur.com/lQ47aea.png)](https://youtu.be/Nhgd-mSrreQ "video")
 
 
 ## Product design
