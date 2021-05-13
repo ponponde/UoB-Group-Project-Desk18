@@ -27,7 +27,7 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 **Click to see our introduction [video]()**
 
-[![video](https://i.imgur.com/lQ47aea.png)](https://youtu.be/Nhgd-mSrreQ "video")
+[![video](https://i.imgur.com/lQ47aea.png)](https://www.youtube.com/watch?v=jRbCMJ7fJa8 "video")
 
 
 ## Product design
