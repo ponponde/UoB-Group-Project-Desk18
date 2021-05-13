@@ -1,0 +1,520 @@
+openapi: 3.0.0
+info:
+  title: auth
+  version: '1.0'
+servers:
+  - url: 'http://localhost:8080'
+paths:
+  /api/auth/signup:
+    post:
+      summary: signin
+      tags: []
+      responses: {}
+      operationId: post-signin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                message:
+                  type: string
+                  minLength: 1
+              required:
+                - message
+        description: |-
+          {
+              "username":"abc5",
+              "email":"abc5@gmail.com",
+              "password":"12345"
+          }
+    parameters: []
+  /api/auth/signin:
+    post:
+      summary: /api/auth/signin
+      tags: []
+      responses: {}
+      operationId: post-api-auth-signin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                id:
+                  type: string
+                  minLength: 1
+                username:
+                  type: string
+                  minLength: 1
+                email:
+                  type: string
+                  minLength: 1
+                roles:
+                  type: array
+                  items:
+                    required: []
+                    properties: {}
+                accessToken:
+                  type: string
+                  minLength: 1
+              required:
+                - id
+                - username
+                - email
+                - roles
+                - accessToken
+            examples:
+              example-1:
+                value:
+                  id: 608aa1cc309675001a015c98
+                  username: abc5
+                  email: abc5@gmail.com
+                  roles:
+                    - ROLE_USER
+                  accessToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOGFhMWNjMzA5Njc1MDAxYTAxNWM5OCIsImlhdCI6MTYxOTY5ODE1MywiZXhwIjoxNjE5Nzg0NTUzfQ.I-ty7nPFTX2W2MvdR2sE9TPEbMfyp9IaOHFhKJTbu00
+        description: |-
+          {
+              "username":"abc5",
+              "password":"12345"
+          }
+  /api/auth/getUserInfo:
+    get:
+      summary: /api/auth/getUserInfo
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: get-api-auth-getUserInfo
+  '/api/map/mapInfo/:id':
+    get:
+      summary: by country
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  Country:
+                    type: string
+                    minLength: 1
+                  CountryCode:
+                    type: string
+                    minLength: 1
+                  Confirmed:
+                    type: number
+                  Deaths:
+                    type: number
+                  Recovered:
+                    type: number
+                  Active:
+                    type: string
+                  Recommendation:
+                    type: string
+                  Notes:
+                    type: string
+                  NewConfirmed:
+                    type: number
+                  statistics:
+                    type: object
+                    properties:
+                      up:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            minLength: 1
+                          rate:
+                            type: string
+                            minLength: 1
+                        required:
+                          - title
+                          - rate
+                      down:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            minLength: 1
+                          rate:
+                            type: string
+                            minLength: 1
+                        required:
+                          - title
+                          - rate
+                    required:
+                      - up
+                      - down
+                  rankList:
+                    type: array
+                    uniqueItems: true
+                    minItems: 1
+                    items:
+                      required:
+                        - points
+                        - name
+                        - photo
+                      properties:
+                        points:
+                          type: number
+                        name:
+                          type: string
+                          minLength: 1
+                        photo:
+                          type: string
+                          minLength: 1
+                required:
+                  - Country
+                  - CountryCode
+                  - Confirmed
+                  - Deaths
+                  - Recovered
+                  - Active
+                  - Recommendation
+                  - Notes
+                  - NewConfirmed
+                  - statistics
+                  - rankList
+              examples:
+                Global:
+                  value:
+                    Country: Global
+                    CountryCode: Global
+                    Confirmed: 149407874
+                    Deaths: 3148318
+                    Recovered: 86817042
+                    Active: ''
+                    Recommendation: ''
+                    Notes: ''
+                    NewConfirmed: 661727
+                    statistics:
+                      up:
+                        title: Cooking by myself
+                        rate: 52.1%
+                      down:
+                        title: Jogging
+                        rate: 6.82%
+                    rankList:
+                      - points: 11685
+                        name: Eyrdin
+                        photo: 'https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg'
+                      - points: 5046
+                        name: nmcj1996
+                        photo: 'https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg'
+                      - points: 3048
+                        name: TirNanog84
+                        photo: 'https://api.time.com/wp-content/uploads/2014/05/166259035.jpg'
+                      - points: 2518
+                        name: Kitbuqa
+                        photo: 'https://api.time.com/wp-content/uploads/2014/05/166259035.jpg'
+                      - points: 1804
+                        name: Eyrdin
+                        photo: 'https://api.time.com/wp-content/uploads/2021/04/self-love.jpg'
+        '':
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  Country:
+                    type: string
+                    minLength: 1
+                  CountryCode:
+                    type: string
+                    minLength: 1
+                  Confirmed:
+                    type: number
+                  Deaths:
+                    type: number
+                  Recovered:
+                    type: number
+                  Active:
+                    type: string
+                  Recommendation:
+                    type: string
+                  Notes:
+                    type: string
+                  NewConfirmed:
+                    type: number
+                  statistics:
+                    type: object
+                    properties:
+                      up:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            minLength: 1
+                          rate:
+                            type: string
+                            minLength: 1
+                        required:
+                          - title
+                          - rate
+                      down:
+                        type: object
+                        properties:
+                          title:
+                            type: string
+                            minLength: 1
+                          rate:
+                            type: string
+                            minLength: 1
+                        required:
+                          - title
+                          - rate
+                    required:
+                      - up
+                      - down
+                  rankList:
+                    type: array
+                    uniqueItems: true
+                    minItems: 1
+                    items:
+                      required:
+                        - points
+                        - name
+                        - photo
+                      properties:
+                        points:
+                          type: number
+                        name:
+                          type: string
+                          minLength: 1
+                        photo:
+                          type: string
+                          minLength: 1
+                required:
+                  - Country
+                  - CountryCode
+                  - Confirmed
+                  - Deaths
+                  - Recovered
+                  - Active
+                  - Recommendation
+                  - Notes
+                  - NewConfirmed
+                  - statistics
+                  - rankList
+              examples:
+                example-1:
+                  value:
+                    Country: Global
+                    CountryCode: Global
+                    Confirmed: 149407874
+                    Deaths: 3148318
+                    Recovered: 86817042
+                    Active: ''
+                    Recommendation: ''
+                    Notes: ''
+                    NewConfirmed: 661727
+                    statistics:
+                      up:
+                        title: Cooking by myself
+                        rate: 52.1%
+                      down:
+                        title: Jogging
+                        rate: 6.82%
+                    rankList:
+                      - points: 11685
+                        name: Eyrdin
+                        photo: 'https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg'
+                      - points: 5046
+                        name: nmcj1996
+                        photo: 'https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg'
+                      - points: 3048
+                        name: TirNanog84
+                        photo: 'https://api.time.com/wp-content/uploads/2014/05/166259035.jpg'
+                      - points: 2518
+                        name: Kitbuqa
+                        photo: 'https://api.time.com/wp-content/uploads/2014/05/166259035.jpg'
+                      - points: 1804
+                        name: Eyrdin
+                        photo: 'https://api.time.com/wp-content/uploads/2021/04/self-love.jpg'
+      operationId: get-111
+      parameters: []
+    parameters: []
+  /api/point:
+    get:
+      summary: 'http://localhost:8080/api/point'
+      tags: []
+      responses: {}
+      operationId: get-api-point
+      description: ''
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                id:
+                  type: string
+                  minLength: 1
+                points:
+                  type: number
+              required:
+                - id
+                - points
+            examples:
+              example-1:
+                value:
+                  id: 608aa1cc309675001a015c98
+                  points: 303
+        description: |-
+          {
+             "id": "608aa1cc309675001a015c98",
+             "points":3
+          }
+  /api/forum:
+    post:
+      summary: /api/forum
+      tags: []
+      responses: {}
+      operationId: post-api-forum
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                country:
+                  type: string
+                  minLength: 1
+                author:
+                  type: string
+                  minLength: 1
+                author_id:
+                  type: string
+                  minLength: 1
+                content:
+                  type: string
+                  minLength: 1
+              required:
+                - country
+                - author
+                - author_id
+                - content
+            examples:
+              example-1:
+                value:
+                  country: GB
+                  author: Han Solo
+                  author_id: '2'
+                  content: 'We supply a series of design principles, practical patterns and high quality design resources(Sketch and Axure), to help people create their product prototypes beautifully and efficiently.'
+        description: |2-
+
+
+
+
+
+           {
+          "country":"GB",
+          "author":"Han Solo",
+          "author_id":"2",
+          "content":"We supply a series of design principles, practical patterns and high quality design resources(Sketch and Axure), to help people create their product prototypes beautifully and efficiently.",
+          }
+  '/api/forum/:country':
+    get:
+      summary: '/api/forum/:country'
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  data:
+                    type: array
+                    uniqueItems: true
+                    minItems: 1
+                    items:
+                      required:
+                        - country
+                        - author
+                        - author_id
+                        - content
+                      properties:
+                        country:
+                          type: string
+                          minLength: 1
+                        author:
+                          type: string
+                          minLength: 1
+                        author_id:
+                          type: string
+                          minLength: 1
+                        content:
+                          type: string
+                          minLength: 1
+                required:
+                  - data
+              examples:
+                example-1:
+                  value: {}
+      operationId: 'get-api-forum-:country'
+  '/api/forum/user/:author_id':
+    get:
+      summary: '/api/forum/user/:author_id'
+      tags: []
+      responses: {}
+      operationId: 'get-api-forum-user-:author_id'
+components:
+  schemas:
+    User:
+      title: User
+      type: object
+      description: ''
+      x-examples:
+        Alice Smith:
+          id: 142
+          firstName: Alice
+          lastName: Smith
+          email: alice.smith@gmail.com
+          dateOfBirth: '1997-10-31'
+          emailVerified: true
+          signUpDate: '2019-08-24'
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the given user.
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+          format: email
+        dateOfBirth:
+          type: string
+          format: date
+          example: '1997-10-31'
+        emailVerified:
+          type: boolean
+          description: Set to true if the user's email has been verified.
+        createDate:
+          type: string
+          format: date
+          description: The date that the user was created.
+      required:
+        - id
+        - firstName
+        - lastName
+        - email
+        - emailVerified

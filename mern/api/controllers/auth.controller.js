@@ -11,6 +11,7 @@ exports.signup = (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8),
+        points: 300,
     });
 
     user.save((err, user) => {
@@ -48,7 +49,7 @@ exports.signup = (req, res) => {
                     return;
                 }
 
-                user.roles = [role._id];
+                //  user.roles = [role._id];
                 user.save((err) => {
                     if (err) {
                         res.status(500).send({ message: err });
@@ -100,7 +101,36 @@ exports.signin = (req, res) => {
                 username: user.username,
                 email: user.email,
                 roles: authorities,
+                points: user.points,
                 accessToken: token,
             });
         });
+};
+
+exports.getUserInfo = async (req, res) => {
+    if (req.body.token) {
+        let decoded;
+        try {
+            decoded = jwt.decode(req.body.token, config.secret);
+        } catch (e) {
+            return res.status(401).send("unauthorized");
+        }
+
+        User.findOne({
+            _id: decoded.id,
+        }).exec((err, user) => {
+            if (err) {
+                res.status(500).send({ message: err });
+                return;
+            }
+
+            res.status(200).send({
+                id: user._id,
+                username: user.username,
+                email: user.email,
+                points: user.points,
+                accessToken: req.body.token,
+            });
+        });
+    }
 };

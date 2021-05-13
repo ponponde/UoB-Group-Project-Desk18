@@ -1,0 +1,64 @@
+@import "../../common.scss";
+.navBar {
+    color: #fff;
+    background-color: $primary;
+    height: 55px;
+    margin-bottom: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    @include flexCenter;
+    .searchInput {
+        border-bottom: 2px solid #fff;
+        width: 30%;
+        height: 70%;
+        min-width: 240px;
+        margin: 0 auto;
+        @media screen and (max-width: $mobileSize) {
+            margin-left: 30%;
+        }
+        display: flex;
+        align-items: flex-end;
+        > input {
+            border: unset;
+            outline-style: none;
+            background: $primary;
+            color: #fff;
+            width: 100%;
+            font-size: 20px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+        .searchBtn {
+            cursor: pointer;
+        }
+    }
+    .groupBtn {
+        @include flexCenter;
+        height: 55px;
+        .navBtn {
+            @include flexCenter;
+            margin-right: 10px;
+            align-items: center;
+        }
+    }
+    .groupLogo {
+        margin-left: 15px;
+        height: 55px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        > img {
+            width: 100%;
+        }
+    }
+}
+// .ant-menu.ant-menu-light.ant-menu-root.ant-menu-horizontal {
+//     background-color: transparent;
+//     border-color: transparent;
+//     color: white;
+//     .ant-menu-item.ant-menu-item-only-child.ant-menu-item-active {
+//         color: white;
+//     }
+// }
