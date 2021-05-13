@@ -1,13 +1,36 @@
 <p align="center"><img src="logoTxt.png"width=80%>
+
   
 
 # System Implementation
 
 ## Table of Contents
 
+- [Stack architecture and system design](#Stack-architecture-and-system-design)
+- [Back End](#Back-End)
+- [Middle Tier](#Middle-Tier)
+- [Frontend implementation](#Frontend-implementation)
+  - [Frontend Overview](#Frontend-Overview)
+  - [Framework–React/Redux](#Framework–React/Redux)
+    - [React](#React)
+    - [Redux](#redux)
+    - [Data Visualization](#Data-Visualization)
+    - [UI Design](#UI-Design)
+- [Additional elements and components](#Additional-elements-and-components)
+  - [Authentication](#Authentication)
+  - [Sound](#Sound)
+  - [Animation](#Animation)
+- [Deployment details](#Deployment-details)
+  - [ui](#ui)
+    - [build environment](#build-environment)
+    - [production environment](#production-environment)
+  - [api](#api)
+  - [mongo](#mongo)
+  - [docker-compose.yml](#docker-compose.yml)
 
 
 ## Stack architecture and system design
+
 **Stack Architecture**
 
 The website implements the MERN stack architecture. React was chosen to develop for the front end of the website. The main reason for this is the fact that the team’s objective was to develop a website that features an interactive world map where countries could be clicked to provide information and space for forum posts. We discovered a publicly available React library which implemented the functionality that we wanted to provide and it was considered that using React to integrate this library would be more efficient than using Angular to re-implement all the components necessary for the map.
@@ -26,7 +49,8 @@ The code for the website is designed into UI and API, which contain the code for
 
 In API, server.js is used to start the server which connects the website’s database to the user interface.  The file establishes a connection to MongoDB and adds the routes of the website’s API to the middleware to be executed when different endpoints are reached by the user. The website’s design follows the Model-View-Controller design pattern but instead of static templates being rendered as views, those are generated dynamically by React on the front end. Thus, there are dedicated files which contain the information about the models of the data and ,separately , files that execute javascript to process data fetched from the database and return the processed information back to the user. This process occurs when a user selects the appropriate button/field on the interactive map which is routed to a particular URL serving as an endpoint. Once the appropriate field is clicked, this prompts a request to the server’s API which processes information depending on which endpoint is reached. The processing logic is contained in the controller files. The controllers are, in turn,  connected to the server’s endpoints through the routes defined with Express in api/routes folder. The diagram below illustrates the way data is handled by the API:
 
-<p align="center"><img src="resource_report/Mvc_express.png"width=50%>
+<p align="center"><img src="Mvc_express.png"width=50%>
+
 
 In UI the key files are the components which provide JavaScript functionality in a reusable way. The HTML that is returned from these files is exported through the containers/Home/index.js file which provides the initial layout for the page and handles clicks and other functionality needed by the user. 
 
@@ -36,11 +60,13 @@ MongoDB and Mongoose were used for database implementation.  MongoDB is a NoSQL 
 
 The setup for the mongoose connection is defined in api/db/index.js and the models are defined in api/db/models. Each of the files in the latter folder defines a mongoose schema that is used to map the data stored in MongoDB. Below is a map illustrating the relationship between the models used for the website:
 
-<p align="center"><img src="resource_report/model2.png"width=50%>
+<p align="center"><img src="model2.png"width=50%>
+
 
 The data received from third party API’s for statistical information about COVID is not being stored as it’s being simply redirected to the user through the map.controller.js.
 
 ## Middle Tier
+
 The back end implements a RESTful API. The data is shared between the front end and the back end through http requests and the data that is exported from the back end is in JSON format as opposed to the strict requirement for XML documents with SOAP for example. Through CRUD operations, data is accessed by the front end through HTTP requests and visualised to the end user. The persistence of the server and the routes from the API to the front end are implemented through Node and Express.
 
 The main files for the API are detailed below.
@@ -79,7 +105,7 @@ We implemented our webpage frontend with some libraries and some well-built Html
 
 Table 1. Frontend libraries overview
 
-### Framework – React + Redux
+### Framework–React/Redux
 
 #### React
 
@@ -145,7 +171,7 @@ Because of the components structure of React, the states of each will become ver
 To use Redux, we also need a UI binder to support Redux. We chose an official library React-Redux[10] to do the job.
 
 
-#### Data Visualization - react-svg-map[4]
+#### Data Visualization
 
 We introduce a novel method to visualize the data in map. Because the shape of every country is not a rectangle like a typical html component or a simple shape easy to implement by css.  We reach out for a support from a ready-made react map component. We put react-svg-map into the main page of our webpage,  and combine it with the data to show. With one click , all of the data are changed to that country.
 
@@ -155,7 +181,7 @@ We introduce a novel method to visualize the data in map. Because the shape of e
 Gif 1. React-svg-map interaction
 
 
-#### UI Design – Ant-Design[5]
+#### UI Design
 
 To make our webpage keep a neat and nice design, We adopt Ant-Design for our UI design library. Ant-Design provides a complete program including lots of common component like buttons, modal and carousel. For example, the modal for Forum button( Gif. 2 ) and the carousel for intro tutorial( Gif. 3 ).
 
@@ -189,6 +215,7 @@ useEffect(() => {
       } 
   },[]);
  ```
+
 Code 1. Whole page click sound
 
 
@@ -202,6 +229,7 @@ useEffect(() => {
     }
   });
 ```
+
 Code 2. Back ground music
 
 
@@ -235,9 +263,11 @@ Gif 5. Intro animation
 
 
 ## Deployment details
+
 In this project, we use docker to test and deploy our product and to achieve continuous integration and deployment. We created 3 images including ui, api, and mongo and set up network for communicate to each other.
 
 ### ui
+
 ```dockerfile
 #### build environment
 FROM node:12.2.0-alpine as build
@@ -255,10 +285,12 @@ COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
+
 The ui image deploys our frontend part of our project. We use multi-stage builds to create our ui image. First, we use the node official image to build our project including installing all modules in `package.json`. Next, since we use React as our frontend web framework, `npm install react-scripts` download scripts and configuration used by React. After setting up the environment, we then use `nginx` to deploy our server-side and listen on port 80.
 
 
 ### api
+
 ```dockerfile
 FROM node:8
 #### Create app directory
@@ -274,13 +306,16 @@ COPY . .
 EXPOSE 8080
 CMD [ "npm", "start" ]
 ```
+
 This image is for creating multiple api and receive any request from ui image. Node official image is used as the base image and listen on port 8080. 
 
 
 ### mongo
+
 Instead of creating the database image, we use the official mongo image directly pulled from the docker hub.
 
 ### docker-compose.yml
+
 ```yaml
 version: '2'
 services:
@@ -301,4 +336,5 @@ services:
     ports:
       - '27017:27017'
 ```
+
 We use `docker-compose up --build` to build our whole product including ui, api, and mongo image. Because the api container requires the service from the mongo container, we need to start the mongo container first. This is the same as ui and api container. `depends_on` is used to start containers in dependency order.
