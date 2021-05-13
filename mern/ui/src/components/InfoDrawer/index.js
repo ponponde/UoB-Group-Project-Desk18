@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import { Drawer, Button } from "antd";
+import React from "react";
+import { Drawer, List } from "antd";
 
 const InfoDrawer = (props) => {
     const onClose = () => {
         props.onClose && props.onClose();
     };
-    //  console.log(props.data);
-    React.useEffect(() => {
-        console.log(props.data);
-    }, [props]);
+
     return (
         <>
             <Drawer
@@ -18,26 +15,33 @@ const InfoDrawer = (props) => {
                 onClose={onClose}
                 visible={props.visible}
             >
-                <ul>
-                    {props.data &&
-                        Array.isArray(props.data) &&
-                        props.data.map((n) => {
-                            return (
-                                <li key={n.ID}>
-                                    {n.Date}:{n.Note}
-                                </li>
-                            );
-                        })}
-                    {props.data &&
-                        !Array.isArray(props.data) &&
-                        Object.keys(props.data).map((n) => {
-                            return (
-                                <li key={n}>
-                                    {n}: {props.data[n]}
-                                </li>
-                            );
-                        })}
-                </ul>
+                {props.title == "Gov Info" ? (
+                    <li key={props.title}>
+                        {props.data.code == "cn" ? (
+                            //  <div onClick={window.open(props.url)}>
+                            <a href={props.url} target="_blank">
+                                疫情防控_中国政府网
+                            </a>
+                        ) : (
+                            //  </div>
+                            <img src={props.data}></img>
+                        )}
+                    </li>
+                ) : (
+                    <List
+                        itemLayout="horizontal"
+                        dataSource={props.data}
+                        renderItem={(item) => (
+                            <List.Item>
+                                <List.Item.Meta
+                                    title={
+                                        <a href="https://ant.design">{item.Date.split("T")[0] + ": " + item.Note}</a>
+                                    }
+                                />
+                            </List.Item>
+                        )}
+                    />
+                )}
             </Drawer>
         </>
     );

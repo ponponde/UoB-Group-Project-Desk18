@@ -6,7 +6,9 @@ import "./style.scss";
 import { Link } from "react-router-dom";
 import LoginModal from "../LoginModal";
 import SideForum from "../SideForum";
+import PointModal from "../PointModal";
 import SignupModal from "../SignupModal";
+import * as ep from "../../Endpoint";
 import logo from "../../img/logo.png";
 import logoTxt from "../../img/logoTxt.png";
 import { logout } from "../../store/action";
@@ -16,15 +18,18 @@ const NavBar = (props) => {
     const [showLogin, setShowLogin] = React.useState(false);
     const [showSignup, setShowSignup] = React.useState(false);
     const [showForum, setShowForum] = React.useState(false);
+    const [showPoint, setShowPoint] = React.useState(false);
     const [keyWord, setKeyword] = React.useState();
     const isLogin = useSelector((state) => state.isLogin);
     const currentCountry = useSelector((state) => state.currentCountry);
+    const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     const handleLogout = () => {
+        localStorage.clear(ep.SESSION_KEY);
         dispatch(logout());
     };
     const backToWorld = () => {
-        dispatch(setCurrentCountry("Globle"));
+        dispatch(setCurrentCountry("Global"));
     };
     //  const showForum = useSelector((state) => state.showForum);
 
@@ -59,6 +64,9 @@ const NavBar = (props) => {
                 {!isLogin ? (
                     <>
                         <div className="navBtn">
+                            <Button onClick={() => setShowForum(true)}>Forum</Button>
+                        </div>
+                        <div className="navBtn">
                             <Button onClick={() => setShowSignup(true)}>Sign up</Button>
                         </div>
                         <div className="navBtn">
@@ -67,19 +75,19 @@ const NavBar = (props) => {
                     </>
                 ) : (
                     <>
+                        <div className="navBtn"> Welcome back! {user?.username} </div>
                         <div className="navBtn">
                             <Button onClick={() => setShowForum(true)}>Forum</Button>
                         </div>
                         <div className="navBtn">
-                            <Link to="Game">
-                                <Button>Profolio</Button>
-                            </Link>
+                            <Button onClick={() => setShowPoint(true)}>My points</Button>
                         </div>
                         <div className="navBtn">
                             <Button onClick={() => handleLogout()}>Log out</Button>
                         </div>
                     </>
                 )}
+                {showPoint ? <PointModal user={user} visible={showPoint} close={() => setShowPoint(false)} /> : null}
                 {showLogin ? <LoginModal visible={showLogin} close={() => setShowLogin(false)} /> : null}
                 {showSignup ? <SignupModal visible={showSignup} close={() => setShowSignup(false)} /> : null}
                 {showForum ? <SideForum visible={showForum} close={() => setShowForum(false)} /> : null}

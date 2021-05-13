@@ -1,7 +1,6 @@
 import * as types from "./types";
 
 export function setUser(user) {
-    console.log("setUser", user);
     return {
         type: types.SET_USER,
         data: user,
@@ -28,10 +27,9 @@ export const setPostData = (v) => {
         data: v,
     };
 };
-
-// export function setDetailData(data, events) {
-//     return {
-//         type: types.UPDATE_DETAIL,
-//         payload: { data, events },
-//     };
-// }
+export function setCurrentCountryData(data) {
+    return {
+        type: types.SET_COUNTRY_DATA,
+        data,
+    };
+}

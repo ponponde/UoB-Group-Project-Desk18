@@ -11,6 +11,7 @@ exports.signup = (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8),
+        points: 300,
     });
 
     user.save((err, user) => {
@@ -48,7 +49,7 @@ exports.signup = (req, res) => {
                     return;
                 }
 
-                user.roles = [role._id];
+                //  user.roles = [role._id];
                 user.save((err) => {
                     if (err) {
                         res.status(500).send({ message: err });
@@ -100,13 +101,13 @@ exports.signin = (req, res) => {
                 username: user.username,
                 email: user.email,
                 roles: authorities,
+                points: user.points,
                 accessToken: token,
             });
         });
 };
 
 exports.getUserInfo = async (req, res) => {
-    console.log("getUserInfo", req.body.token);
     if (req.body.token) {
         let decoded;
         try {
@@ -117,25 +118,19 @@ exports.getUserInfo = async (req, res) => {
 
         User.findOne({
             _id: decoded.id,
-        })
-            .populate("roles", "-__v")
-            .exec((err, user) => {
-                if (err) {
-                    res.status(500).send({ message: err });
-                    return;
-                }
-                var authorities = [];
+        }).exec((err, user) => {
+            if (err) {
+                res.status(500).send({ message: err });
+                return;
+            }
 
-                for (let i = 0; i < user.roles.length; i++) {
-                    authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
-                }
-                res.status(200).send({
-                    id: user._id,
-                    username: user.username,
-                    email: user.email,
-                    roles: authorities,
-                    accessToken: req.body.token,
-                });
+            res.status(200).send({
+                id: user._id,
+                username: user.username,
+                email: user.email,
+                points: user.points,
+                accessToken: req.body.token,
             });
+        });
     }
 };

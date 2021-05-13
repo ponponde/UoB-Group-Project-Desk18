@@ -1,25 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
-// import "./index.css";
-import { List, Avatar, Button, Skeleton } from "antd";
-import * as mockData from "../../utils/mockData";
+import { List, Avatar } from "antd";
 
-const RankingList = () => {
-    const data = [
-        {
-            title: mockData.getRandomNum(12000, 9000),
-        },
-        {
-            title: mockData.getRandomNum(9000, 7000),
-        },
-        {
-            title: mockData.getRandomNum(7000, 6000),
-        },
-        {
-            title: mockData.getRandomNum(6000, 5000),
-        },
-    ];
+const RankingList = (props) => {
+    const { data } = props;
     return (
         <List data-testid="RankingList"
             itemLayout="horizontal"
@@ -27,8 +11,8 @@ const RankingList = () => {
             renderItem={(item) => (
                 <List.Item>
                     <List.Item.Meta
-                        avatar={<Avatar src={mockData.mockPhoto()} />}
-                        title={<a href="https://ant.design">{mockData.getMockName() + ": " + item.title}</a>}
+                        avatar={<Avatar src={item.photo} />}
+                        title={<a href="https://ant.design">{item.name + ": " + item.points}</a>}
                     />
                 </List.Item>
             )}

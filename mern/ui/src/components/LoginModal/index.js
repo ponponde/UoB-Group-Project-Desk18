@@ -42,23 +42,11 @@ const LoginModal = (props) => {
 
     const onFill = () => {
         form.setFieldsValue({
-            name: "abc",
-            password: "12345",
+            name: "",
+            password: "",
         });
     };
-    function setToken(userToken) {
-        sessionStorage.setItem("token", JSON.stringify(userToken));
-    }
 
-    const saveToken = (userToken) => {
-        localStorage.setItem("token", JSON.stringify(userToken));
-        setToken(userToken.token);
-    };
-    function getToken() {
-        const tokenString = sessionStorage.getItem("token");
-        const userToken = JSON.parse(tokenString);
-        return userToken?.token;
-    }
     const { visible, close } = props;
     return (
         <>

@@ -51,7 +51,6 @@ export const getForumByCountry = (country_code) => {
         url: `http://localhost:8080/api/forum/${country_code}`,
     }).then(
         (response) => {
-            console.log("getForumByCountry", response.data);
             return response.data;
         },
         (error) => {
@@ -67,7 +66,37 @@ export const sentPost = (data) => {
         data,
     }).then(
         (response) => {
-            console.log("sentPost", response.data);
+            return response.data;
+        },
+        (error) => {
+            console.log(error);
+        }
+    );
+};
+
+export const getMapInfo = (code) => {
+    return axios({
+        method: "GET",
+        url: ep.MAP_GET_API + code,
+    }).then(
+        (response) => {
+            return response.data;
+        },
+        (error) => {
+            console.log(error);
+        }
+    );
+};
+
+export const addPoint = (data) => {
+    return; //@TODO: no time to complete it
+    return axios({
+        method: "POST",
+        url: ep.POINT_POST_API,
+        data,
+    }).then(
+        (response) => {
+            console.log("POINT_POST_API", response.data);
             return response.data;
         },
         (error) => {

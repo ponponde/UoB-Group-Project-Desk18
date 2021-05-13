@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Input, Button, Modal } from "antd";
-import { useSelector, useDispatch } from "react-redux";
 import * as fetch from "../../utils/fetch";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "../../store/action";
 const layout = {
     labelCol: {
         span: 8,
@@ -19,16 +20,23 @@ const tailLayout = {
 
 const SignupModal = (props) => {
     const [form] = Form.useForm();
+    const dispatch = useDispatch();
     const onFinish = (values) => {
-        console.log(values);
-        fetch.signup(values, close);
+        fetch.signup(values).then((res) => {
+            if (res.status === 200) {
+                fetch.login(values).then((r) => {
+                    dispatch(setUser(r.data));
+                    close();
+                });
+            }
+        });
     };
 
     const onFill = () => {
         form.setFieldsValue({
-            username: "abc",
-            email: "abc@gmail.com",
-            password: "12345",
+            username: "",
+            email: "",
+            password: "",
         });
     };
 
