@@ -25,9 +25,13 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 ## Video
 
-**Click to see our introduction [video]()**
+**Click to see our introduction [video](https://www.youtube.com/watch?v=jRbCMJ7fJa8)**
 
-[![video](https://i.imgur.com/lQ47aea.png)](https://youtu.be/Nhgd-mSrreQ "video")
+[![video](https://i.imgur.com/lQ47aea.png)](https://www.youtube.com/watch?v=jRbCMJ7fJa8 "video")
+
+
+**If you want to see more ->[full introduction video](https://www.youtube.com/watch?v=jRbCMJ7fJa8)**
+[![video](https://i.imgur.com/lQ47aea.png)](https://www.youtube.com/watch?v=o_aCs7QLDlM "full introduction video")
 
 
 ## Product design
@@ -95,3 +99,7 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 
 ## Acknowledgement
+
+
+
+
