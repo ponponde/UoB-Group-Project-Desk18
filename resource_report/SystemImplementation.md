@@ -60,7 +60,7 @@ MongoDB and Mongoose were used for database implementation.  MongoDB is a NoSQL 
 
 The setup for the mongoose connection is defined in api/db/index.js and the models are defined in api/db/models. Each of the files in the latter folder defines a mongoose schema that is used to map the data stored in MongoDB. Below is a map illustrating the relationship between the models used for the website:
 
-<p align="center"><img src="model2.png"width=50%>
+<p align="center"><img src="models2.png"width=50%>
 
 
 The data received from third party API’s for statistical information about COVID is not being stored as it’s being simply redirected to the user through the map.controller.js.
