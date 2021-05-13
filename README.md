@@ -1,39 +1,39 @@
-<p align="center"><img src="resource_report/logo.png"width=30%>
-<p align="center"><img src="resource_report/logoTxt.png"width=50%>
-
+<p align="center"><img src="resource_report/mainImg.png"width=60%>
 
 ___
 
  ## What is ***CovidSurvival***
 
-How to survival in this post COVID would?  
+Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
+We have songs and wine, and especially, friends from all over the world to share their stories of life under quarantine.  
+
+Do you wondering how to survival in this post COVID would?  
 Check if you want to travel. There's travelling policy for each country  
 Check if you fear of cases. There's real time statistics of each country  
 Check if you feel alone. There's people around the world sharing and supporting each others  
 
-## Introduction
-
-> （提交作业前最后更新一下）***Globally**, as of **12:18pm CEST, 5 May 2021**, there have been **153,738,171 confirmed cases** of COVID-19, including **3,217,281 deaths**, reported to WHO. As of **3 May 2021**, a total of **1,047,825,481 vaccine doses** have been administered.
-
-This is the latest data from [WHO Coronavirus (COVID-19) Dashboard](https://covid19.who.int/).
-
-> As the Covid-19 epidemic spreads around the world, the virus continues to evolve, which severely affecting people's lives around the world. According to UK [government figures](https://www.bbc.com/news/uk-51768274), there have been over 4.4 million confirmed cases of coronavirus in the UK and more than 127,000 people have died. However, the heart-breaking scenes not only happen in the UK. Coronavirus has caused many humanitarian crises around the world. Coupled with the wave of [globalisation](https://www.bbc.com/news/uk-56864100), it is no longer possible for any country to stand alone. Therefore, even though the COVID has subsided in the UK, we cannot stop protecting ourselves.
-
-> However, [anti-lockdown](https://www.reuters.com/world/uk/anti-lockdown-protesters-defy-restrictions-central-london-march-2021-04-24/) and [anti-mask](https://www.thestar.com/news/canada/2021/05/01/hundreds-of-anti-lockdown-anti-mask-protesters-take-to-the-streets-again-in-downtown-barrie.html) activities around the world have not ceased either. From this we can conclude that despite the [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks)'s insistence on 'Make wearing a mask a normal part of being around other people', many people are still not convinced of the need to wear masks and maintain social distance.
-
-In order to control the Covid, all of us should work together, believe in science and should take the initiative and prevent the Covid. However, for different reasons, many people find it difficult to accept the scientific knowledge and are reluctant to comply with coronavirus prevention policies. This has greatly helped the spread of the coronavirus. So, how can we make people more aware of outbreaks around the world and comply with the policy through a fun website?
-
-CovidSurvival is an online social platform. On our webpage one can see real-time coronavirus statistics from around the world. It is also possible to see people from other different parts of the world sharing their lives with the coronavirus. More participation, more points, more exposure. By seeing how people in other regions are living, we hope that users will gain a clearer understanding of the dangers of coronavirus and be proactive in keeping their social distance and protection.
-
-## Video
+We are waiting for you!
 
 **Click to see our introduction [video](https://www.youtube.com/watch?v=jRbCMJ7fJa8)**
  
-[![video](https://i.imgur.com/lQ47aea.png)](https://www.youtube.com/watch?v=jRbCMJ7fJa8 "video")
+[![video](![](https://i.imgur.com/OXibJVa.png)](https://www.youtube.com/watch?v=jRbCMJ7fJa8 "video")
 
+
+## Introduction
+
+As the Covid-19 epidemic spreads around the world, the virus continues to evolve, which severely affects people's lives around the world. According to UK government figures, there have been over 4.4 million confirmed cases of coronavirus in the UK alone and more than 127,000 people have died. The epidemic is a world-wide problem that has forced people from numerous disciplines to find ways of containing the spread of the virus. 
+
+The issue that our project seeks to address is the lack of diverse ways of presenting COVID information to users. Governments have opted to provide information about the virus to the population mainly through television broadcasts and news media. This is understandable given that these traditional media appear more appropriate for official statements as they are well-established and the information from these sources is generally perceived as more credible. However, the nature of these media does not allow them to provide a large volume of statistical information to the target audience and the content often includes directives for people about the best ways of protecting themselves. This has the disadvantage that such media are rarely able to help people make their independent observations about the spread of the virus.
+
+That is why we decided to create  CovidSurvival - a website platform that provides statistical information about the COVID situation in each country as well as providing links to news articles and official travel policies issued by the respective governments. On our webpage users can see real-time coronavirus statistics from around the world. This has the utility of providing a source of large volumes of data. We are hoping that people who wouldn't otherwise be convinced by news articles about scientific matters would convince themselves of the accuracy of scientific claims by observing trends in the data. For example, if cases drop sharply in countries that adopted wide vaccination programmes that would attest for the efficacy of vaccines and users could be more inclined to accept this stance if they are able to infer this themselves from the data itself.   
+
+But CovidSurvival is actually more than just a website for information! It is also a social platform that allows users to engage with each other and to share their opinions. Users are able to make forum posts and the website encourages socialising between users by giving points for likes and maintaining a leaderboard of top users. The points that count towards a user’s ranking are , however, also generated by exploring statistical information from the website and this educates users in a fun and casual way whilst also providing them a platform to socialise at a time when so many people are stuck at their homes. Also, by interacting between each other, users can share information with people who wouldn't otherwise have access to the information that others have. They can also get different points of view about the virus and the best ways of preventing infection.
+
+
+## Video
 
 **If you want to see more ->[full introduction video](https://www.youtube.com/watch?v=jRbCMJ7fJa8)**
-[![video](https://i.imgur.com/27p4nT3.png)](https://www.youtube.com/watch?v=o_aCs7QLDlM "full introduction video")
+[![video](https://i.imgur.com/27p4nT3.png)](https://www.youtube.com/watch?v=tdEkIdn4zNo "full introduction video")
 
 
 ## Product design
@@ -107,21 +107,15 @@ CovidSurvival is an online social platform. On our webpage one can see real-time
 
 ## Conclusion
 
-Considering that this was the first time we had applied software engineering development methods to a project, we were very careful in our communication. Firstly, we meet two or three times a week to ensure we can simulate a normal stand up meeting. Secondly, we use Asana to manage our tasks. For example, we use this software to assign tasks and to follow up on the progress of each person's tasks. These activities allow us to keep in close contact and communicate issues in a timely manner, thus enabling agile development.
+Considering that this was the first time we had applied software engineering development methods to a project, we were very careful in our communication. Firstly, we held meetings two to three times a week to ensure that the project is developed steadily and consistently. Secondly, we used an online management platform, Asana, to distribute tasks between team members and to manage deadlines. We used this software to follow up on the progress of each person's tasks and adapt the expected timeframes for the completion of different features. These activities allowed us to keep in close contact and communicate issues in a timely manner, thus enabling agile development.
 
-By comparing the list of features (backlog) drawn up at the beginning of the project based on user requirements, I think we have completed our project according to plan. In the backlog, we have prioritised the features for the different iterations in order of priority. This helped us to iterate through the versions in order of importance, and ultimately to create a more complete prototype. According to our plan, all the basic functionality should have been implemented in iteration 2. However, at the time of submission, we had completed the third iteration, and the prototype was much more feature-rich and interesting than the previous version.
+By comparing the list of features (backlog) drawn up at the beginning of the project based on user requirements, we have completed our project according to plan. In the backlog, we have prioritised the features for the different iterations in order of priority. This helped us to iterate through the versions in order of importance, and ultimately to create a more complete prototype. According to our plan, all the basic functionality should have been implemented in iteration 2. However, at the time of submission, we had completed the third iteration, and the prototype was much more feature-rich and interesting than the previous version.
 
 Coronavirus has forced us to choose to work remotely, but we have planned ahead for this. In order to ensure that we can keep in touch with each other during remote collaboration, we ensure that there are two or more ways of contacting each other. For example, excluding teams, members can communicate with each other via wechat, whatsapp, etc. In extreme cases we can also meet offline to deal with unforeseen situations, that is, to meet each other face-to-face by knowing each other's address. However, we still regret that we did not have the opportunity to have a real face-to-face stand up meeting.
 
-> Discussion of Social and Ethical implications of your work.
+Discussion of Social and Ethical implications of your work.
 
-In terms of design, we need more usability testing to tweak the user interface and interaction story, and we can refer to more UI design methods to increase user stickiness. In terms of development, in addition to the features mentioned in the backlog for subsequent iterations, algorithms can be applied to our product. For example, the home page can be used to recommend content that may be of more interest to users based on the algorithm. In terms of evaluation, we can further deepen our evaluation tools from two perspectives. For example, code testing can be done using other open-source tools and inviting people not involved in development to black-box test the prototype. For user testing, we can use data collection techniques such as eye-movement technology to obtain statistical data for quantitative analysis.
+In terms of design, we need more usability testing to tweak the user interface and interaction story, and we can refer to more UI design methods to increase user stickiness. In terms of development, in addition to the features mentioned in the backlog for subsequent iterations, algorithms can be applied to our product. For example, the home page can be used to recommend content that may be of more interest to users based on the algorithm. In terms of evaluation, we can further deepen our evaluation tools from two perspectives. For example, code testing can be done using other open-source tools and inviting people not involved in development to black-box test the prototype. For user testing, we can use data collection techniques such as eye-movement technology to obtain statistical data for quantitative analysis. Finally, with respect to the ethical implications of the project we dont consider the website to have negative impact. A potential issue in this regard is the fact that the website only provides links to information or statistical information obtained by third-party API’s and ,therefore, the accuracy of the information is not verified. However, nowhere in the website we make claims about the accuracy of the information and users are mainly redirected to third party sources, therefore, no negative ethical implications from this.
 
-
-
-
+ 
 ## Acknowledgement
-
-
-
-
