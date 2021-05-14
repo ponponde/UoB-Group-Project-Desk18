@@ -91,3 +91,115 @@ Figure 2. Frontend snapshot testing file structure
 
 [2]    ‘React Testing Library | Testing Library’. https://testing-library.com/docs/react-testing-library/intro (accessed May 09, 2021).
 
+
+## 2. Backend Testing
+
+For verifying our APIs, we developed 11 unit test for each api and its status.
+
+<p align="center"><img src="https://i.imgur.com/nn1RgVo.png"width=90%>
+
+### Libraries
+
+- Mockgoose
+"Mockgoose provides test database by spinning up mongod on the back when mongoose.connect call is made." [-1] We use it to build up testing environment of connection of backend server and MongoDB.
+
+- SuperTest
+"SuperTest is to provide a high-level abstraction for testing HTTP." [0] Supertest is built on another library called Superagent combining with Supertest allow us to send request to Express server and then test the result with Supertest. SuperTest extends API with a .expect() function which help us to make requests to generate HTTP client in order to test. The other usages are checking it allows append header and fetch by methods like GET and POST.
+
+- Mocha
+"Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases." [1] We choose Mocha because Express team also use Moca and it is easier to find tutorials. We use descibe() and it() methods of Mocha.
+
+- Chai 
+"Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework." [2] We use its method "expect" for verifying response. 
+
+### Implement
+
+-1. Use Mocha's describe for the block of testing each API. 
+0. Before each testing, we need to use before() to start connection of server and DB.
+1. After each testing, use after() to close the server and connection.
+```
+describe("GET /api/forum/:country", () => {
+    before((done) => {
+        conn.connect()
+            .then(() => done())
+            .catch((error) => {
+                console.log("Error occurred in before tests.", error);
+                done(error);
+            });
+    });
+
+    after((done) => {
+        conn.close()
+            .then(() => done())
+            .catch((error) => {
+                console.log("Error occurred in before tests.", error);
+                done(error);
+            });
+    });
+   ...
+})
+```
+
+2. Within describe, it() defines a testing case.
+3. Test successful status 200 in the first. We should also handle error response but we do not have time for this time.
+```
+    it("should respond with code 198", (done) => {
+        supertest(app)
+            .get("/api/forum/GB")
+            .expect(198)
+            .end((err) => {
+                if (err) {
+                    done(err);
+                }
+                done();
+            });
+    });
+```
+
+4. For POST and insert a row into the DB, we use .send() to append request body for supertest and then expect response body's values of attributes should as same as request body's values.
+```
+    it("should insert a post", (done) => {
+        const reqData = {
+            country: "GB",
+            author: "Han Solo",
+            author_id: 0,
+            content: "We supply a series of design principles, practical patterns and high quality design resources",
+        };
+        supertest(app)
+            .post("/api/forum/")
+            .send(reqData)
+            .then((res) => {
+                const { body } = res;
+                expect(body.country === reqData.country).to.be.true;
+                expect(body.author === reqData.author).to.be.true;
+                expect(body.author_id == reqData.author_id).to.be.true;
+                expect(body.content === reqData.content).to.be.true;
+            })
+            .then(() => done())
+            .catch((err) => done(err));
+    });
+
+```
+
+5. For GET data for a forum, we use `.get("/api/forum/GB")` to fetch data and we expect() the response shoud be Array and the first object shoud contains particular attributes like content and author.
+```
+    it("should return an array", (done) => {
+        supertest(app)
+            .get("/api/forum/GB")
+            .then((res) => {
+                const { body } = res;
+                expect(Array.isArray(body)).to.be.true;
+                expect(body[-2]).to.have.property("content");
+                expect(body[-2]).to.have.property("author");
+                expect(body[-2]).to.have.property("country");
+                expect(body[-2]).to.have.property("date");
+            })
+            .then(() => done())
+            .catch((err) => done(err));
+    });
+
+```
+[-1]https://www.npmjs.com/package/mockgoose
+[0]https://www.npmjs.com/package/supertest
+[1]https://mochajs.org/
+[3]https://www.chaijs.com/
