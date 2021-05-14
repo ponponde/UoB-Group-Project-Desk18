@@ -45,8 +45,8 @@ But CovidSurvival is actually more than just a website for information! It is al
   - User Story
   - General User Persona
 - Design Process and Early prototyping and Ideation
-- UX approach
 - Wireframes and interaction flow diagrams
+- UX approach
 - Appendix: Interview
 
 
@@ -99,11 +99,17 @@ But CovidSurvival is actually more than just a website for information! It is al
 
 **View our [evaluation document](resource_report/Evaluation.md) to see :**
 
-- Evaluate the designs
+- Evaluation Method
 - Testing
+  - Frontend Test
+    - Library Used
+    - Testing Design
+  - Backend Test
 - User acceptance testing
-
-
+  - Methods
+    - Think aloud methods
+    - Interview
+  - Timeline
 
 ## Conclusion
 
@@ -117,5 +123,3 @@ Discussion of Social and Ethical implications of your work.
 
 In terms of design, we need more usability testing to tweak the user interface and interaction story, and we can refer to more UI design methods to increase user stickiness. In terms of development, in addition to the features mentioned in the backlog for subsequent iterations, algorithms can be applied to our product. For example, the home page can be used to recommend content that may be of more interest to users based on the algorithm. In terms of evaluation, we can further deepen our evaluation tools from two perspectives. For example, code testing can be done using other open-source tools and inviting people not involved in development to black-box test the prototype. For user testing, we can use data collection techniques such as eye-movement technology to obtain statistical data for quantitative analysis. Finally, with respect to the ethical implications of the project we dont consider the website to have negative impact. A potential issue in this regard is the fact that the website only provides links to information or statistical information obtained by third-party API’s and ,therefore, the accuracy of the information is not verified. However, nowhere in the website we make claims about the accuracy of the information and users are mainly redirected to third party sources, therefore, no negative ethical implications from this.
 
- 
-## Acknowledgement
