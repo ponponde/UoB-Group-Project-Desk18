@@ -111,7 +111,7 @@
 - questionnaire design for user evaluation
 - user testing
 - frontend testing
-    - jest, reac-testing, library
+    - jest, react-testing, library
 - backend testing
     - chai, mocha
 - introduction video content
