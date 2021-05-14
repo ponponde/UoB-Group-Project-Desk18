@@ -1,5 +1,6 @@
 <p align="center"><img src="resource_report/mainImg.png"width=60%>
 
+
 ___
 
  ## What is ***CovidSurvival***
@@ -15,7 +16,7 @@ Check if you feel alone. There's people around the world sharing and supporting 
 We are waiting for you!
 
 **Click to see our introduction [video](https://www.youtube.com/watch?v=jRbCMJ7fJa8)**
- 
+
 [![video](https://i.imgur.com/OXibJVa.png)](https://www.youtube.com/watch?v=jRbCMJ7fJa8 "video")
 
 
@@ -93,6 +94,7 @@ But CovidSurvival is actually more than just a website for information! It is al
   - Developing
   - Evaluation
 - Appendix : Sprint
+- Manage team's tasks with Asana
 
 
 ## Evaluation
@@ -113,13 +115,10 @@ But CovidSurvival is actually more than just a website for information! It is al
 
 ## Conclusion
 
-Considering that this was the first time we had applied software engineering development methods to a project, we were very careful in our communication. Firstly, we held meetings two to three times a week to ensure that the project is developed steadily and consistently. Secondly, we used an online management platform, Asana, to distribute tasks between team members and to manage deadlines. We used this software to follow up on the progress of each person's tasks and adapt the expected timeframes for the completion of different features. These activities allowed us to keep in close contact and communicate issues in a timely manner, thus enabling agile development.
+Considering that this was the first time we had applied software engineering development methods to a project, we were very careful in our communication. Firstly, we held meetings two to three times a week to ensure that the project is developed steadily and consistently. Secondly, we used an online management platform, [Asana](resource_report/ProjectManagement.md/#Manage-team's-tasks-with-Asana), to distribute tasks between team members and to manage deadlines. We used this software to follow up on the progress of each person's tasks and adapt the expected timeframes for the completion of different features. These activities allowed us to keep in close contact and communicate issues in a timely manner, thus enabling agile development.
 
 By comparing the list of features (backlog) drawn up at the beginning of the project based on user requirements, we have completed our project according to plan. In the backlog, we have prioritised the features for the different iterations in order of priority. This helped us to iterate through the versions in order of importance, and ultimately to create a more complete prototype. According to our plan, all the basic functionality should have been implemented in iteration 2. However, at the time of submission, we had completed the third iteration, and the prototype was much more feature-rich and interesting than the previous version.
 
 Coronavirus has forced us to choose to work remotely, but we have planned ahead for this. In order to ensure that we can keep in touch with each other during remote collaboration, we ensure that there are two or more ways of contacting each other. For example, excluding teams, members can communicate with each other via wechat, whatsapp, etc. In extreme cases we can also meet offline to deal with unforeseen situations, that is, to meet each other face-to-face by knowing each other's address. However, we still regret that we did not have the opportunity to have a real face-to-face stand up meeting.
 
-Discussion of Social and Ethical implications of your work.
-
 In terms of design, we need more usability testing to tweak the user interface and interaction story, and we can refer to more UI design methods to increase user stickiness. In terms of development, in addition to the features mentioned in the backlog for subsequent iterations, algorithms can be applied to our product. For example, the home page can be used to recommend content that may be of more interest to users based on the algorithm. In terms of evaluation, we can further deepen our evaluation tools from two perspectives. For example, code testing can be done using other open-source tools and inviting people not involved in development to black-box test the prototype. For user testing, we can use data collection techniques such as eye-movement technology to obtain statistical data for quantitative analysis. Finally, with respect to the ethical implications of the project we dont consider the website to have negative impact. A potential issue in this regard is the fact that the website only provides links to information or statistical information obtained by third-party API’s and ,therefore, the accuracy of the information is not verified. However, nowhere in the website we make claims about the accuracy of the information and users are mainly redirected to third party sources, therefore, no negative ethical implications from this.
-
