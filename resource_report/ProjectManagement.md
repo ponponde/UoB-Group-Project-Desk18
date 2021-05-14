@@ -16,6 +16,7 @@
 	- [Developing](#Developing)
 	- [Evaluation](#Evaluation)
 - [**Appendix : Sprint**](#appendix-sprints)
+- [**Appendix : Meeting Log**](#Meeting-log)
 
 ## Introduction
 
@@ -238,3 +239,6 @@ There is still something we can improve on using Git. First, each member should 
 
 3. At the end, all the tasks should in the completec block besides those which is good to have for this stage but could be put into the next stage in the future.
 <p align="center"><img src="asana3.png"width=80%>
+	
+## Appendix Meeting Log
+Click here to view our [meeting log document](MeetingLog.md)
