@@ -16,15 +16,17 @@
 	- [Developing](#Developing)
 	- [Evaluation](#Evaluation)
 - [**Appendix : Sprint**](#appendix-sprints)
+- [**Manage team's tasks with Asana**](#Manage-team's-tasks-with-Asana)
 
 ## Introduction
 
-For our flexible and extensible project, we use Agile which is a set of best practices in software development based on Scrum, Extreme Programming and Lean. Besides, Agile also requires a different approach, which is adapted to incremental development and the particular strengths of agile methods.
-We mainly use the Scrum approach which is a general Agile method but its focus is on managing iterative development rather than specific agile practices. There are three core phases in Scrum including making the outline planning, planning the series of sprint cycles and closure phase. More details about the sprint cycle information and so on can be acquired from [**Appendix : Backlog**](Backlog.md).
+To make our project flexible, we used Agile which is a set of best practices in software development based on Scrum, Extreme Programming and Lean. Agile also requires a different approach, which is adapted to incremental development and the particular strengths of agile methods.
 
-The reason why we choose Scrum as our core method is that the clear process helps us to plan the whole work and to divide them into several stages. The project of CovidSurvival is broken down into a series of the manageable and understandable chunk so that it becomes much easier for our team to reach an agreement on the detail of the project requirement. Also, unstable requirements can never hold up the process. Through several stand-up meetings, the whole team can have visibility of everything which helps us to keep the same pace and share the information about the schedule and existing problem.
+We mainly used the Scrum approach which is a general Agile method but its focus is on managing iterative development rather than specific agile practices. There are three core phases in Scrum including making the outline planning, planning the series of sprint cycles and closure phase. More details about the sprint cycle information and so on can be acquired from [**Appendix : Backlog**](Backlog.md).
 
-For example, as a project facing to the user all aroung the world, end user can easily participate in the whole developing process, which gives us a convenient channel to obtain the feedback, so that later increment can be successfully conducted based on end users’ evaluation. Besides, to make the project to be easy enough to use, the System user interfaces are developed using an interactive development system with pictures and a few animations in order to prove the end users’ engagement.
+The reason why we choose Scrum as our core method is that the clear process helps us to plan the whole work and to divide them into several stages. The project of CovidSurvival is broken down into a series of the manageable and understandable chunks so that it becomes much easier for our team to reach an agreement on the detail of the project requirement. Also, unstable requirements can never hold up the process. Through several stand-up meetings, the whole team can have visibility of everything which helps us to keep the same pace and share the information about the schedule and existing problem.
+
+For example, as a project facing to the user all aroung the world, end users can easily participate in the whole developing process, which gives us a convenient channel to obtain the feedback, so that later increments can be successfully conducted based on end users’ evaluation. Besides, to make the project to be easy enough to use, the System user interfaces are developed using an interactive development system with pictures and a few animations in order to prove the end users’ engagement.
 
 <p align="center"><img src="EachIteration.png"width=70%>
 
@@ -70,7 +72,7 @@ Those will help us to arrange and manage tasks when developing project more effi
 
 |    **Items**     |        **Time**        | Task                                                         |
 | :--------------: | :--------------------: | ------------------------------------------------------------ |
-| Outline planning | April 2nd - April 10th | Establish the general objectives and design the software structure. |
+| Outline planning | Feb 4th - April 10th | Establish the general objectives and design the software structure. |
 |   Sprint cycle   |  April 9th - May 3rd   | Plan the backlog, select the function to be complete and write the code. |
 | Project closure  |   May 3rd -May 10th    | Wraps up the project and complete required documentation.    |
 
@@ -82,7 +84,7 @@ A Work Breakdown Structure is used to separate a large and sophisticated project
 
 The Gantt Chart is a traditional tool to represent the timing of tasks.
 
-Those will help us to arrange and manage tasks when developing project more efficiently.
+Those helped is to arrange and manage tasks when developing project more efficiently.
 
 | **Stage**   | **Activity**                                         | **Durations** | **Dependencies** | **Deliverables**            |
 | ----------- | ---------------------------------------------------- | ------------- | ---------------- | --------------------------- |
@@ -104,29 +106,7 @@ Those will help us to arrange and manage tasks when developing project more effi
 
 ### Gantt Chart
 
-```mermaid
-gantt
-Title Gantt Chart
-section Preparation
-T1 : done, 2021-02-04, 7d
-T2 : done, 2021-02-04, 7d
-T3 : done, 2021-02-04, 14d
-T4 : done, 2021-02-15, 14d
-T5 : done, 2021-02-15, 7d
-section Iteration
-T6 : done, 2021-03-01, 7d
-T7 : done, 2021-03-08, 7d
-T8 : done, 2021-03-15, 14d
-T9 : done, 2021-03-22, 14d
-T10 : done, 2021-03-29, 14d
-T11 : done, 2021-04-05, 14d
-T12 : done, 2021-04-12, 14d
-section Final
-T13 : done, 2021-04-26, 7d
-T14 : done, 2021-04-26, 14d
-T15 : done, 2021-04-26, 14d
-```
-
+<p align="center"><img src="Gantt.png"width=80%>
 
 
 
@@ -135,7 +115,7 @@ T15 : done, 2021-04-26, 14d
 In this project, we use Git and GitHub to manage and cooperate on all of our codes and reports. In order to keep everything tidy and to practice continuous integration and deployment, Gitflow workflow is used to set up a neat but also robust framework for managing collaborative projects.
 
 ### Planning
-Before starting to develop our product, we have discussed several times in our weekly meeting to establish:
+Before starting to develop our product, we have discussed several times in our weekly meetings to establish:
 
 - Personal workflow (including usage of Git command)
 - Branching rules
@@ -150,18 +130,15 @@ Our Git repository has main, dev, feature and report branches. The main branch, 
 ### Developing
 During development, we found that it’s hard to keep everything to the plan. Because this is the first time we collaborate using Git, we sometimes forgot to git fetch before creating feature branches. Furthermore, we were not sure when to merge to dev and main and what kind of tests should be applied before the merge. The solution is that every member builds the project during weekly meeting and tests together if there is any problem. Then we merge those finished feature branches. In this case, we keep the working tree clean and members can easily track changes of each commit.
 
-Sometimes bugs appear after merging, fortunately, with this developing routine, we can simply git reset and try to merge manually to verify if every conflict was solved correctly.
+Sometimes bugs appear after merging, however, with this developing routine, we can simply git reset and try to merge manually to verify if every conflict was solved correctly.
 
 ### Evaluation
-Because Git has many advantages like speed, simplicity and integrity, using git as our version control tool definitely facilitates our project development. Although we did not stick to the Gitflow at all times and we mess the working tree occasionally, our project is maintained well by this powerful version control system.
+Because Git has many advantages like speed, simplicity and integrity, using git as our version control tool definitely facilitates our project development. Although we did not stick to the Gitflow at all times and we messed the working tree occasionally, our project is maintained well by this version control system.
 
 There is still something we can improve on using Git. First, each member should be more familiar with Git commands and the version control system. Therefore, we will not need to spend a huge amount of time fixing disordered branches and solving issues in the individual local repository. Second, we should follow Gitflow as possible to keep main, dev, and feature branches doing their works. As a result, the working tree will be more straightforward and easier to maintain and release. Last but not least, everyone should make clearer commit messages so that others could understand at a glance. People don’t really have the patience to look into every commit and check changes in files. This is especially important when there are hundreds of commits in the repository.
 
 
-
-
 ## Appendix Sprints
-
 #### Sprint 1: Brainstorming
 
 - Key meeting points:
@@ -221,11 +198,23 @@ There is still something we can improve on using Git. First, each member should 
   - build frontend testing 
 
 
-#### Sprint 7 : Resolving issues and enhancing features 
+#### Sprint 7 : Resolving issues and enhancing features & Write-up
 
 - Key meeting points:
   - point system
 
-#### Sprint 8 : Write-up
 
+## Manage team's tasks with Asana
 
+1. With Asana, we created tickets, which contains api spec and description, in the requirement block and assigned a member to each ticket. 
+
+<p align="center"><img src="https://i.imgur.com/FzvvOAS.png"width=80%>
+
+<p align="center"><img src="https://i.imgur.com/KJ8wo4g.png"width=80%>
+
+2. As our sprints go, the tickets will be moved to the progress or complete block. 
+   -  members could create subtask based on their tickets.
+<p align="center"><img src="asana2.png"width=80%>
+
+3. At the end, all the tasks should in the completec block besides those which is good to have for this stage but could be put into the next stage in the future.
+<p align="center"><img src="asana3.png"width=80%>

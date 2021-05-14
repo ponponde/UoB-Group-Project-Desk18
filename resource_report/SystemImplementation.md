@@ -43,14 +43,19 @@ Express was used to define routes and make calls to third party API’s where ne
 
 MongoDB was used for persistent storage of data for the website. MongoDB is a NoSQL database that allows us to structure data as objects and documents as opposed to tables with rows and columns. The advantage of this is that we don't have to convert or map the objects from the code into tables with specific relationships.
 
+
+
+
+
 **System Design**
 
 The code for the website is designed into UI and API, which contain the code for the front end and back end side of the website respectively.
 
+<p align="center"><img src="Mvc_express.png"width=60%>
+
 In API, server.js is used to start the server which connects the website’s database to the user interface.  The file establishes a connection to MongoDB and adds the routes of the website’s API to the middleware to be executed when different endpoints are reached by the user. The website’s design follows the Model-View-Controller design pattern but instead of static templates being rendered as views, those are generated dynamically by React on the front end. Thus, there are dedicated files which contain the information about the models of the data and ,separately , files that execute javascript to process data fetched from the database and return the processed information back to the user. This process occurs when a user selects the appropriate button/field on the interactive map which is routed to a particular URL serving as an endpoint. Once the appropriate field is clicked, this prompts a request to the server’s API which processes information depending on which endpoint is reached. The processing logic is contained in the controller files. The controllers are, in turn,  connected to the server’s endpoints through the routes defined with Express in api/routes folder. The diagram below illustrates the way data is handled by the API:
 
-<p align="center"><img src="Mvc_express.png"width=50%>
-
+<p align="center"><img src="Arch.jpg"width=80%>
 
 In UI the key files are the components which provide JavaScript functionality in a reusable way. The HTML that is returned from these files is exported through the containers/Home/index.js file which provides the initial layout for the page and handles clicks and other functionality needed by the user. 
 
@@ -60,10 +65,11 @@ MongoDB and Mongoose were used for database implementation.  MongoDB is a NoSQL 
 
 The setup for the mongoose connection is defined in api/db/index.js and the models are defined in api/db/models. Each of the files in the latter folder defines a mongoose schema that is used to map the data stored in MongoDB. Below is a map illustrating the relationship between the models used for the website:
 
-<p align="center"><img src="models2.png"width=50%>
+<p align="center"><img src="models2.png"width=80%>
 
 
 The data received from third party API’s for statistical information about COVID is not being stored as it’s being simply redirected to the user through the map.controller.js.
+
 
 ## Middle Tier
 
@@ -95,6 +101,146 @@ The forum.controller.js allows data to be posted and retrieved from forums for c
 
 The map.controller.js deals with displaying statistical information about covid cases in separate countries. Once a country is clicked, this controller contacts a third party API through axios and fetches the relevant information. Because the returned response contains daily data, the controller parser the information for the current day only and sends the information to the front end. 
 
+### API Spec
+
+API spec is on [swagger](https://app.swaggerhub.com/apis-docs/covidsurvival/covid-survival/1.0), which will be expired on 05/22/2021 on swagger free pages. 
+If it is expired, please refer to [Yaml](resource_report/covidSurvival.v1.yaml) or [Html](resource_report/covidSurvivalApiSpec.html) 
+
+<p align="center"><img src="![](https://i.imgur.com/w2hoimn.png"width=80%>
+
+We designed six APIs as below:
+
+#### [POST] Sign up
+   - Purpose: user registration
+   - Request body:
+```
+{
+  "username": "abc5",
+  "email": "abc5@gmail.com",
+  "password": "12345"
+}
+```
+#### [POST] Sign in
+   -  Purpose: user login
+   - Request body:
+```
+{
+  "username": "abc5",
+  "password": "12345"
+}
+```
+   - Response body:
+```
+{
+  "id": "608aa1cc309675001a015c98",
+  "username": "abc5",
+  "email": "abc5@gmail.com",
+  "roles": [
+    "ROLE_USER"
+  ],
+  "accessToken": "eyJhbGciOiJI......IaOHFhKJTbu00"
+}
+```
+   - Extension in the future: we plan to give each roles different authorization. 
+For example, an admin of a country's forum or levels according to users poins and ranking.  
+
+#### [GET] /api/map/mapInfo/:id
+**:id** is country's id. 
+When the user clicks a country on the map, the front-end will fetch this api for information of that country inclouds: 
+   - The numbers of cases: backend will fetch `https://api.covid19api.com/live/country/` and get realtime data.
+   - Travel policy: backend will fetch `https://api.covid19api.com/premium/travel/country/` and get updated data.
+   - Gov's info: we plan to collect each country's official website links and posters about fighting COVID like:
+   <p align="center"><img src="https://www.midyorks.nhs.uk/media/images/versions/img94joktmu78806.jpg?bev=7067"width=80%>
+
+   -  Ranking (Mock): This array contains the top 5 users' information about points but now is just mock data. 
+   -  Statistics (Mock): This shows the trending tags goes up and down in that country. Now is mock data ,but in the future, we are going to develop emotion and sentiment analysis based on posts in a country's forum.
+   - News (TBC): We plan to search news about covid of that country, but we have not completed this service this time.
+
+```
+{
+  "Country": "Global",
+  "CountryCode": "Global",
+  "Confirmed": 149407874,
+  "Deaths": 3148318,
+  "Recovered": 86817042,
+  "Active": "",
+  "Recommendation": "",
+  "Notes": "",
+  "NewConfirmed": 661727,
+  "statistics": {
+    "up": {
+      "title": "Cooking by myself",
+      "rate": "52.1%"
+    },
+    "down": {
+      "title": "Jogging",
+      "rate": "6.82%"
+    }
+  },
+  "rankList": [
+    {
+      "points": 11685,
+      "name": "Eyrdin",
+      "photo": "https://www.tubefilter.com/wp-content/uploads/2019/11/dobrik-people-1920x1131.jpg"
+    },
+    ...
+    {
+      "points": 1804,
+      "name": "Eyrdin",
+      "photo": "https://api.time.com/wp-content/uploads/2021/04/self-love.jpg"
+    }
+  ]
+}
+```
+
+
+#### [POST] /api/point
+
+User could add points by clicking map by chance,posting in a forum, replying a post or like a post.
+
+- Request body
+```
+{ "id": "608aa1cc309675001a015c98", "points":3 }
+
+```
+- Response body
+```
+{
+  "id": "608aa1cc309675001a015c98",
+  "points": 303
+}
+```
+We did not finish this part at the time, but it should be completed as soon as possible.
+
+#### ​[POST] /api​/forum
+Make a post in the forum:
+- Request body
+```
+{
+  "country": "GB",
+  "author": "Han Solo",
+  "author_id": "608aa1cc309675001a015c98",
+  "content": "We supply a series of design principles, practical patterns and high quality design resources(Sketch and Axure), to help people create their product prototypes beautifully and efficiently."
+}
+```
+
+#### [GET] /api/forum/:country
+When an user clicks forum, front-end will fetch this api and get posts of the forum.
+- Response body
+```
+[
+  {
+    "country": "string",
+    "author": "string",
+    "author_id": "string",
+    "content": "string",
+    "likes":"number"
+  }
+]
+```
+- Extension: 
+   - Each post sould contain reply posts.
+   - It should allow users upload photo, voice message and video.
 ## Frontend implementation 
 
 ### Frontend Overview 
@@ -111,9 +257,9 @@ Table 1. Frontend libraries overview
 
 React is an open source JavaScript library for building user interfaces maintained by Facebook. It lets you compose complex UIs from small and isolated pieces of code called “components”[1]. In mechanism, it features virtual document object model, which only rendered the components actually change.
 
-There are plenty of frontend frameworks nowadays. The most popular ones are the big three Angular, React, and Vue. We finally chose React for our project not only because of its popularity but also its outstanding advantages[2].  
+There are plenty of frontend frameworks nowadays. The most popular ones are the big three - Angular, React, and Vue. We finally chose React for our project not only because of its popularity but also its outstanding advantages[2].  
 
-First, popularity, According the research by Elar Saks[3],  react have got the highest package downloads which means that the resources must be sufficient to do a good project. We indeed found a perfect react-svg-map[4] for our data visualization  and a fantastic UI library ant-design[5].Second, easy to make separate components. Our components lie in the components folder, like figure 1. Third, simplicity, well defined methods, HTML like in-javascript tags for component rendering, and a full CSS support make the user learn quickly with some basic of frontend skills. We arranged our components like Figure 2.  Fourth, testability, with a bunch of testing library[6][7][8] and components structure React web app is very easy to test.
+First, popularity, According the research by Elar Saks[3],  react has the highest package downloads which means that the resources must be sufficient to do a good project. We indeed found a perfect react-svg-map[4] for our data visualization  and a fantastic UI library ant-design[5].Second, in React it's easy to make separate components. Our components are contained in the components folder, like figure 1. Third, simplicity, well defined methods, HTML like in-javascript tags for component rendering, and a full CSS support make the user learn quickly with some basic frontend skills. We arranged our components like Figure 2.  The fourth reason is testability - with a bunch of testing library[6][7][8] and components structure React web app is very easy to test.
 
 
 ```
@@ -166,7 +312,7 @@ Figure 2. Frontend Component structure
 
 #### Redux
 
-Because of the components structure of React, the states of each will become very hard to maintain through the growth of the scale of the web application. Hance, we need a library to help us manage the states. Redux[9], a predictable state container for JS Apps, is perfect for this job.
+Because of the components structure of React, the states of each will become very hard to maintain through the growth of the scale of the web application. Hence, we need a library to help us manage the states. Redux[9], a predictable state container for JS Apps, is perfect for this job.
 
 To use Redux, we also need a UI binder to support Redux. We chose an official library React-Redux[10] to do the job.
 
@@ -240,7 +386,7 @@ Gif 4. Music Toggle
 
 ### Animation
 
-After considering some animation libraries like react-spring and Framer-motion, we decided using the primitive @keyframe in CSS for our animation. For example our intro animation is fully implemented with  @keyframe ( Gif 5 ).
+After considering some animation libraries like react-spring and Framer-motion, we decided to use the primitive @keyframe in CSS for our animation. For example our intro animation is fully implemented with  @keyframe ( Gif 5 ).
 
 
 ![](https://i.imgur.com/VM7Dp0l.gif)
@@ -338,3 +484,19 @@ services:
 ```
 
 We use `docker-compose up --build` to build our whole product including ui, api, and mongo image. Because the api container requires the service from the mongo container, we need to start the mongo container first. This is the same as ui and api container. `depends_on` is used to start containers in dependency order.
+
+### CI/CD
+
+   <p align="center"><img src="https://www.synopsys.com/content/dam/synopsys/sig-assets/images/cicd.svg.imgo.svg"width=80%>[12]
+
+CI/CD allows us to release the next version efficiently. Continuous integration (CI) involves developers making changes and reviews their code. Continuous delivery (CD) automatically delivers completed code to environments. Although we are not expected to deploy this project to a remote server, we plan to build our CI/CD by these steps:
+1. Start from planing and coding
+2. Build and test: must pass all built testing 
+3. Release and deploy: open pull request and reviewed by other members
+4. Approved to merge into dev
+5. Deploy to the remote server and run it up by docker (Dev environment)
+6. Test the lastest version on the Dev environment
+7. If we find bugs or create new requests, we go back to the first step.
+
+
+[12]https://www.synopsys.com/glossary/what-is-cicd.html
