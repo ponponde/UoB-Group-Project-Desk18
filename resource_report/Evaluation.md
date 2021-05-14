@@ -1,3 +1,4 @@
+<p align="center"><img src="logoTxt.png"width=80%>
 # **Evaluation**
 
 ## Table of Contents
