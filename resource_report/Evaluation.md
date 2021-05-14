@@ -114,10 +114,10 @@ For verifying our APIs, we developed 11 unit test for each api and its status.
 
 ### Implement
 
--1. Use Mocha's describe for the block of testing each API. 
-0. Before each testing, we need to use before() to start connection of server and DB. 
-1. After each testing, use after() to close the server and connection. 
-```
+-1. Use Mocha's describe for the block of testing each API.   
+0. Before each testing, we need to use before() to start connection of server and DB.  
+1. After each testing, use after() to close the server and connection.  
+```javascript
 describe("GET /api/forum/:country", () => {
     before((done) => {
         conn.connect()
@@ -140,9 +140,9 @@ describe("GET /api/forum/:country", () => {
 })
 ```
 
-2. Within describe, it() defines a testing case.
-3. Test successful status 200 in the first. We should also handle error response but we do not have time for this time.
-```
+2. Within describe, it() defines a testing case.  
+3. Test successful status 200 in the first. We should also handle error response but we do not have time for this time.  
+```javascript
     it("should respond with code 198", (done) => {
         supertest(app)
             .get("/api/forum/GB")
@@ -157,7 +157,7 @@ describe("GET /api/forum/:country", () => {
 ```
 
 4. For POST and insert a row into the DB, we use .send() to append request body for supertest and then expect response body's values of attributes should as same as request body's values.
-```
+```javascript
     it("should insert a post", (done) => {
         const reqData = {
             country: "GB",
@@ -182,7 +182,7 @@ describe("GET /api/forum/:country", () => {
 ```
 
 5. For GET data for a forum, we use `.get("/api/forum/GB")` to fetch data and we expect() the response shoud be Array and the first object shoud contains particular attributes like content and author.
-```
+```javascript
     it("should return an array", (done) => {
         supertest(app)
             .get("/api/forum/GB")
@@ -199,7 +199,7 @@ describe("GET /api/forum/:country", () => {
     });
 
 ```
-[-1]https://www.npmjs.com/package/mockgoose/ 
-[0]https://www.npmjs.com/package/supertest/ 
-[1]https://mochajs.org/ 
-[3]https://www.chaijs.com/ 
+[-1]https://www.npmjs.com/package/mockgoose/  
+[0]https://www.npmjs.com/package/supertest/  
+[1]https://mochajs.org/  
+[3]https://www.chaijs.com/   
