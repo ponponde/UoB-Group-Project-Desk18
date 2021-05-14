@@ -33,7 +33,7 @@ But CovidSurvival is actually more than just a website for information! It is al
 
 ## Video
 
-**If you want to see more ->[full introduction video](https://www.youtube.com/watch?v=jRbCMJ7fJa8)**
+**If you want to see more ->[full introduction video](https://www.youtube.com/watch?v=tdEkIdn4zNo)**
 [![video](https://i.imgur.com/27p4nT3.png)](https://www.youtube.com/watch?v=tdEkIdn4zNo "full introduction video")
 
 
