@@ -225,7 +225,7 @@ There is still something we can improve on using Git. First, each member should 
   - point system
 
 
-### Manage team's tasks with Asana
+## Manage team's tasks with Asana
 
 1. With Asana, we created tickets, which contains api spec and description, in the requirement block and assigned a member to each ticket. 
 
