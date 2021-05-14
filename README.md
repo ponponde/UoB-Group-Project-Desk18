@@ -8,7 +8,7 @@ ___
 Do you feel boring when isolating alone? Do you want to hear stories from abroad?   
 We have songs and wine, and especially, friends from all over the world to share their stories of life under quarantine.  
 
-Do you wondering how to survival in this post COVID would?  
+Do you wondering how to survival in this post COVID world?  
 Check if you want to travel. There's travelling policy for each country  
 Check if you fear of cases. There's real time statistics of each country  
 Check if you feel alone. There's people around the world sharing and supporting each others  
