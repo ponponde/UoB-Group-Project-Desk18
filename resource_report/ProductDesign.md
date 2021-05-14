@@ -1,6 +1,5 @@
 <p align="center"><img src="logoTxt.png"width=80%>
 
-
 # Product Design
 
 ## Table of Contents
@@ -10,8 +9,8 @@
   - [User Story](#user-story)
   - [General User Persona](#general-user-persona)
 - [**Design Process and Early prototyping and Ideation**](#Design-Process-and-Early-prototyping-and-Ideation)
-- [**UX approach**](#UX-approach)
 - [**Wireframes and interaction flow diagrams**](#Wireframes-and-interaction-flow-diagrams)
+- [**UX approach**](#UX-approach)
 - [**Appendix: Interview**](#appendix-interview)
 
 ## User Requirement
@@ -37,9 +36,9 @@ Observation is also one of the methods of the Fact-finding technique. Observing 
 
 ### User Story
 
+<p align="center"><img src="UserStory.jpg"width=80%>
+  
 Click [Backlog](Backlog.md) to see User Story and iteration arrangement.
-
-
 
 
 ### General User Persona
@@ -58,40 +57,42 @@ Characteristics: Expect socialising. Not familiar with foreign countries. Not us
 
 User environment : Forced to stay at home for long periods of time because of the spread of the coronavirus. 
 
-
+<p align="center"><img src="Persona.png"width=80%>
 
 ## Design Process and Early prototyping and Ideation
 
- (including mood boards and paper prototyping)
+- Mood Board
 
+<p align="center"><img src="mood.jpeg"width=80%>
 
+- Paper Prototyping
+
+<p align="center"><img src="pp1.jpeg"width=80%>
+  
+<p align="center"><img src="pp2.jpeg"width=80%>
+  
+<p align="center"><img src="pp3.jpeg"width=80%>
 
 ## UX approach
 
-– design heuristics/approach, design methods (design fiction / heuristics)
+Heuristic evaluation is a method in the field of UX for assessing the usability of products. Throughout the design and development process, we try to do heuristic evaluations of the latest iteration of the prototype as often as possible. The following heuristic analysis scales are used.
 
 
-
-
+|                 **Heuristic Content**                  | **Severity** | **Records**                                                  |
+| :----------------------------------------------------: | :----------: | ------------------------------------------------------------ |
+| Visibility of system status and loss of mobile devices |      0       | Always keeping the user informed of what is happening.       |
+|         Matching of the system to user habits          |      1       | Use of words, phrases and concepts that are familiar to the user rather than system-oriented terminology |
+|                Consistency and mapping                 |      2       |                                                              |
+|   Ease of input, screen readability and swipeability   |      3       |                                                              |
+|   Flexibility, efficiency of use and personalisation   |      3       |                                                              |
+|       Aesthetics, privacy and social conventions       |      3       |                                                              |
+|             Handling of exceptions, errors             |      3       |                                                              |
 
 
 
 ## Wireframes and interaction flow diagrams
 
 Original prediction game and map wireframe design for desktop UI (up), and updated with forum wireframe design (down):
-
-- Original prediction game and map wireframe
-
-<p align="left"><img src="Wire1a.png"width=40%>
-<p align="right"><img src="Wire1b.png"width=40%>
-
-------
-
-- updated with forum wireframe
-
-We picked a world map to attract users to click and search the current situation of other country, and decided a one page ui to simplify data and tasks and to avoid switching different functionalities in the other pages.
-
-<p align="center"><img src="Wire2.jpeg"width=50%>
 
 - Prototype of the main page
 
@@ -112,6 +113,18 @@ We want to make our product more friendly, after interviewed many users and coll
 - Prototype of the intro page
 
 <p align="center"><img src="Wire7.png"width=50%>
+- Original prediction game and map wireframe
+
+<p align="left"><img src="Wire1a.png"width=40%>
+<p align="right"><img src="Wire1b.png"width=40%>
+
+------
+
+- updated with forum wireframe
+
+We picked a world map to attract users to click and search the current situation of other country, and decided a one page ui to simplify data and tasks and to avoid switching different functionalities in the other pages.
+
+<p align="center"><img src="Wire2.jpeg"width=50%>
 
 #### Interaction flow diagrams for final key subsystems
 
@@ -122,7 +135,6 @@ Map is the key feature for our product so we choose destoop ui for this project.
   - With authentication, the user could collect points by post, like, reply in the forum or click map to check the data of other countries.
 
 <p align="center"><img src="Wire8.jpeg"width=50%>
-
 
 ## Appendix Interview
 
@@ -144,10 +156,6 @@ Map is the key feature for our product so we choose destoop ui for this project.
 
 5. Would you be willing to share your life with your online friends about your life with the spread of the coronavirus?
 
-   
-
 6. For what purpose would you use the page?
-
    
-
 7. Is there anything in particular you would like to know about coronavirus?
