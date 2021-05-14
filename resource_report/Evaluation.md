@@ -96,7 +96,7 @@ Figure 2. Frontend snapshot testing file structure
 
 For verifying our APIs, we developed 11 unit test for each api and its status.
 
-<p align="center"><img src="https://i.imgur.com/nn1RgVo.png"width=90%>
+<p align="center"><img src="https://i.imgur.com/nn3RgVo.png"width=90%>
 
 ### Libraries
 
