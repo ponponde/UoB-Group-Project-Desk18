@@ -115,8 +115,8 @@ For verifying our APIs, we developed 11 unit test for each api and its status.
 ### Implement
 
 -1. Use Mocha's describe for the block of testing each API. 
-0. Before each testing, we need to use before() to start connection of server and DB.
-1. After each testing, use after() to close the server and connection.
+0. Before each testing, we need to use before() to start connection of server and DB. 
+1. After each testing, use after() to close the server and connection. 
 ```
 describe("GET /api/forum/:country", () => {
     before((done) => {
@@ -199,7 +199,7 @@ describe("GET /api/forum/:country", () => {
     });
 
 ```
-[-1]https://www.npmjs.com/package/mockgoose
-[0]https://www.npmjs.com/package/supertest
-[1]https://mochajs.org/
-[3]https://www.chaijs.com/
+[-1]https://www.npmjs.com/package/mockgoose/ 
+[0]https://www.npmjs.com/package/supertest/ 
+[1]https://mochajs.org/ 
+[3]https://www.chaijs.com/ 
