@@ -105,29 +105,7 @@ Those will help us to arrange and manage tasks when developing project more effi
 
 ### Gantt Chart
 
-```mermaid
-gantt
-Title Gantt Chart
-section Preparation
-T1 : done, 2021-02-04, 7d
-T2 : done, 2021-02-04, 7d
-T3 : done, 2021-02-04, 14d
-T4 : done, 2021-02-15, 14d
-T5 : done, 2021-02-15, 7d
-section Iteration
-T6 : done, 2021-03-01, 7d
-T7 : done, 2021-03-08, 7d
-T8 : done, 2021-03-15, 14d
-T9 : done, 2021-03-22, 14d
-T10 : done, 2021-03-29, 14d
-T11 : done, 2021-04-05, 14d
-T12 : done, 2021-04-12, 14d
-section Final
-T13 : done, 2021-04-26, 7d
-T14 : done, 2021-04-26, 14d
-T15 : done, 2021-04-26, 14d
-```
-
+<p align="center"><img src="Gantt.png"width=80%>
 
 
 
