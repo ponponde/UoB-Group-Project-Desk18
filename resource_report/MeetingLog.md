@@ -45,7 +45,7 @@
 -  C. improve online learning (+visualization)
 -  D. donation platform
 -  E. job application
--  result: A-3, B-3, C-3, D-1
+-  result: A-4, B-3, C-3, D-2, E-1
 ### Conclusion
 -  the project is not a game, it should still be interactive (e.g. clicking map zoom in/out)
 
