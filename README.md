@@ -95,11 +95,17 @@ But CovidSurvival is actually more than just a website for information! It is al
 
 **View our [evaluation document](resource_report/Evaluation.md) to see :**
 
-- Evaluate the designs
+- Evaluation Method
 - Testing
+  - Frontend Test
+    - Library Used
+    - Testing Design
+  - Backend Test
 - User acceptance testing
-
-
+  - Methods
+    - Think aloud methods
+    - Interview
+  - Timeline
 
 ## Conclusion
 
