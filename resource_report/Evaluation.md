@@ -117,25 +117,6 @@ Figure 2. Frontend snapshot testing file structure
 
 ## Backend Testing
 The tests for the back end were performed with two libraries Mocha and SuperTest. SuperTest is used to allow the requests to be made run without the server being run in advance. Mocha is a javascript framework which we used to test the website’s asynchronous functionality.
-The test case is initially described and after that the expected output is matched against the received data from the API. For example, the following code tests whether the status code received from the API upon making a get request to an endpoint is 200:
-
- ```
- it("should respond with code 200", (done) => {
- ​      supertest(app)
- ​       .get("/api/forum/GB")
- ​       .expect(200)
- ​       .end((err) => {
- ​         if (err) {
- ​           done(err);
- ​         }
- ​         done();
- ​       });
- ​    });
- ```
- 
-For verifying our APIs, we developed 11 unit test for each api and its status.
-
-<p align="center"><img src="https://i.imgur.com/nn3RgVo.png"width=90%>
 
 ### Libraries
 
@@ -152,6 +133,10 @@ For verifying our APIs, we developed 11 unit test for each api and its status.
 "Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework." [2] We use its method "expect" for verifying response. 
 
 ### Implement
+
+The test case is initially described and after that the expected output is matched against the received data from the API. For verifying our APIs, we developed 13 unit tests for each api and its status.
+
+<p align="center"><img src="https://i.imgur.com/nn3RgVo.png"width=90%>
 
 1. Use Mocha's describe for the block of testing each API.   
 2. Before each testing, we need to use before() to start connection of server and DB.  
@@ -181,19 +166,22 @@ describe("GET /api/forum/:country", () => {
 
 4. Within describe, it() defines a testing case.  
 5. Test successful status 200 in the first. We should also handle error response but we do not have time for this time.  
-```javascript
-    it("should respond with code 198", (done) => {
-        supertest(app)
-            .get("/api/forum/GB")
-            .expect(198)
-            .end((err) => {
-                if (err) {
-                    done(err);
-                }
-                done();
-            });
-    });
-```
+   For example, the following code tests whether the status code received from the API upon making a get request to an endpoint is 200:
+
+ ```
+ it("should respond with code 200", (done) => {
+ ​      supertest(app)
+ ​       .get("/api/forum/GB")
+ ​       .expect(200)
+ ​       .end((err) => {
+ ​         if (err) {
+ ​           done(err);
+ ​         }
+ ​         done();
+ ​       });
+ ​    });
+ ```
+ 
 
 6. For POST and insert a row into the DB, we use .send() to append request body for supertest and then expect response body's values of attributes should as same as request body's values.
 ```javascript
