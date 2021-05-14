@@ -484,3 +484,19 @@ services:
 ```
 
 We use `docker-compose up --build` to build our whole product including ui, api, and mongo image. Because the api container requires the service from the mongo container, we need to start the mongo container first. This is the same as ui and api container. `depends_on` is used to start containers in dependency order.
+
+### CI/CD
+
+   <p align="center"><img src="https://www.synopsys.com/content/dam/synopsys/sig-assets/images/cicd.svg.imgo.svg"width=80%>[12]
+
+CI/CD allows us to release the next version efficiently. Continuous integration (CI) involves developers making changes and reviews their code. Continuous delivery (CD) automatically delivers completed code to environments. Although we are not expected to deploy this project to a remote server, we plan to build our CI/CD by these steps:
+1. Start from planing and coding
+2. Build and test: must pass all built testing 
+3. Release and deploy: open pull request and reviewed by other members
+4. Approved to merge into dev
+5. Deploy to the remote server and run it up by docker (Dev environment)
+6. Test the lastest version on the Dev environment
+7. If we find bugs or create new requests, we go back to the first step.
+
+
+[12]https://www.synopsys.com/glossary/what-is-cicd.html
