@@ -16,6 +16,7 @@
 	- [Developing](#Developing)
 	- [Evaluation](#Evaluation)
 - [**Appendix : Sprint**](#appendix-sprints)
+- [**Manage team's tasks with Asana**](#Manage-team's-tasks-with-Asana)
 
 ## Introduction
 
