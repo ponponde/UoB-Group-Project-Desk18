@@ -146,7 +146,7 @@ For example, an admin of a country's forum or levels according to users poins an
 
 #### [GET] /api/map/mapInfo/:id
 **:id** is country's id. 
-When the user click a country on the map, the front-end will fetch this api for information of that country inclouds: 
+When the user clicks a country on the map, the front-end will fetch this api for information of that country inclouds: 
    - The numbers of cases: backend will fetch `https://api.covid19api.com/live/country/` and get realtime data.
    - Travel policy: backend will fetch `https://api.covid19api.com/premium/travel/country/` and get updated data.
    - Gov's info: we plan to collect each country's official website links and posters about fighting COVID like:
@@ -210,7 +210,7 @@ User could add points by clicking map by chance,posting in a forum, replying a p
   "points": 303
 }
 ```
-We did not finished this part at the time, but it should be completed as soon as possible.
+We did not finish this part at the time, but it should be completed as soon as possible.
 
 #### ​[POST] /api​/forum
 Make a post in the forum:
@@ -225,7 +225,7 @@ Make a post in the forum:
 ```
 
 #### [GET] /api/forum/:country
-When an user click forum, front-end will fetch this api and get posts of the forum.
+When an user clicks forum, front-end will fetch this api and get posts of the forum.
 - Response body
 ```
 [
@@ -257,9 +257,9 @@ Table 1. Frontend libraries overview
 
 React is an open source JavaScript library for building user interfaces maintained by Facebook. It lets you compose complex UIs from small and isolated pieces of code called “components”[1]. In mechanism, it features virtual document object model, which only rendered the components actually change.
 
-There are plenty of frontend frameworks nowadays. The most popular ones are the big three Angular, React, and Vue. We finally chose React for our project not only because of its popularity but also its outstanding advantages[2].  
+There are plenty of frontend frameworks nowadays. The most popular ones are the big three - Angular, React, and Vue. We finally chose React for our project not only because of its popularity but also its outstanding advantages[2].  
 
-First, popularity, According the research by Elar Saks[3],  react have got the highest package downloads which means that the resources must be sufficient to do a good project. We indeed found a perfect react-svg-map[4] for our data visualization  and a fantastic UI library ant-design[5].Second, easy to make separate components. Our components lie in the components folder, like figure 1. Third, simplicity, well defined methods, HTML like in-javascript tags for component rendering, and a full CSS support make the user learn quickly with some basic of frontend skills. We arranged our components like Figure 2.  Fourth, testability, with a bunch of testing library[6][7][8] and components structure React web app is very easy to test.
+First, popularity, According the research by Elar Saks[3],  react has the highest package downloads which means that the resources must be sufficient to do a good project. We indeed found a perfect react-svg-map[4] for our data visualization  and a fantastic UI library ant-design[5].Second, in React it's easy to make separate components. Our components are contained in the components folder, like figure 1. Third, simplicity, well defined methods, HTML like in-javascript tags for component rendering, and a full CSS support make the user learn quickly with some basic frontend skills. We arranged our components like Figure 2.  The fourth reason is testability - with a bunch of testing library[6][7][8] and components structure React web app is very easy to test.
 
 
 ```
@@ -312,7 +312,7 @@ Figure 2. Frontend Component structure
 
 #### Redux
 
-Because of the components structure of React, the states of each will become very hard to maintain through the growth of the scale of the web application. Hance, we need a library to help us manage the states. Redux[9], a predictable state container for JS Apps, is perfect for this job.
+Because of the components structure of React, the states of each will become very hard to maintain through the growth of the scale of the web application. Hence, we need a library to help us manage the states. Redux[9], a predictable state container for JS Apps, is perfect for this job.
 
 To use Redux, we also need a UI binder to support Redux. We chose an official library React-Redux[10] to do the job.
 
@@ -386,7 +386,7 @@ Gif 4. Music Toggle
 
 ### Animation
 
-After considering some animation libraries like react-spring and Framer-motion, we decided using the primitive @keyframe in CSS for our animation. For example our intro animation is fully implemented with  @keyframe ( Gif 5 ).
+After considering some animation libraries like react-spring and Framer-motion, we decided to use the primitive @keyframe in CSS for our animation. For example our intro animation is fully implemented with  @keyframe ( Gif 5 ).
 
 
 ![](https://i.imgur.com/VM7Dp0l.gif)
